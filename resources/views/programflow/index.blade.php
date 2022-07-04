@@ -4,19 +4,19 @@
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="utf-8">
-    <title>Commencement | UMak</title>
+    <title>Program Flow | UMak</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Landing Page of UMak Commencement Website">
     <meta name="author" content="Umak">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!-- Favicon-->
-    <link rel="icon" type="image/png" href="{{ asset('/resources/img/umak_logo.png') }}"><!-- Fonts-->
+    <link rel="icon" type="image/png" href="{{ asset('/img/umak_logo.png') }}"><!-- Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap"><!-- Style-->
     <!-- build:css -->
-    <link rel="stylesheet" href="{{ asset('/resources/vendors/css/magnific-popup.css') }}">
-    <link rel="stylesheet" href="{{ asset('/resources/vendors/css/swiper-bundle.css') }}">
-    <link rel="stylesheet" href="{{ asset('/resources/css/main.css') }}"><!-- endbuild -->
+    <link rel="stylesheet" href="{{ asset('/vendors/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('/vendors/css/swiper-bundle.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/main.css') }}"><!-- endbuild -->
     <!-- jQuery-->
-    <script src="{{ asset('/resources/vendors/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('/vendors/js/jquery.min.js') }}"></script>
 
 </head>
 
@@ -25,16 +25,16 @@
     <!-- Navbar top-->
     <nav class="navbar navbar-expand-lg navbar-top navbar-fixed navbar-dark navbar-opaque navbar-border-bottom text-white">
         <div class="container">
-            <a class="navbar-brand position-fixed" href="index.html">
-                <img src="{{ asset('/resources/img/umak_logo1.png') }}" class="img pt-25"/> <span class="ps-10 h6 d-none d-lg-inline-block text-white">UMak Commencement</span>
+            <a class="navbar-brand position-fixed" href="/">
+                <img src="{{ asset('/img/umak_logo1.png') }}" class="img pt-25"/> <span class="ps-10 h6 d-none d-lg-inline-block text-white">UMak Commencement</span>
             </a>
             <a class="navbar-toggle order-4 ms-auto pe-10 popup-inline" href="#navbar-mobile-style-1"><span></span><span></span><span></span></a>
             <ul class="nav navbar-nav order-2 ms-auto nav-no-opacity">
-                <li class="nav-item active"><a class="nav-link" href="index.html"><span>Home</span></a></li>
-                <li class="nav-item navbar-dropdown"><a class="nav-link" href="index-2.html"><span>Programme</span></a>
+                <li class="nav-item"><a class="nav-link" href="/"><span>Home</span></a></li>
+                <li class="nav-item active navbar-dropdown"><a class="nav-link" href="index-2.html"><span>Programme</span></a>
                     <div class="dropdown-menu rounded-2 shadow">
                         <ul class="nav navbar-nav">
-                            <li class="nav-item"><a class="nav-link" href="home-01.html"><span>Program Flow</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ url('/programflow#programflow') }}"><span>Program Flow</span></a></li>
                             <li class="nav-item"><a class="nav-link" href="home-02.html"><span>Regalia</span></a></li>
                             <li class="nav-item"><a class="nav-link" href="home-03.html"><span>Venue</span></a></li>
                             <li class="nav-item"><a class="nav-link" href="home-04.html"><span>Policies</span></a></li>
@@ -47,22 +47,22 @@
     <div class="navbar navbar-mobile navbar-mobile-style-1 bg-white mfp-hide" id="navbar-mobile-style-1">
         <div class="navbar-wrapper">
             <div class="navbar-head">
-                <a class="navbar-brand d-block d-md-none mt-20" href="index.html">
-                    <img src="{{ asset('/resources/img/umak_logo.png') }}" width="75px" class="float-start me-15">
+                <a class="navbar-brand d-block d-md-none mt-20" href="/">
+                    <img src="{{ asset('/img/umak_logo.png') }}" width="75px" class="float-start me-15">
                     <div class="ps-10 h6 mt-20 ms-15">UMak Commencement</div>
                     <a class="navbar-toggle popup-modal-dismiss" href="#"><span></span><span></span><span></span>
                 </a>
             </div>
             <div class="navbar-body">
                 <ul class="nav navbar-nav navbar-nav-collapse">
-                    <li class="nav-item active"><a class="nav-link" href="index.html"><span>Home</span></a></li>
-                    <li class="nav-item navbar-collapse"><a class="nav-link" href="#navbarCollapseHome" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbarCollapseHome"><span>Programme</span></a>
+                    <li class="nav-item "><a class="nav-link" href="/"><span>Home</span></a></li>
+                    <li class="nav-item active navbar-collapse"><a class="nav-link" href="#navbarCollapseHome" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbarCollapseHome"><span>Programme</span></a>
                         <div class="navbar-collapse-menu collapse" id="navbarCollapseHome">
                             <ul class="nav navbar-nav">
-                                <li class="nav-item"><a class="nav-link" href="home-01.html"><span>Program Flow</span></a></li>
-                            <li class="nav-item"><a class="nav-link" href="home-02.html"><span>Regalia</span></a></li>
-                            <li class="nav-item"><a class="nav-link" href="home-03.html"><span>Venue</span></a></li>
-                            <li class="nav-item"><a class="nav-link" href="home-04.html"><span>Policies</span></a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ url('/programflow#programflow') }}"><span>Program Flow</span></a></li>
+                                <li class="nav-item"><a class="nav-link" href="home-02.html"><span>Regalia</span></a></li>
+                                <li class="nav-item"><a class="nav-link" href="home-03.html"><span>Venue</span></a></li>
+                                <li class="nav-item"><a class="nav-link" href="home-04.html"><span>Policies</span></a></li>
                             </ul>
                         </div>
                     </li>
@@ -96,7 +96,7 @@
                     <div class="swiper-slide h-auto">
                         <div class="py-200 position-relative overflow-hidden h-100">
                             <div class="background">
-                                <div class="background-image jarallax" data-jarallax data-speed="0.8"><img class="jarallax-img" loading="lazy" src="{{ asset('/resources/img/umak_banner.jpg') }}" data-swiper-parallax-x="20%" alt=""></div>
+                                <div class="background-image jarallax" data-jarallax data-speed="0.8"><img class="jarallax-img" loading="lazy" src="{{ asset('/img/umak_banner.jpg') }}" data-swiper-parallax-x="20%" alt=""></div>
                                 <div class="background-color" style="--background-color: #000; opacity: .25;"></div>
                                 <div class="background-color" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 150px);"></div>
                             </div>
@@ -106,7 +106,7 @@
                     <div class="swiper-slide h-auto">
                         <div class="py-200 position-relative overflow-hidden h-100">
                             <div class="background">
-                                <div class="background-image jarallax" data-jarallax data-speed="0.8"><img class="jarallax-img" loading="lazy" src="{{ asset('/resources/img/umak_banner2.png') }}" data-swiper-parallax-x="20%" alt=""></div>
+                                <div class="background-image jarallax" data-jarallax data-speed="0.8"><img class="jarallax-img" loading="lazy" src="{{ asset('/img/umak_banner2.png') }}" data-swiper-parallax-x="20%" alt=""></div>
                                 <div class="background-color" style="--background-color: #000; opacity: .25;"></div>
                                 <div class="background-color" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 150px);"></div>
                             </div>
@@ -116,7 +116,7 @@
                     <div class="swiper-slide h-auto">
                         <div class="py-200 position-relative overflow-hidden h-100">
                             <div class="background">
-                                <div class="background-image jarallax" data-jarallax data-speed="0.8"><img class="jarallax-img" loading="lazy" src="{{ asset('/resources/img/umak_banner3.png') }}" data-swiper-parallax-x="20%" alt=""></div>
+                                <div class="background-image jarallax" data-jarallax data-speed="0.8"><img class="jarallax-img" loading="lazy" src="{{ asset('/img/umak_banner3.png') }}" data-swiper-parallax-x="20%" alt=""></div>
                                 <div class="background-color" style="--background-color: #000; opacity: .25;"></div>
                                 <div class="background-color" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 150px);"></div>
                             </div>
@@ -126,7 +126,7 @@
                     <div class="swiper-slide h-auto">
                         <div class="py-200 position-relative overflow-hidden h-100">
                             <div class="background">
-                                <div class="background-image jarallax" data-jarallax data-speed="0.8"><img class="jarallax-img" loading="lazy" src="{{ asset('/resources/img/umak_banner4.png') }}" data-swiper-parallax-x="20%" alt=""></div>
+                                <div class="background-image jarallax" data-jarallax data-speed="0.8"><img class="jarallax-img" loading="lazy" src="{{ asset('/img/umak_banner4.png') }}" data-swiper-parallax-x="20%" alt=""></div>
                                 <div class="background-color" style="--background-color: #000; opacity: .25;"></div>
                                 <div class="background-color" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 150px);"></div>
                             </div>
@@ -176,8 +176,8 @@
         </div>
         <div class="pt-120 pb-130 alert-warning shape-parent text-center">
             <!-- Shape-->
-            <div class="shape justify-content-end"><img loading="lazy" src="{{ asset('/resourcesimg/root/404-shape-326x321.png') }}" alt="" width="542" height="382"></div><!-- Shape-->
-            <div class="shape align-items-end"><img loading="lazy" src="{{ asset('/resources/img/root/contact-2-shape-558x364.png') }}" alt="" width="309" height="435"></div>
+            <div class="shape justify-content-end"><img loading="lazy" src="{{ asset('img/root/404-shape-326x321.png') }}" alt="" width="542" height="382"></div><!-- Shape-->
+            <div class="shape align-items-end"><img loading="lazy" src="{{ asset('/img/root/contact-2-shape-558x364.png') }}" alt="" width="309" height="435"></div>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 offset-lg-3">
@@ -218,7 +218,7 @@
                 </div>
                 <div class="rounded-4 bg-accent-1 pt-160 pb-130 shape-parent mt-120">
                     <!-- Shape-->
-                    <div class="shape justify-content-end rounded-top-right-4 overflow-hidden opacity-50"><img loading="lazy" src="{{ asset('/resources/img/root/home-2-shape-390x294.png') }}" alt="" width="232" height="325"></div>
+                    <div class="shape justify-content-end rounded-top-right-4 overflow-hidden opacity-50"><img loading="lazy" src="{{ asset('/img/root/home-2-shape-390x294.png') }}" alt="" width="232" height="325"></div>
                     <div class="swiper shape-parent" data-swiper-slides="1" data-swiper-gap="30" data-swiper-grabcursor="true" data-show="startbox">
                         <!-- Shape-->
                         <div class="shape justify-content-center mt-n70 opacity-50"><svg class="no-transform" xmlns="http://www.w3.org/2000/svg" width="169" height="145" fill="none">
@@ -270,7 +270,7 @@
         </div>
         <div class="pt-120 pb-130 bg-gray shape-parent overflow-hidden">
             <!-- Shape-->
-            <div class="shape align-items-end justify-content-start"><img loading="lazy" src="{{ asset('/resources/img/root/services-shape-420x487.png') }}" alt="" width="420" height="487"></div>
+            <div class="shape align-items-end justify-content-start"><img loading="lazy" src="{{ asset('/img/root/services-shape-420x487.png') }}" alt="" width="420" height="487"></div>
             <div class="container">
                 <div class="row gy-90">
                     <div class="col-lg-3">
@@ -285,7 +285,7 @@
                                         <!-- Feedback-->
                                         <div class="feedback bg-dark-light rounded-4 pe-60 h-100">
                                             <div class="feedback-header d-flex align-items-center mb-35">
-                                                <div class="flex-shrink-0"><img class="rounded-circle" loading="lazy" src="{{ asset('/resources/img/root/avatar-3-200x200.jpg') }}" alt="" height="64" width="64"></div>
+                                                <div class="flex-shrink-0"><img class="rounded-circle" loading="lazy" src="{{ asset('/img/root/avatar-3-200x200.jpg') }}" alt="" height="64" width="64"></div>
                                                 <div class="flex-grow-1 ms-20">
                                                     <h6 class="feedback-author text-white mb-5">Prof. Cedric Clavecillas, MIT</h6>
                                                     <p class="feedback-position text-gray font-size-14 m-0">Senior Data Scientist, Mercury Drugs .Inc</p>
@@ -299,7 +299,7 @@
                                         <div class="feedback bg-dark-light rounded-4 pe-60 h-100">
                                             
                                             <div class="feedback-header d-flex align-items-center mb-35">
-                                                <div class="flex-shrink-0"><img class="rounded-circle" loading="lazy" src="{{ asset('/resources/img/root/avatar-2-200x200.jpg') }}" alt="" height="64" width="64"></div>
+                                                <div class="flex-shrink-0"><img class="rounded-circle" loading="lazy" src="{{ asset('/img/root/avatar-2-200x200.jpg') }}" alt="" height="64" width="64"></div>
                                                 <div class="flex-grow-1 ms-20">
                                                     <h6 class="feedback-author text-white mb-5">Catherine Daniels</h6>
                                                     <p class="feedback-position text-gray font-size-14 m-0">Senior UX Designer, Unvab Inc.</p>
@@ -313,7 +313,7 @@
                                         <div class="feedback bg-dark-light rounded-4 pe-60 h-100">
                                             
                                             <div class="feedback-header d-flex align-items-center mb-35">
-                                                <div class="flex-shrink-0"><img class="rounded-circle" loading="lazy" src="{{ asset('/resources/img/root/avatar-1-200x200.jpg') }}" alt="" height="64" width="64"></div>
+                                                <div class="flex-shrink-0"><img class="rounded-circle" loading="lazy" src="{{ asset('/img/root/avatar-1-200x200.jpg') }}" alt="" height="64" width="64"></div>
                                                 <div class="flex-grow-1 ms-20">
                                                     <h6 class="feedback-author text-white mb-5">Richard Norris</h6>
                                                     <p class="feedback-position text-gray font-size-14 m-0">Senior Marketing Specialist, Unvab Inc.</p>
@@ -343,7 +343,7 @@
     <footer class="bg-accent-2 text-dark py-50 footerNext">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center gy-50">
-                <img src="{{ asset('/resources/img/umak_logo.png') }}" width="140" class="mb-0 mb-sm-20">
+                <img src="{{ asset('/img/umak_logo.png') }}" width="140" class="mb-0 mb-sm-20">
                 <p class="font-size-15 mb-35 text-justify ms-30">The <b>University of Makati (UMak)</b> is a public, locally funded university of the local government of Makati. It is envisioned as the primary instrument where university education and industry training programs interface to mold Makati and non-Makati youth into productive citizens and IT-enabled professionals who are exposed to cutting-edge technology in their areas of specialization. UMak is the final stage of Makati City's integrated primary level to tertiary level educational system that enables its less privileged citizens to compete for job opportunities in various businesses and industries.</p>
             </div>
             <p class="text-center mb-10">© Copyright 2022 - University of Makati. All Rights Reserved.</p>
@@ -368,7 +368,7 @@
                             <a type="button" class="btn btn-accent-1 rounded-3 shadow" href="#" target="_self">
                                 <div class="row align-items-center">
                                     <div class="col-4">
-                                        <img src="{{ asset('/resources/img/cbfs-logo.png') }}" class="img-fluid">
+                                        <img src="{{ asset('/img/cbfs-logo.png') }}" class="img-fluid">
                                     </div>
                                     <div class="col-8 text-center">
                                         College of Business and Financial Sciences
@@ -383,7 +383,7 @@
                             <a type="button" class="btn btn-accent-1 rounded-3 shadow" href="#" target="_self">
                                 <div class="row align-items-center">
                                     <div class="col-4">
-                                        <img src="{{ asset('/resources/img/cbfs-logo.png') }}" class="img-fluid">
+                                        <img src="{{ asset('/img/cbfs-logo.png') }}" class="img-fluid">
                                     </div>
                                     <div class="col-8 text-center">
                                         College of Business and Financial Sciences
@@ -398,7 +398,7 @@
                             <a type="button" class="btn btn-accent-1 rounded-3 shadow" href="#" target="_self">
                                 <div class="row align-items-center">
                                     <div class="col-4">
-                                        <img src="{{ asset('/resources/img/cbfs-logo.png') }}" class="img-fluid">
+                                        <img src="{{ asset('/img/cbfs-logo.png') }}" class="img-fluid">
                                     </div>
                                     <div class="col-8 text-center">
                                         College of Business and Financial Sciences
@@ -415,7 +415,7 @@
                               <a type="button" class="btn btn-accent-1 rounded-3 shadow" href="#" target="_self">
                                 <div class="row align-items-center">
                                     <div class="col-4">
-                                        <img src="{{ asset('/resources/img/cbfs-logo.png') }}" class="img-fluid">
+                                        <img src="{{ asset('/img/cbfs-logo.png') }}" class="img-fluid">
                                     </div>
                                     <div class="col-8 text-center">
                                         College of Business and Financial Sciences
@@ -429,7 +429,7 @@
                                 <a type="button" class="btn btn-accent-1 rounded-3 shadow" href="#" target="_self">
                                     <div class="row align-items-center">
                                         <div class="col-4">
-                                            <img src="{{ asset('/resources/img/cbfs-logo.png') }}" class="img-fluid">
+                                            <img src="{{ asset('/img/cbfs-logo.png') }}" class="img-fluid">
                                         </div>
                                         <div class="col-8 text-center">
                                             College of Business and Financial Sciences
@@ -444,7 +444,7 @@
                                 <a type="button" class="btn btn-accent-1 rounded-3 shadow" href="#" target="_self">
                                     <div class="row align-items-center">
                                         <div class="col-4">
-                                            <img src="{{ asset('/resources/img/cbfs-logo.png') }}" class="img-fluid">
+                                            <img src="{{ asset('/img/cbfs-logo.png') }}" class="img-fluid">
                                         </div>
                                         <div class="col-8 text-center">
                                             College of Business and Financial Sciences
@@ -462,7 +462,7 @@
                                     <a type="button" class="btn btn-accent-1 rounded-3 shadow" href="#" target="_self">
                                         <div class="row align-items-center">
                                             <div class="col-4">
-                                                <img src="{{ asset('/resources/img/cbfs-logo.png') }}" class="img-fluid">
+                                                <img src="{{ asset('/img/cbfs-logo.png') }}" class="img-fluid">
                                             </div>
                                             <div class="col-8 text-center">
                                                 College of Business and Financial Sciences
@@ -477,7 +477,7 @@
                                     <a type="button" class="btn btn-accent-1 rounded-3 shadow" href="#" target="_self">
                                         <div class="row align-items-center">
                                             <div class="col-4">
-                                                <img src="{{ asset('/resources/img/cbfs-logo.png') }}" class="img-fluid">
+                                                <img src="{{ asset('/img/cbfs-logo.png') }}" class="img-fluid">
                                             </div>
                                             <div class="col-8 text-center">
                                                 College of Business and Financial Sciences
@@ -492,7 +492,7 @@
                                     <a type="button" class="btn btn-accent-1 rounded-3 shadow" href="#" target="_self">
                                         <div class="row align-items-center">
                                             <div class="col-4">
-                                                <img src="{{ asset('/resources/img/cbfs-logo.png') }}" class="img-fluid">
+                                                <img src="{{ asset('/img/cbfs-logo.png') }}" class="img-fluid">
                                             </div>
                                             <div class="col-8 text-center">
                                                 College of Business and Financial Sciences
@@ -510,7 +510,7 @@
                                     <a type="button" class="btn btn-accent-1 rounded-3 shadow" href="#" target="_self">
                                         <div class="row align-items-center">
                                             <div class="col-4">
-                                                <img src="{{ asset('/resources/img/cbfs-logo.png') }}" class="img-fluid">
+                                                <img src="{{ asset('/img/cbfs-logo.png') }}" class="img-fluid">
                                             </div>
                                             <div class="col-8 text-center">
                                                 College of Business and Financial Sciences
@@ -525,7 +525,7 @@
                                     <a type="button" class="btn btn-accent-1 rounded-3 shadow" href="#" target="_self">
                                         <div class="row align-items-center">
                                             <div class="col-4">
-                                                <img src="{{ asset('/resources/img/cbfs-logo.png') }}" class="img-fluid">
+                                                <img src="{{ asset('/img/cbfs-logo.png') }}" class="img-fluid">
                                             </div>
                                             <div class="col-8 text-center">
                                                 College of Business and Financial Sciences
@@ -540,7 +540,7 @@
                                     <a type="button" class="btn btn-accent-1 rounded-3 shadow" href="#" target="_self">
                                         <div class="row align-items-center">
                                             <div class="col-4">
-                                                <img src="{{ asset('/resources/img/cbfs-logo.png') }}" class="img-fluid">
+                                                <img src="{{ asset('/img/cbfs-logo.png') }}" class="img-fluid">
                                             </div>
                                             <div class="col-8 text-center">
                                                 College of Business and Financial Sciences
@@ -559,7 +559,7 @@
                                     <a type="button" class="btn btn-accent-1 rounded-3 shadow" href="#" target="_self">
                                         <div class="row align-items-center">
                                             <div class="col-4">
-                                                <img src="{{ asset('/resources/img/cbfs-logo.png') }}" class="img-fluid">
+                                                <img src="{{ asset('/img/cbfs-logo.png') }}" class="img-fluid">
                                             </div>
                                             <div class="col-8 text-center">
                                                 College of Business and Financial Sciences
@@ -581,25 +581,25 @@
     </div>
 
     <!-- build:js -->
-    <script src="{{ asset('/resources/vendors/js/bootstrap.js') }}"></script>
-    <script src="{{ asset('/resources/vendors/js/imagesloaded.pkgd.js') }}"></script>
-    <script src="{{ asset('/resources/vendors/js/isotope.pkgd.js') }}"></script>
-    <script src="{{ asset('/resources/vendors/js/jarallax.js') }}"></script>
-    <script src="{{ asset('/resources/vendors/js/jarallax-element.js') }}"></script>
-    <script src="{{ asset('/resources/vendors/js/jquery.countdown.js') }}"></script>
-    <script src="{{ asset('/resources/vendors/js/jquery.magnific-popup.js') }}"></script>
-    <script src="{{ asset('/resources/vendors/js/ofi.js') }}"></script>
-    <script src="{{ asset('/resources/vendors/js/jquery.inview.js') }}"></script>
-    <script src="{{ asset('/resources/vendors/js/swiper-bundle.js') }}"></script>
-    <script src="{{ asset('/resources/vendors/js/gist-embed.min.js') }}"></script>
-    <script src="{{ asset('/resources/js/helpers.js') }}"></script>
-    <script src="{{ asset('/resources/js/controllers/show-on-scroll.js') }}"></script>
-    <script src="{{ asset('/resources/js/controllers/countdown.js') }}"></script>
-    <script src="{{ asset('/resources/js/controllers/isotope.js') }}"></script>
-    <script src="{{ asset('/resources/js/controllers/navbar.js') }}"></script>
-    <script src="{{ asset('/resources/js/controllers/stretch-column.js') }}"></script>
-    <script src="{{ asset('/resources/js/controllers/swiper.js') }}"></script>
-    <script src="{{ asset('/resources/js/controllers/others.js') }}"></script><!-- endbuild -->
+    <script src="{{ asset('/vendors/js/bootstrap.js') }}"></script>
+    <script src="{{ asset('/vendors/js/imagesloaded.pkgd.js') }}"></script>
+    <script src="{{ asset('/vendors/js/isotope.pkgd.js') }}"></script>
+    <script src="{{ asset('/vendors/js/jarallax.js') }}"></script>
+    <script src="{{ asset('/vendors/js/jarallax-element.js') }}"></script>
+    <script src="{{ asset('/vendors/js/jquery.countdown.js') }}"></script>
+    <script src="{{ asset('/vendors/js/jquery.magnific-popup.js') }}"></script>
+    <script src="{{ asset('/vendors/js/ofi.js') }}"></script>
+    <script src="{{ asset('/vendors/js/jquery.inview.js') }}"></script>
+    <script src="{{ asset('/vendors/js/swiper-bundle.js') }}"></script>
+    <script src="{{ asset('/vendors/js/gist-embed.min.js') }}"></script>
+    <script src="{{ asset('/js/helpers.js') }}"></script>
+    <script src="{{ asset('/js/controllers/show-on-scroll.js') }}"></script>
+    <script src="{{ asset('/js/controllers/countdown.js') }}"></script>
+    <script src="{{ asset('/js/controllers/isotope.js') }}"></script>
+    <script src="{{ asset('/js/controllers/navbar.js') }}"></script>
+    <script src="{{ asset('/js/controllers/stretch-column.js') }}"></script>
+    <script src="{{ asset('/js/controllers/swiper.js') }}"></script>
+    <script src="{{ asset('/js/controllers/others.js') }}"></script><!-- endbuild -->
 </body>
 
 
