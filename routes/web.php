@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\ProgramFlowController;
+use App\Http\Controllers\LoginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +15,40 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/* ## START Visitor Module Region ## */
+
+/*
+-------------------
+    Home Routes
+------------------- 
+*/ 
+Route::get('/', function(){ return Redirect::to("/home"); });
+Route::get('/home', [LandingPageController::class, 'index']);
+
+/*
+-------------------
+    ProgramFlow Routes
+------------------- 
+*/ 
+Route::get('/programflow', [ProgramFlowController::class, 'index']);
+
+/* ## END Visitor Module Region ## */
+
+
+
+/* ## START CMS Module Region ## */
+
+/*
+-------------------
+    Login Routes
+------------------- 
+*/ 
+Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login/signin', [LoginController::class, 'signin']);
+// Route::post('/login/signin', function(){
+//     return response('Hello World', 200)
+//     ->header('Content-Type', 'text/plain');
+// });
+
+
+/* ## END CMS Module Region ## */
