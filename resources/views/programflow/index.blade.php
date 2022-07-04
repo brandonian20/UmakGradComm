@@ -9,6 +9,7 @@
     <meta name="description" content="Landing Page of UMak Commencement Website">
     <meta name="author" content="Umak">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!-- Favicon-->
+    
     <link rel="icon" type="image/png" href="{{ asset('/img/umak_logo.png') }}"><!-- Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap"><!-- Style-->
     <!-- build:css -->
@@ -600,6 +601,15 @@
     <script src="{{ asset('/js/controllers/stretch-column.js') }}"></script>
     <script src="{{ asset('/js/controllers/swiper.js') }}"></script>
     <script src="{{ asset('/js/controllers/others.js') }}"></script><!-- endbuild -->
+
+    <script type="text/javascript">
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    </script>
+
 </body>
 
 
