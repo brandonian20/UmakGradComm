@@ -43,17 +43,6 @@
                             <tr>
                                 <td><small>A public, locally funded university of the local government of Makati.</small></td>
                             </tr>
-                            <tr>
-                                <td><small>
-                                    <?php
-                                    
-                                        if (DB::connection()->getPdo()){
-                                            echo "successfullyconnceted to the database ";
-                                        }
-
-                                    ?>
-                                </small></td>
-                            </tr>
                         </table>
                     </div>
                 </div>

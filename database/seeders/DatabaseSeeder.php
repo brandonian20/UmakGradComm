@@ -18,12 +18,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
 
         // User::create([
         //     'name' => 'Timothy Cuizon',
@@ -32,6 +26,7 @@ class DatabaseSeeder extends Seeder
         //     'created_at' => Carbon::now()->toDateTimeString(),
         //     'updated_at' => Carbon::now()->toDateTimeString(),
         // ]);
+
         // User::create([
         //     'name' => 'Brandon Penalosa',
         //     'email' => 'brandonian2000@gmail.com',
@@ -47,6 +42,7 @@ class DatabaseSeeder extends Seeder
         //     'created_at' => Carbon::now()->toDateTimeString(),
         //     'updated_at' => Carbon::now()->toDateTimeString(),
         // ]);
+
         // User::create([
         //     'name' => 'Cedric Clavecillas',
         //     'email' => 'iancedric@gmail.com',
