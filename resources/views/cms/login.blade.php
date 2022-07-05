@@ -69,7 +69,7 @@
                     </div>
                     <div class="col-sm-12 text-center mb-4">
                         <div class="d-flex justify-content-center align-items-center">
-                            <h3 class="h3 mb-0 me-2" style="color: #333; margin-left: -45px">UMak Commencement</h3>
+                            <h3 class="h3 mb-0" style="color: #333;">UMak Commencement</h3>
                             <!-- <p class="border border-success text-success px-1 ml-1 rounded mb-0">Beta</p> -->
                         </div>
                     </div>
@@ -77,7 +77,7 @@
                     <div class="col-sm-12">
                         <div class="div-controls px-3">
                             <div class="row justify-content-center">
-                                <div class="col-sm-8 text-center">
+                                <div class="col-sm-7 text-center">
                                     <div class="row">
                                         <form id="formSignIn">
                                             <div class="form-floating mb-3">

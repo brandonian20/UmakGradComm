@@ -2,8 +2,12 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use \App\Models\User;
+use Carbon\Carbon;
+
+
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,5 +24,36 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        // User::create([
+        //     'name' => 'Timothy Cuizon',
+        //     'email' => 'timothywaltercuizon@gmail.com',
+        //     'password' => Hash::make("tim123"),
+        //     'created_at' => Carbon::now()->toDateTimeString(),
+        //     'updated_at' => Carbon::now()->toDateTimeString(),
+        // ]);
+        // User::create([
+        //     'name' => 'Brandon Penalosa',
+        //     'email' => 'brandonian2000@gmail.com',
+        //     'password' => Hash::make("brandon123"),
+        //     'created_at' => Carbon::now()->toDateTimeString(),
+        //     'updated_at' => Carbon::now()->toDateTimeString(),
+        // ]);
+
+        // User::create([
+        //     'name' => 'Elias Cabo',
+        //     'email' => 'eliascabo@gmail.com',
+        //     'password' => Hash::make("eli123"),
+        //     'created_at' => Carbon::now()->toDateTimeString(),
+        //     'updated_at' => Carbon::now()->toDateTimeString(),
+        // ]);
+        // User::create([
+        //     'name' => 'Cedric Clavecillas',
+        //     'email' => 'iancedric@gmail.com',
+        //     'password' => Hash::make("ced123"),
+        //     'created_at' => Carbon::now()->toDateTimeString(),
+        //     'updated_at' => Carbon::now()->toDateTimeString(),
+        // ]);
+
     }
 }
