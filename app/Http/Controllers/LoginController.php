@@ -69,6 +69,7 @@ class LoginController extends Controller
             ]);
         }
 
+        //This is a comment
         if (Auth::attempt( 
             array(
                 'email' => $r->email,
