@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LandingPageController;
-use App\Http\Controllers\ProgramFlowController;
+use App\Http\Controllers\VisitorPageController;
 use App\Http\Controllers\LoginController;
 /*
 |--------------------------------------------------------------------------
@@ -19,21 +18,14 @@ use App\Http\Controllers\LoginController;
 
 /*
 -------------------
-    Home Routes
+    Visitor Module Routes
 ------------------- 
 */ 
 Route::get('/', function(){ return Redirect::to("/home"); });
-Route::get('/home', [LandingPageController::class, 'index']);
-
-/*
--------------------
-    ProgramFlow Routes
-------------------- 
-*/ 
-Route::get('/programflow', [ProgramFlowController::class, 'index']);
+Route::get('/home', [VisitorPageController::class, 'home']);
+Route::get('/programflow', [VisitorPageController::class, 'programme']);
 
 /* ## END Visitor Module Region ## */
-
 
 
 /* ## START CMS Module Region ## */
