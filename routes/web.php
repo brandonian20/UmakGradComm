@@ -21,6 +21,7 @@ use App\Http\Controllers\LoginController;
     Visitor Module Routes
 ------------------- 
 */ 
+
 Route::get('/', function(){ return Redirect::to("/home"); });
 Route::get('/home', [VisitorPageController::class, 'home']);
 Route::get('/programflow', [VisitorPageController::class, 'programme']);
@@ -35,6 +36,7 @@ Route::get('/programflow', [VisitorPageController::class, 'programme']);
     Login Routes
 ------------------- 
 */ 
+
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login/signin', [LoginController::class, 'signin']);
 
