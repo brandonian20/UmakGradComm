@@ -14,14 +14,7 @@ class LoginController extends Controller
     //Signin func
     public function signin(){
         return response()->json([
-            'hello' => 'world',
-            'name' => 'Elias cabo',
-            'attr' => [
-                'str' => 100,
-                'agi' => 23,
-                'tuli' => false,
-                'clothes' => 'Microsoft Technology Associate',
-            ]
+            'name' => 'Brandon'
         ]);
     }
 

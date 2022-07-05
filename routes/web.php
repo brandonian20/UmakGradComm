@@ -45,10 +45,6 @@ Route::get('/programflow', [ProgramFlowController::class, 'index']);
 */ 
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login/signin', [LoginController::class, 'signin']);
-// Route::post('/login/signin', function(){
-//     return response('Hello World', 200)
-//     ->header('Content-Type', 'text/plain');
-// });
 
 
 /* ## END CMS Module Region ## */
