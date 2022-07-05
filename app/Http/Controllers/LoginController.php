@@ -63,6 +63,7 @@ class LoginController extends Controller
             'password' => 'required|min:3',
         ]);
 
+        //This is another comment
         if ($validator->fails()){
             return response()->json([
                 'response' => $validator->errors()
