@@ -6,14 +6,19 @@
         <title>Commencement | UMak</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="Landing Page of UMak Commencement Website">
-        <meta name="author" content="Umak">
+        <meta name="author" content="Umak"> 
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!-- Favicon-->
         <link rel="icon" type="image/png" href="{{ asset('/img/umak_logo.png') }}"><!-- Fonts-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap"><!-- Style-->
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
         <!-- build:css -->
         <link rel="stylesheet" href="{{ asset('/vendors/css/magnific-popup.css') }}">
         <link rel="stylesheet" href="{{ asset('/vendors/css/swiper-bundle.css') }}">
-        <link rel="stylesheet" href="{{ asset('/css/main.css') }}"><!-- endbuild -->
+        <link rel="stylesheet" href="{{ asset('/css/main.css') }}">
+        <link rel="stylesheet" href="{{ asset('/css/style.css') }}"><!-- endbuild -->
         <!-- jQuery-->
         <script src="{{ asset('/vendors/js/jquery.min.js') }}"></script>
 
