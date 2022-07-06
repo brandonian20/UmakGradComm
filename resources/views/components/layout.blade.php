@@ -28,14 +28,14 @@
                 </a>
                 <a class="navbar-toggle order-4 ms-auto pe-10 popup-inline" href="#navbar-mobile-style-1"><span></span><span></span><span></span></a>
                 <ul class="nav navbar-nav order-2 ms-auto nav-no-opacity">
-                    <li class="nav-item active"><a class="nav-link" href="/"><span>Home</span></a></li>
-                    <li class="nav-item navbar-dropdown"><a class="nav-link" href="{{ url('/programflow') }}"><span>Programme</span></a>
+                    <li class="nav-item {{ (request()->is('/*')) ? 'active' : '' }}"><a class="nav-link" href="/"><span>Home</span></a></li>
+                    <li class="nav-item navbar-dropdown {{ (request()->is('programflow*')) ? 'active' : '' }}"><a class="nav-link" href="{{ url('/programflow') }}"><span>Programme</span></a>
                         <div class="dropdown-menu rounded-2 shadow">
                             <ul class="nav navbar-nav">
-                                <li class="nav-item"><a class="nav-link" href="{{ url('/programflow') }}"><span>Program Flow</span></a></li>
-                                <li class="nav-item"><a class="nav-link" href="home-02.html"><span>Regalia</span></a></li>
-                                <li class="nav-item"><a class="nav-link" href="home-03.html"><span>Venue</span></a></li>
-                                <li class="nav-item"><a class="nav-link" href="home-04.html"><span>Policies</span></a></li>
+                                <li class="nav-item {{ (request()->is('programflow')) ? 'active' : '' }}"><a class="nav-link" href="{{ url('/programflow') }}"><span>Program Flow</span></a></li>
+                                <li class="nav-item {{ (request()->is('programflow#regalia')) ? 'active' : '' }}"><a class="nav-link" href="home-02.html"><span>Regalia</span></a></li>
+                                <li class="nav-item {{ (request()->is('programflow#venue')) ? 'active' : '' }}"><a class="nav-link" href="home-03.html"><span>Venue</span></a></li>
+                                <li class="nav-item {{ (request()->is('programflow#policies')) ? 'active' : '' }}"><a class="nav-link" href="home-04.html"><span>Policies</span></a></li>
                             </ul>
                         </div>
                     </li>
