@@ -38,11 +38,7 @@ Route::get('/programflow', [VisitorPageController::class, 'programme']);
 
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login/signin', [LoginController::class, 'signin']);
-Route::post('/login/decrypt', [LoginController::class, 'decrypt']);
-Route::post('/login/hash', [LoginController::class, 'hash']);
-Route::post('/login/hashcheck', [LoginController::class, 'hashcheck']);
 Route::post('/login/list', [LoginController::class, 'list']);
-Route::post('/login/login', [LoginController::class, 'login']);
 
 
 /* ## END CMS Module Region ## */

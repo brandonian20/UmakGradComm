@@ -7,6 +7,7 @@ use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
 use App\Models\User;
@@ -20,57 +21,44 @@ class LoginController extends Controller
         return view('cms/login');
     }
 
-    //Signin func
-    public function signin(){
-        return response()->json([
-            'name' => Crypt::encrypt('Brandon')
-        ]);
-    }
+    // //Signin func
+    // public function signin(){
+    //     return response()->json([
+    //         'name' => Crypt::encrypt('Brandon')
+    //     ]);
+    // }
 
-    //func
-    public function decrypt(Request $r){
-        return response()->json([
-            'name' => Crypt::decrypt($r->Name)
-        ]);
-    }
+    // //func
+    // public function decrypt(Request $r){
+    //     return response()->json([
+    //         'name' => Crypt::decrypt($r->Name)
+    //     ]);
+    // }
 
-    //func
-    public function hash(Request $r){
-        return response()->json([
-            'hashed' => Hash::make($r->Name)
-        ]);
-    }
+    // //func
+    // public function hash(Request $r){
+    //     return response()->json([
+    //         'hashed' => Hash::make($r->Name)
+    //     ]);
+    // }
 
-    //func
-    public function hashcheck(Request $r){
-        return response()->json([
-            'hashcheck' => Hash::check($r->plaintext, $r->hashed)
-        ]);
-    }
+    // //func
+    // public function hashcheck(Request $r){
+    //     return response()->json([
+    //         'hashcheck' => Hash::check($r->plaintext, $r->hashed)
+    //     ]);
+    // }
 
-    //func
+    //func login
     public function list(){
         return response()->json([
-            'response' => User::all()
+            'data' => DB::table('users')
         ]);
     }
 
-    //func
-    public function login(Request $r){
-        
-        $validator = Validator::make($r->all(), [
-            'email' => 'required|email',
-            'password' => 'required|min:3',
-        ]);
+    //func signin
+    public function signin(Request $r){
 
-        //This is another comment
-        if ($validator->fails()){
-            return response()->json([
-                'response' => $validator->errors()
-            ]);
-        }
-
-        //This is a comment
         if (Auth::attempt( 
             array(
                 'email' => $r->email,
