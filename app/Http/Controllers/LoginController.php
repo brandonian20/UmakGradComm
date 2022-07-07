@@ -4,15 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Validator;
-
-use App\Models\User;
-
-
 
 class LoginController extends Controller
 {
@@ -59,20 +52,15 @@ class LoginController extends Controller
     //func signin
     public function signin(Request $r){
 
-        if (Auth::attempt( 
-            array(
-                'email' => $r->email,
-                'password' => $r->password
-            )
-        )){
-            return response()->json([
-                'response' => 'logged in'
-            ]);
-        } else {
-            return response()->json([
-                'response' => 'false credentials'
-            ]);
+        $user = DB::table('users')->where('email', $r->email);
+
+        $resp = ['success' => false, 'data' => 'Invalid Credentials'];
+        
+        if ($user->count() > 0 && Hash::check($r->password, $user->get('password')[0]->password)){
+            $resp = ['success' => true, 'data' => '/dashboard'];
         }
+
+        return response()->json($resp);
 
     }
 
