@@ -6,23 +6,18 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
     //Index func
     public function index(){
+
+        if (Session::get('userData') != null){
+            return redirect('/dashboard');
+        }
+
         return view('cms/login');
-    }
-
-    //func login
-    public function list(){
-        return response()->json([
-            'data' => DB::table('users')
-        ]);
-    }
-
-    public function checkSession(Request $r){
-        return $r->session('userData');
     }
 
     //func signin
@@ -35,22 +30,23 @@ class LoginController extends Controller
         //Check if user exists && matches the password
         if ($user->count() > 0 && Hash::check($r->password, $user->get('password')[0]->password)){
 
-            session(['userData' => 'logged in']);
+            Session::put('userData', 
+                ['email' => $user->get('email')[0]->email,
+                'name' => $user->get('name')[0]->name]
+            );
 
             $resp = ['success' => true, 'data' => '/dashboard'];
         }
 
         return response()->json($resp);
-
     }
 
     //func signout
     public function signout(Request $r){
+        Session::forget('userData');
 
-       $r->session()->forget('userData');
-
-        return response()->json(['logout success']);
-
+        return redirect('/login');
     }
 
 }
+

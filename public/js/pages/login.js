@@ -149,7 +149,7 @@ function GetFD(formSelector, appendFD = null) {
     let fd = new FormData();
 
     for (let x of formSelector.serializeArray()) {
-        fd.append(x.name, x.value);
+        fd.append(x.name, x.value); 
     }
 
     if (appendFD) {
