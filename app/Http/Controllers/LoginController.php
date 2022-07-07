@@ -28,27 +28,35 @@ class LoginController extends Controller
         ]);
     }
 
+    public function checkSession(Request $r){
+        return $r->session('userData');
+    }
+
     //func signin
     public function signin(Request $r){
 
-        if (Auth::attempt( 
-            array(
-                'email' => $r->email,
-                'password' => $r->password
-            )
-        )){ //Success
+        $user = DB::table('users')->where('email', $r->email);
 
-            
+        $resp = ['success' => false, 'data' => 'Invalid Credentials'];
+        
+        //Check if user exists && matches the password
+        if ($user->count() > 0 && Hash::check($r->password, $user->get('password')[0]->password)){
 
-            return response()->json([
-                'response' => 'logged in'
-            ]);
+            session(['userData' => 'logged in']);
 
-        } else { // Fail
-            return response()->json([
-                'response' => 'false credentials'
-            ]);
+            $resp = ['success' => true, 'data' => '/dashboard'];
         }
+
+        return response()->json($resp);
+
+    }
+
+    //func signout
+    public function signout(Request $r){
+
+       $r->session()->forget('userData');
+
+        return response()->json(['logout success']);
 
     }
 
