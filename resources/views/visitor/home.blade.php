@@ -286,10 +286,10 @@
                         <a type="button" class="btn btn-accent-1 rounded-3 shadow" href="#" target="_self">
                             <div class="row align-items-center">
                                 <div class="col-4">
-                                    <img src="{{ asset('/img/cbfs-logo.png') }}" class="img-fluid">
+                                    <img src="{{ asset('/img/cbfs-logo.png') }}"  width="70px"> 
                                 </div>
                                 <div class="col-8 text-center">
-                                    College of Business and Financial Sciences
+                                    College of Allied Health Studies
 
                                 </div>
                             </div>
@@ -301,10 +301,10 @@
                         <a type="button" class="btn btn-accent-1 rounded-3 shadow" href="#" target="_self">
                             <div class="row align-items-center">
                                 <div class="col-4">
-                                    <img src="{{ asset('/img/cbfs-logo.png') }}" class="img-fluid">
+                                    <img src="{{ asset('/img/cbfs-logo.png') }}"  width="70px"> 
                                 </div>
                                 <div class="col-8 text-center">
-                                    College of Business and Financial Sciences
+                                    College of Arts and Letters
 
                                 </div>
                             </div>
@@ -316,7 +316,7 @@
                         <a type="button" class="btn btn-accent-1 rounded-3 shadow" href="#" target="_self">
                             <div class="row align-items-center">
                                 <div class="col-4">
-                                    <img src="{{ asset('/img/cbfs-logo.png') }}" class="img-fluid">
+                                    <img src="{{ asset('/img/cbfs-logo.png') }}"  width="70px"> 
                                 </div>
                                 <div class="col-8 text-center">
                                     College of Business and Financial Sciences
@@ -333,10 +333,10 @@
                           <a type="button" class="btn btn-accent-1 rounded-3 shadow" href="#" target="_self">
                             <div class="row align-items-center">
                                 <div class="col-4">
-                                    <img src="{{ asset('/img/cbfs-logo.png') }}" class="img-fluid">
+                                    <img src="{{ asset('/img/cbfs-logo.png') }}"  width="70px"> 
                                 </div>
                                 <div class="col-8 text-center">
-                                    College of Business and Financial Sciences
+                                    College of Computing and Information Sciences
 
                                 </div>
                             </div>
@@ -347,10 +347,10 @@
                             <a type="button" class="btn btn-accent-1 rounded-3 shadow" href="#" target="_self">
                                 <div class="row align-items-center">
                                     <div class="col-4">
-                                        <img src="{{ asset('/img/cbfs-logo.png') }}" class="img-fluid">
+                                        <img src="{{ asset('/img/cbfs-logo.png') }}"  width="70px"> 
                                     </div>
                                     <div class="col-8 text-center">
-                                        College of Business and Financial Sciences
+                                        College of Construction Sciences and Engineering
 
                                     </div>
                                 </div>
@@ -362,10 +362,10 @@
                             <a type="button" class="btn btn-accent-1 rounded-3 shadow" href="#" target="_self">
                                 <div class="row align-items-center">
                                     <div class="col-4">
-                                        <img src="{{ asset('/img/cbfs-logo.png') }}" class="img-fluid">
+                                        <img src="{{ asset('/img/cbfs-logo.png') }}"  width="70px"> 
                                     </div>
                                     <div class="col-8 text-center">
-                                        College of Business and Financial Sciences
+                                        College of Continuing, Advanced and Professional Studies
 
                                     </div>
                                 </div>
@@ -380,10 +380,10 @@
                                 <a type="button" class="btn btn-accent-1 rounded-3 shadow" href="#" target="_self">
                                     <div class="row align-items-center">
                                         <div class="col-4">
-                                            <img src="{{ asset('/img/cbfs-logo.png') }}" class="img-fluid">
+                                            <img src="{{ asset('/img/cbfs-logo.png') }}"  width="70px"> 
                                         </div>
                                         <div class="col-8 text-center">
-                                            College of Business and Financial Sciences
+                                            College of Education
     
                                         </div>
                                     </div>
@@ -395,10 +395,10 @@
                                 <a type="button" class="btn btn-accent-1 rounded-3 shadow" href="#" target="_self">
                                     <div class="row align-items-center">
                                         <div class="col-4">
-                                            <img src="{{ asset('/img/cbfs-logo.png') }}" class="img-fluid">
+                                            <img src="{{ asset('/img/cbfs-logo.png') }}"  width="70px"> 
                                         </div>
                                         <div class="col-8 text-center">
-                                            College of Business and Financial Sciences
+                                            College of Governance and Public Policy
     
                                         </div>
                                     </div>
@@ -410,10 +410,10 @@
                                 <a type="button" class="btn btn-accent-1 rounded-3 shadow" href="#" target="_self">
                                     <div class="row align-items-center">
                                         <div class="col-4">
-                                            <img src="{{ asset('/img/cbfs-logo.png') }}" class="img-fluid">
+                                            <img src="{{ asset('/img/cbfs-logo.png') }}"  width="70px"> 
                                         </div>
                                         <div class="col-8 text-center">
-                                            College of Business and Financial Sciences
+                                            College of Human Kinetics
     
                                         </div>
                                     </div>
@@ -428,10 +428,10 @@
                                 <a type="button" class="btn btn-accent-1 rounded-3 shadow" href="#" target="_self">
                                     <div class="row align-items-center">
                                         <div class="col-4">
-                                            <img src="{{ asset('/img/cbfs-logo.png') }}" class="img-fluid">
+                                            <img src="{{ asset('/img/cbfs-logo.png') }}"  width="70px"> 
                                         </div>
                                         <div class="col-8 text-center">
-                                            College of Business and Financial Sciences
+                                            College of Science
     
                                         </div>
                                     </div>
@@ -443,10 +443,10 @@
                                 <a type="button" class="btn btn-accent-1 rounded-3 shadow" href="#" target="_self">
                                     <div class="row align-items-center">
                                         <div class="col-4">
-                                            <img src="{{ asset('/img/cbfs-logo.png') }}" class="img-fluid">
+                                            <img src="{{ asset('/img/cbfs-logo.png') }}"  width="70px"> 
                                         </div>
                                         <div class="col-8 text-center">
-                                            College of Business and Financial Sciences
+                                            College of Technology Management
     
                                         </div>
                                     </div>
@@ -455,13 +455,13 @@
                             </div>
                             <div class="col">
                             
-                                <a type="button" class="btn btn-accent-1 rounded-3 shadow" href="#" target="_self">
+                                <a type="button" class="btn btn-accent-1 rounded-3 shadow btn-block" href="#" target="_self">
                                     <div class="row align-items-center">
                                         <div class="col-4">
-                                            <img src="{{ asset('/img/cbfs-logo.png') }}" class="img-fluid">
+                                            <img src="{{ asset('/img/cbfs-logo.png') }}"  width="70px"> 
                                         </div>
                                         <div class="col-8 text-center">
-                                            College of Business and Financial Sciences
+                                            College of Tourism and Hospitality Management
     
                                         </div>
                                     </div>
@@ -473,20 +473,22 @@
                         <div class="row py-10">
                             <div class="col">
                             </div>
+
                             <div class="col">
-                                <a type="button" class="btn btn-accent-1 rounded-3 shadow" href="#" target="_self">
+                                <a type="button" class="btn btn-accent-1 rounded-3 shadow btn-block" href="#" target="_self">
                                     <div class="row align-items-center">
                                         <div class="col-4">
-                                            <img src="{{ asset('/img/cbfs-logo.png') }}" class="img-fluid">
+                                            <img src="{{ asset('/img/cbfs-logo.png') }}"  width="70px"> 
                                         </div>
                                         <div class="col-8 text-center">
-                                            College of Business and Financial Sciences
+                                            School of Law
     
                                         </div>
                                     </div>
                                 </a>
 
                             </div>
+
                             <div class="col">
                             
                             </div>
