@@ -33,13 +33,14 @@
 
                 <!-- User Dropdown-->
                 <li class="nav-item dropdown no-caret dropdown-user me-3 me-lg-4">
-                    <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownUserImage" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="img-fluid" src="assets/img/illustrations/profiles/profile-1.png" /></a>
+                    <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownUserImage" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa-duotone fa-user" style="height: 25px; width: 25px;"></i></a>
                     <div class="dropdown-menu dropdown-menu-end border-0 shadow animated--fade-in-up" aria-labelledby="navbarDropdownUserImage">
                         <h6 class="dropdown-header d-flex align-items-center">
-                            <img class="dropdown-user-img" src="assets/img/illustrations/profiles/profile-1.png" />
+                            <i class="dropdown-user-img fa-solid fa-user"></i>
+                            {{-- <img class="dropdown-user-img" src="assets/img/illustrations/profiles/profile-1.png" /> --}}
                             <div class="dropdown-user-details">
-                                <div class="dropdown-user-details-name">Valerie Luna</div>
-                                <div class="dropdown-user-details-email"><a href="cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="681e041d060928090704460b0705">[email&#160;protected]</a></div>
+                                <div class="dropdown-user-details-name">{{ Session::get('userData.name') }}</div>
+                                <div class="dropdown-user-details-email"><a href="cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="681e041d060928090704460b0705">{{ Session::get('userData.email') }}</a></div>
                             </div>
                         </h6>
                         <div class="dropdown-divider"></div>
@@ -47,7 +48,7 @@
                             <div class="dropdown-item-icon"><i data-feather="settings"></i></div>
                             Account
                         </a> -->
-                        <a class="dropdown-item" href="/logout">
+                        <a class="dropdown-item" href="/login/signout">
                             <div class="dropdown-item-icon"><i data-feather="log-out"></i></div>
                             Logout
                         </a>

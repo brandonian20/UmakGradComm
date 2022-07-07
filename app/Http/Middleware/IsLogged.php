@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
-class Auth
+class IsLogged
 {
     /**
      * Handle an incoming request.
@@ -17,21 +17,6 @@ class Auth
      */
     public function handle(Request $request, Closure $next)
     {
-
-        $response = $next($request);
-        $response->headers->set('Cache-Control', 'nocache, no-store, max-age=0, must-revalidate');
-        $response->headers->set('Pragma', 'nocache');
-        $response->headers->set('Expires', 'Sat, 01 Jan 2000 00:00:00 GMT');
-
-        if (Session::get('userData') == null){
-            return redirect('/login');
-        }
-
-        return $response;
-    }
-
-    public function isLogged(Request $request, Closure $next){
-
         $response = $next($request);
         $response->headers->set('Cache-Control', 'nocache, no-store, max-age=0, must-revalidate');
         $response->headers->set('Pragma', 'nocache');
@@ -43,5 +28,4 @@ class Auth
 
         return $response;
     }
-
 }

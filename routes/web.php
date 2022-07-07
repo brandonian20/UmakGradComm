@@ -38,9 +38,9 @@ Route::get('/programflow', [VisitorPageController::class, 'programme']);
 ------------------- 
 */ 
 
-Route::get('/login', [LoginController::class, 'index']);
+Route::get('/login', [LoginController::class, 'index'])->middleware('islogged');
 Route::post('/login/signin', [LoginController::class, 'signin']);
-Route::post('/login/list', [LoginController::class, 'list']);
+Route::get('/login/signout', [LoginController::class, 'signout']);
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html class="no-js') }}" lang="en">
 
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+
 <head>
     <meta charset="utf-8">
     <title>Log In CMS | UMak</title>
@@ -10,15 +12,17 @@
     <meta name="author" content="Umak">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!-- Favicon-->
     <meta name="csrf-token" content="{{ csrf_token() }}" />
+
     <link rel="icon" type="image/png" href="{{ asset('/img/umak_logo.png') }}"><!-- Fonts-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap"><!-- Style-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap">
+    <!-- Style-->
     <!-- build:css -->
     <link rel="stylesheet" href="{{ asset('/vendors/css/magnific-popup.css') }}">
     <link rel="stylesheet" href="{{ asset('/vendors/css/swiper-bundle.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/login.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/Poppins.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/bootstrap.min.css') }}"><!-- endbuild -->
-    
+
     <!-- jQuery-->
     <script src="{{ asset('/vendors/js/jquery.min.js') }}"></script>
 
@@ -32,7 +36,7 @@
 
 <body class="">
 
-<div class="container-fluid px-0 vh-100">
+    <div class="container-fluid px-0 vh-100">
         <div class="background-img"></div>
 
         <div class="background-container">
@@ -48,7 +52,8 @@
                                 <td><span style="font-size: 35px;">University Of Makati</span></td>
                             </tr>
                             <tr>
-                                <td><small>A public, locally funded university of the local government of Makati.</small></td>
+                                <td><small>A public, locally funded university of the local government of
+                                        Makati.</small></td>
                             </tr>
                         </table>
                     </div>
@@ -61,7 +66,8 @@
                 <div class="row">
                     <!--LOGO-->
                     <div class="col-sm-12 text-center">
-                        <img src="{{ asset('/img/umak_logo.png') }}" height="230" class="img-responsive login-logo" />
+                        <img src="{{ asset('/img/umak_logo.png') }}" height="230"
+                            class="img-responsive login-logo" />
                     </div>
                     <div class="col-sm-12 text-center mb-4">
                         <div class="d-flex justify-content-center align-items-center">
@@ -77,11 +83,13 @@
                                     <div class="row">
                                         <form id="formSignIn">
                                             <div class="form-floating mb-3">
-                                                <input type="email" class="form-control" name="email" id="floatingEmail" value="timothywaltercuizon@gmail.com" required>
+                                                <input type="email" class="form-control" name="email"
+                                                    id="floatingEmail" value="timothywaltercuizon@gmail.com" required>
                                                 <label for="floatingEmail">Email address</label>
                                             </div>
                                             <div class="form-floating mb-3">
-                                                <input type="password" class="form-control" name="password" id="floatingPassword" value="tim123" required>
+                                                <input type="password" class="form-control" name="password"
+                                                    id="floatingPassword" value="tim123" required>
                                                 <label for="floatingPassword">Password</label>
                                             </div>
                                             <button type="submit" class="btn btn-primary btn-block">
@@ -97,7 +105,11 @@
                 </div>
                 <!--FOOTER-->
                 <div class="row login-footer pb-4 text-secondary mt-5">
-                    <p style="margin: 0">Copyright &copy;<script>document.write(new Date().getFullYear());</script></p>
+                    <p style="margin: 0">Copyright &copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script>
+                    </p>
                     <small>All rights reserved | University Of Makati</small>
                 </div>
             </div>
