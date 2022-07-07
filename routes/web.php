@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VisitorPageController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,5 +41,6 @@ Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login/signin', [LoginController::class, 'signin']);
 Route::post('/login/list', [LoginController::class, 'list']);
 
+Route::get('/dashboard', [DashboardController::class, 'index']);
 
 /* ## END CMS Module Region ## */
