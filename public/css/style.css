@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(fonts/Metropolis-Regular.ttf) format('ttf');
+  }
+
+html, body, h1, h2,h3, h4, h5, h6 {
+    font-family: 'Marcellus', serif !important;
+}
+
+body{
+    font-family: 'Marcellus', serif !important;
+}   
+
+p {
+    font-family: 'Metropolis', serif !important;
+}

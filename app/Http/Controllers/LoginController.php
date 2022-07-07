@@ -14,34 +14,6 @@ class LoginController extends Controller
         return view('cms/login');
     }
 
-    // //Signin func
-    // public function signin(){
-    //     return response()->json([
-    //         'name' => Crypt::encrypt('Brandon')
-    //     ]);
-    // }
-
-    // //func
-    // public function decrypt(Request $r){
-    //     return response()->json([
-    //         'name' => Crypt::decrypt($r->Name)
-    //     ]);
-    // }
-
-    // //func
-    // public function hash(Request $r){
-    //     return response()->json([
-    //         'hashed' => Hash::make($r->Name)
-    //     ]);
-    // }
-
-    // //func
-    // public function hashcheck(Request $r){
-    //     return response()->json([
-    //         'hashcheck' => Hash::check($r->plaintext, $r->hashed)
-    //     ]);
-    // }
-
     //func login
     public function list(){
         return response()->json([
