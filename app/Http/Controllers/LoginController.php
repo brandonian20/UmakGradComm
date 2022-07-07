@@ -21,6 +21,10 @@ class LoginController extends Controller
         ]);
     }
 
+    public function checkSession(Request $r){
+        return $r->session('userData');
+    }
+
     //func signin
     public function signin(Request $r){
 
@@ -28,11 +32,24 @@ class LoginController extends Controller
 
         $resp = ['success' => false, 'data' => 'Invalid Credentials'];
         
+        //Check if user exists && matches the password
         if ($user->count() > 0 && Hash::check($r->password, $user->get('password')[0]->password)){
+
+            session(['userData' => 'logged in']);
+
             $resp = ['success' => true, 'data' => '/dashboard'];
         }
 
         return response()->json($resp);
+
+    }
+
+    //func signout
+    public function signout(Request $r){
+
+       $r->session()->forget('userData');
+
+        return response()->json(['logout success']);
 
     }
 

@@ -16,6 +16,8 @@ class Auth
      */
     public function handle(Request $request, Closure $next)
     {
+
+        //return response(['Maintenance'], 401);
         return $next($request);
     }
 }
