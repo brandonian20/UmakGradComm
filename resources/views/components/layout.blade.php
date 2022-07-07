@@ -76,7 +76,7 @@
 
         {{-- MAIN CONTENT --}}
         <main>
-            {{$slot}}
+            @yield('content')
         </main>
 
         <footer class="bg-accent-2 text-dark py-50 footerNext">

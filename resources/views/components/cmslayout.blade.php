@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Dashboard - SB Admin Pro</title>
+        <title>{{$title}}</title>
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
         <link href="{{ asset('vendors/css/litepicker.css') }}" rel="stylesheet" />
@@ -47,7 +47,7 @@
                             <div class="dropdown-item-icon"><i data-feather="settings"></i></div>
                             Account
                         </a> -->
-                        <a class="dropdown-item" href="#!">
+                        <a class="dropdown-item" href="/logout">
                             <div class="dropdown-item-icon"><i data-feather="log-out"></i></div>
                             Logout
                         </a>
@@ -128,28 +128,7 @@
             </div>
             <div id="layoutSidenav_content">
                 <main>
-                    <header class="page-header page-header-dark bg-gradient-primary-to-secondary pb-10">
-                        <div class="container-xl px-4">
-                            <div class="page-header-content pt-4">
-                                <div class="row align-items-center justify-content-between">
-                                    <div class="col-auto mt-4">
-                                        <h1 class="page-header-title">Dashboard</h1>
-                                        {{-- <div class="page-header-subtitle">Example dashboard overview and content summary</div> --}}
-                                    </div>
-                                    {{-- <div class="col-12 col-xl-auto mt-4">
-                                        <div class="input-group input-group-joined border-0" style="width: 16.5rem">
-                                            <span class="input-group-text"><i class="text-primary" data-feather="calendar"></i></span>
-                                            <input class="form-control ps-0 pointer" id="litepickerRangePlugin" placeholder="Select date range..." />
-                                        </div>
-                                    </div> --}}
-                                </div>
-                            </div>
-                        </div>
-                    </header>
-                    <!-- Main page content-->
-                    <div class="container-xl px-4 mt-n10">
-                        
-                    </div>
+                    @yield('content')
                 </main>
                 <footer class="footer-admin mt-auto footer-light">
                     <div class="container-xl px-4">
