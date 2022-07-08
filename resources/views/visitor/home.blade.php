@@ -14,7 +14,7 @@
                     </div>
                     <div class="text-center">
                         <span class="bg-warning bg-opacity-75">
-                            <h3 class="mb-30 px-lg-30 text-white" data-show="startbox">Onwards to Gold:<br> Celebrating Our Past,<br> Igniting Our Future<br><div class="mb-0 mt-50 fw-medium fs-5 px-lg-70" data-show="startbox" data-show-delay="100">49th Commencement Exercises </div></h3>
+                            <h3 class="mb-30 px-lg-30 text-white" data-show="startbox"><br> Celebrating Our Past,<br> Igniting Our Future<br><div class="mb-0 mt-50 fw-medium fs-5 px-lg-70" data-show="startbox" data-show-delay="100">49th Commencement Exercises </div></h3>
                         </span>
                     </div>
                 </div>
