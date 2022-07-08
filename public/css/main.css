@@ -40530,6 +40530,15 @@ textarea.form-control-lg {
   background-color: #ffb21f;
 }
 
+.btn-accent-4 {
+  color: #fff;
+  background-color: #105389;
+}
+.btn-accent-4:hover, .btn-accent-1:focus, .btn-accent-4.focus, .btn-accent-4:not(:disabled):not(.disabled):active, .btn-accent-4:not(:disabled):not(.disabled).active {
+  color: #fff;
+  background-color: #082c64;
+}
+
 .btn-light {
   color: #17161A;
   background-color: rgba(177, 177, 180, 0.3);
