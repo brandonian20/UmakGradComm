@@ -11,7 +11,7 @@ class DashboardController extends Controller
 {
     //Index func
     public function index(){
-        return view('cms/dashboard', ['title' => 'Dashboard | UMak Commencement']);
+        return view('cms/dashboard', ['title' => 'Dashboard']);
     }
     
 }

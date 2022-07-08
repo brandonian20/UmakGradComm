@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VisitorPageController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AcademicYearController;
+use App\Http\Controllers\SemesterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,5 +45,7 @@ Route::post('/login/signin', [LoginController::class, 'signin']);
 Route::get('/login/signout', [LoginController::class, 'signout']);
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+
+Route::get('/academicYear', [AcademicYearController::class, 'index'])->middleware('auth');
 
 /* ## END CMS Module Region ## */
