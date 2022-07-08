@@ -11,9 +11,18 @@ class VisitorPageController extends Controller
         return view('visitor/home');
     }
 
-    //Home func
-    public function programme(){
-        return view('visitor/programme');
+    // //programme func
+    // public function programme(){
+    //     return view('visitor/programme');
+    // }
+
+    //gallery func
+    public function gallery(){
+        return view('visitor/gallery');
     }
 
+     //graduates func
+     public function graduates(){
+        return view('visitor/graduates');
+    }
 }
