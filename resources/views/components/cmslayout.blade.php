@@ -6,11 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>{{$title}}</title>
+        <title>{{$title}} | UMak Commencement CMS</title>
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
         <link href="{{ asset('vendors/css/litepicker.css') }}" rel="stylesheet" />
-        <link href="{{ asset('vendors/css/datatable-style.css')}}" rel="stylesheet" />
+        {{-- <link href="{{ asset('vendors/css/datatable-style.css')}}" rel="stylesheet" /> --}}
         <script src="{{ asset('vendors/js/fontawesome.min.js') }}" data-search-pseudo-elements="" defer="" crossorigin="anonymous"></script>
         <script src="{{ asset('vendors/js/feather.min.js') }}" crossorigin="anonymous"></script>
     </head>
@@ -33,7 +33,7 @@
 
                 <!-- User Dropdown-->
                 <li class="nav-item dropdown no-caret dropdown-user me-3 me-lg-4">
-                    <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownUserImage" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa-duotone fa-user" style="height: 25px; width: 25px;"></i></a>
+                    <a class="btn btn-icon border btn-transparent-dark dropdown-toggle" id="navbarDropdownUserImage" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-user" style="height: 25px; width: 25px;"></i></a>
                     <div class="dropdown-menu dropdown-menu-end border-0 shadow animated--fade-in-up" aria-labelledby="navbarDropdownUserImage">
                         <h6 class="dropdown-header d-flex align-items-center">
                             <i class="dropdown-user-img fa-solid fa-user"></i>
@@ -87,7 +87,7 @@
                             <!-- Sidenav Menu Heading (Core)-->
                             <div class="sidenav-menu-heading">Information</div>
                             <!-- Sidenav Accordion (Dashboard)-->
-                            <a class="nav-link" href="">
+                            <a class="nav-link" href="/academicYear">
                                 <div class="nav-link-icon"><i class="fa-solid fa-calendar"></i></div>
                                 Academic Year
                             </a>
@@ -152,7 +152,15 @@
         <script src="{{ asset('vendors/js/simple-datatables@latest.js') }}" crossorigin="anonymous"></script>
         <script src="{{ asset('vendors/js/litepicker.js') }}" crossorigin="anonymous"></script>
         <script src="{{ asset('vendors/js/sb-customizer.js') }}"></script>
+        <script src="{{ asset('vendors/js/jquery.min.js') }}"></script>
 
+        <script>
+            $(document).ready(function () {
+                var path = window.location.pathname;
+                var page = path.split("/").pop();
+                $(`a.nav-link[href='/${page}']`).addClass('active');
+            });
+        </script>
     </body>
 
 <!-- Mirrored from sb-admin-pro.startbootstrap.com/dashboard-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Jul 2022 06:10:53 GMT -->
