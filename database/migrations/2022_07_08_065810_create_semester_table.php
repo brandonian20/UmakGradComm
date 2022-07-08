@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCollegeTable extends Migration
+class CreateSemesterTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateCollegeTable extends Migration
      */
     public function up()
     {
-        Schema::create('college', function (Blueprint $table) {
-            $table->integer('collegeID')->primary();
-            $table->string('collegeName');
+        Schema::create('semester', function (Blueprint $table) {
+            $table->integer('semID', true);
+            $table->string('desc', 100);
         });
     }
 
@@ -26,6 +26,6 @@ class CreateCollegeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('college');
+        Schema::dropIfExists('semester');
     }
 }

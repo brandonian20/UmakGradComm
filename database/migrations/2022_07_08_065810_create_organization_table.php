@@ -14,7 +14,7 @@ class CreateOrganizationTable extends Migration
     public function up()
     {
         Schema::create('organization', function (Blueprint $table) {
-            $table->integer('orgID')->primary();
+            $table->integer('orgID', true);
             $table->string('desc', 100);
         });
     }

@@ -14,7 +14,7 @@ class CreateAcademicyearTable extends Migration
     public function up()
     {
         Schema::create('academicyear', function (Blueprint $table) {
-            $table->integer('acadYrID')->primary();
+            $table->integer('acadYrID', true);
             $table->date('year');
             $table->string('theme', 500);
             $table->string('youtubeLiveLink', 1000);

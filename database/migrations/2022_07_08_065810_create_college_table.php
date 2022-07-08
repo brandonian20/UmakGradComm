@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePositionTable extends Migration
+class CreateCollegeTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreatePositionTable extends Migration
      */
     public function up()
     {
-        Schema::create('position', function (Blueprint $table) {
-            $table->integer('positionID')->primary();
-            $table->string('desc', 100);
+        Schema::create('college', function (Blueprint $table) {
+            $table->integer('collegeID', true);
+            $table->string('collegeName');
         });
     }
 
@@ -26,6 +26,6 @@ class CreatePositionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('position');
+        Schema::dropIfExists('college');
     }
 }

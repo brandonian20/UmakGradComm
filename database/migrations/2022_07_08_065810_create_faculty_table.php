@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHonorTable extends Migration
+class CreateFacultyTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateHonorTable extends Migration
      */
     public function up()
     {
-        Schema::create('honor', function (Blueprint $table) {
-            $table->integer('honorID')->primary();
-            $table->string('honorName', 100);
+        Schema::create('faculty', function (Blueprint $table) {
+            $table->integer('facultyID', true);
+            $table->integer('collegeID')->index('FK_99');
+            $table->integer('positionID')->index('FK_115');
+            $table->integer('entID')->index('FK_102');
         });
     }
 
@@ -26,6 +28,6 @@ class CreateHonorTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('honor');
+        Schema::dropIfExists('faculty');
     }
 }

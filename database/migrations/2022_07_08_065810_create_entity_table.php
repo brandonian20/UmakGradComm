@@ -14,7 +14,7 @@ class CreateEntityTable extends Migration
     public function up()
     {
         Schema::create('entity', function (Blueprint $table) {
-            $table->integer('entID')->primary();
+            $table->integer('entID', true);
             $table->string('lastName', 100);
             $table->string('firstName', 100);
             $table->string('middleName', 100)->nullable();

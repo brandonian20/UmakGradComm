@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEntitytypeTable extends Migration
+class CreateHonorTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateEntitytypeTable extends Migration
      */
     public function up()
     {
-        Schema::create('entitytype', function (Blueprint $table) {
-            $table->integer('entTypeID')->primary();
-            $table->string('desc', 50);
+        Schema::create('honor', function (Blueprint $table) {
+            $table->integer('honorID', true);
+            $table->string('honorName', 100);
         });
     }
 
@@ -26,6 +26,6 @@ class CreateEntitytypeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('entitytype');
+        Schema::dropIfExists('honor');
     }
 }

@@ -26,8 +26,9 @@
                 <div class="input-group input-group-joined me-3 " data-bs-toggle="tooltip" title="Selected Academic Year">
                     <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></span>
                     <select name="currentacadyear" id="currentacadyear" class="form-control ps-0 pt-3">
-                        <option value="2021-2022" selected>2021 - 2022</option>
-                        <option value="2020-2021">2020 - 2021</option>
+                        <option value="2022" selected>2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
                     </select>
                 </div>
 
@@ -71,15 +72,15 @@
 
                             <div class="sidenav-menu-heading">Entity</div>
                             <!-- Sidenav Accordion (Dashboard)-->
-                            <a class="nav-link" href="">
+                            <a class="nav-link" href="/graduates">
                                 <div class="nav-link-icon"><i class="fa-solid fa-user-graduate"></i></div>
                                 Graduates
                             </a>
-                            <a class="nav-link" href="">
+                            <a class="nav-link" href="/faculty">
                                 <div class="nav-link-icon"><i class="fa-solid fa-user-tie"></i></div>
                                 Faculty
                             </a>
-                            <a class="nav-link" href="">
+                            <a class="nav-link" href="/guest">
                                 <div class="nav-link-icon"><i class="fa-solid fa-user"></i></div>
                                 Guest
                             </a>
@@ -91,27 +92,27 @@
                                 <div class="nav-link-icon"><i class="fa-solid fa-calendar"></i></div>
                                 Academic Year
                             </a>
-                            <a class="nav-link" href="">
+                            <a class="nav-link" href="/semester">
                                 <div class="nav-link-icon"><i data-feather="activity"></i></div>
                                 Semester
                             </a>
-                            <a class="nav-link" href="">
+                            <a class="nav-link" href="/college">
                                 <div class="nav-link-icon"><i class="fa-solid fa-building-columns"></i></div>
                                 College
                             </a>
-                            <a class="nav-link" href="">
+                            <a class="nav-link" href="/program">
                                 <div class="nav-link-icon"><i class="fa-solid fa-book"></i></div>
                                 Program
                             </a>
-                            <a class="nav-link" href="">
+                            <a class="nav-link" href="/organization">
                                 <div class="nav-link-icon"><i data-feather="activity"></i></div>
                                 Organization
                             </a>
-                            <a class="nav-link" href="">
+                            <a class="nav-link" href="/position">
                                 <div class="nav-link-icon"><i data-feather="activity"></i></div>
                                 Position
                             </a>
-                            <a class="nav-link" href="">
+                            <a class="nav-link" href="/honor">
                                 <div class="nav-link-icon"><i class="fa-solid fa-award"></i></div>
                                 Honor
                             </a>

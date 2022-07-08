@@ -14,7 +14,7 @@ class CreateFreedomwallTable extends Migration
     public function up()
     {
         Schema::create('freedomwall', function (Blueprint $table) {
-            $table->integer('freedomWallID')->primary();
+            $table->integer('freedomWallID', true);
             $table->string('content', 1000);
             $table->integer('acadYrID')->index('FK_129');
         });

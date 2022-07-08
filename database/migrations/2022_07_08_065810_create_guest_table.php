@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSemesterTable extends Migration
+class CreateGuestTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateSemesterTable extends Migration
      */
     public function up()
     {
-        Schema::create('semester', function (Blueprint $table) {
-            $table->integer('semID')->primary();
-            $table->string('desc', 100);
+        Schema::create('guest', function (Blueprint $table) {
+            $table->integer('guestID', true);
+            $table->integer('entID')->index('FK_92');
+            $table->integer('positionID')->index('FK_109');
         });
     }
 
@@ -26,6 +27,6 @@ class CreateSemesterTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('semester');
+        Schema::dropIfExists('guest');
     }
 }

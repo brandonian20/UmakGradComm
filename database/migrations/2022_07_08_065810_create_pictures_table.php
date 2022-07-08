@@ -14,7 +14,7 @@ class CreatePicturesTable extends Migration
     public function up()
     {
         Schema::create('pictures', function (Blueprint $table) {
-            $table->integer('pictureID')->primary();
+            $table->integer('pictureID', true);
             $table->binary('pictureFile');
             $table->integer('picTypeID')->index('FK_85');
             $table->integer('entID')->nullable()->index('FK_78');

@@ -14,7 +14,7 @@ class CreateGraduatesTable extends Migration
     public function up()
     {
         Schema::create('graduates', function (Blueprint $table) {
-            $table->integer('studentID')->primary();
+            $table->integer('studentID', true);
             $table->integer('entID')->index('FK_42');
             $table->integer('semID')->index('FK_70');
             $table->integer('honorID')->index('FK_63');
