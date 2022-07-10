@@ -38,7 +38,9 @@ use App\Http\Controllers\HonorController;
 */ 
 
 Route::get('/', [VisitorPageController::class, 'home']);
-Route::get('/programflow', [VisitorPageController::class, 'programme']);
+// Route::get('/programflow', [VisitorPageController::class, 'programme']);
+Route::get('/gallery', [VisitorPageController::class, 'gallery']);
+Route::get('/graduates', [VisitorPageController::class, 'graduates']);
 
 /* ## END Visitor Module Region ## */
 
