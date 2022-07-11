@@ -66,6 +66,9 @@ Route::get('/faculty', [FacultyController::class, 'index'])->middleware('auth');
 Route::get('/guest', [GuestController::class, 'index'])->middleware('auth');
 
 Route::get('/academicYear', [AcademicYearController::class, 'index'])->middleware('auth');
+Route::get('/academicYear/datatable', [AcademicYearController::class, 'datatable'])->middleware('auth');
+Route::get('/academicYear/add', [AcademicYearController::class, 'add'])->middleware('auth');
+Route::get('/academicYear/edit', [AcademicYearController::class, 'edit'])->middleware('auth');
 
 Route::get('/semester', [SemesterController::class, 'index'])->middleware('auth');
 
