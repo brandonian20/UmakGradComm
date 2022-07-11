@@ -26,3 +26,19 @@ p {
     font-family: 'Metropolis', serif !important;
 }
 
+.gallery-bg {
+  background-image: url('img/BG1-Black.png') !important;
+  background-repeat: repeat-y !important;
+  height: 100vh !important;
+}
+
+.button-color{
+  background-color: black !important;
+  color: #948601 !important;
+}
+
+.button-color:hover{
+  background-color: #948601 !important;
+  color: black !important;
+}
+
