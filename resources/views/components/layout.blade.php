@@ -14,6 +14,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+        <script src="{{ asset('vendors/js/fontawesome.min.js') }}" data-search-pseudo-elements="" defer="" crossorigin="anonymous"></script> <!-- Font Awesome-->
         <!-- build:css -->
         <link rel="stylesheet" href="{{ asset('/vendors/css/magnific-popup.css') }}">
         <link rel="stylesheet" href="{{ asset('/vendors/css/swiper-bundle.css') }}">
