@@ -278,40 +278,52 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="">
+
+                {{-- Button --}}
+                <div class="" style="">
                     <!-- First Row -->
                     <div class="row py-10">
-                      <div class="col d-grid gap-2">
+                        <div class="col-lg d-grid gap-2">
 
-                        <a type="button" class="btn btn-accent-4 rounded-3 shadow" href="#" target="_self">
-                            <div class="row align-items-center">
-                                <div class="col-4">
-                                    <img src="{{ asset('/img/coahs-logo.png') }}"  width="70px"> 
-                                </div>
-                                <div class="col-8 text-center fs-3">
-                                    COAHS
-
-                                </div>
+                            <div class="btn-group">
+                                <a type="button" class="btn btn-accent-4 rounded-start shadow" href="#" target="_self">
+                                    <div class="row align-items-center">
+                                        <div class="col-4">
+                                            <img src="{{ asset('/img/coahs-logo.png') }}"  width="70px"> 
+                                        </div>
+                                        <div class="col-8 text-center fs-3">
+                                            COAHS
+                                        </div>
+                                    </div>
+                                </a>
+                                <button type="button" class="btn btn-accent-4 rounded-end shadow dropdown-toggle dropdown-toggle-split px-0" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
                             </div>
-                        </a>
 
-                      </div>
-                      <div class="col d-grid gap-2">
+                        </div>
+
+                        <div class="col-lg d-grid gap-2">
                         
-                        <a type="button" class="btn btn-accent-4 rounded-3 shadow" href="#" target="_self">
-                            <div class="row align-items-center">
-                                <div class="col-4">
-                                    <img src="{{ asset('/img/cal-logo-w.png') }}"  width="70px"> 
-                                </div>
-                                <div class="col-8 text-center fs-3">
-                                    CAL
+                            <a type="button" class="btn btn-accent-4 rounded-3 shadow" href="#" target="_self">
+                                <div class="row align-items-center">
+                                    <div class="col-4">
+                                        <img src="{{ asset('/img/cal-logo-w.png') }}"  width="70px"> 
+                                    </div>
+                                    <div class="col-8 text-center fs-3">
+                                        CAL
 
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
 
-                      </div>
-                      <div class="col d-grid gap-2">
+                        </div>
+                      <div class="col-lg d-grid gap-2">
                         
                         <a type="button" class="btn btn-accent-4 rounded-3 shadow" href="#" target="_self">
                             <div class="row align-items-center">
