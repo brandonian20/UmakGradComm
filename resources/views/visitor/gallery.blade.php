@@ -2,8 +2,12 @@
 
 @section('content')
      <!-- Programme Content -->
-     <section id="programme">
-        <div class="pt-120 pb-130 alert-warning shape-parent text-center">
+     <section id="gallery">
+        <div class="pt-120 pb-130 text-center bg-image"   style="
+        background-image: url({{ asset('/img/BG1-Black.png') }});
+        background-repeat: repeat-y;
+        background-size: auto 100%;;
+    ">
             <!-- Shape-->
             {{-- <div class="shape justify-content-end"><img loading="lazy" src="{{ asset('img/root/404-shape-326x321.png') }}"
                     alt="" width="542" height="382"></div><!-- Shape--> --}}
@@ -13,7 +17,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 offset-lg-3" style="margin-bottom: 2rem">
-                        <h2 class="m-0" data-show="startbox">Assembly and Procession Gallery</h2>
+                        <h2 class="m-0 text-white" data-show="startbox">Assembly and Procession Gallery</h2>
                     </div>
                 </div>
                 <div class="isotope shape-parent mt-100" data-show="startbox">
@@ -38,7 +42,7 @@
                         </div>
                     </div>
                 </div>
-                <a class="btn btn-accent-1 mt-50" href="services-01.html" target="_self">Show more...</a>   
+                <a class="btn btn-accent-1 mt-50 button-color" href="services-01.html" target="_self">Load more...</a>   
             </div>
         </div>
     </section>
