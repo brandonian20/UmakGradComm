@@ -21057,3 +21057,8 @@ pre[class*=language-] {
 #datatable thead tr{
   border-bottom: 2px solid black;
 }
+
+#datatable .dataTables-filter{
+  display: flex;
+  justify-content: end;
+}

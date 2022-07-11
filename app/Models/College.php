@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Semester extends Model
+class College extends Model
 {
     use HasFactory;
 
@@ -13,6 +13,6 @@ class Semester extends Model
 
     protected $table = "college";
     protected $primaryKey = "collegeID";
-    protected $fillable = ["collegeName", "image", "updatedBy", "updatedAt"];
+    protected $fillable = ["collegeName", "shortname", "image", "updatedBy", "updatedAt"];
 
 }

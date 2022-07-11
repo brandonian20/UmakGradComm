@@ -45,7 +45,7 @@
                     <div class="modal-body">
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control"
-                                id="desc" name="desc" placeholder="Desc">
+                                id="desc" name="desc" placeholder="Desc" required>
                             <label for="desc">Description</label>
                         </div>
                     </div>
@@ -70,7 +70,7 @@
                     <div class="modal-body">
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control"
-                                id="e-desc" name="e-desc" placeholder="Desc">
+                                id="e-desc" name="e-desc" placeholder="Desc" required>
                             <label for="e-desc">Description</label>
                         </div>
                     </div>

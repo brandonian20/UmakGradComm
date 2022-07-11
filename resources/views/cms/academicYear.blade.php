@@ -45,7 +45,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-floating mb-3">
-                        <input type="number" step="1" min="1900" max="2100" class="form-control" id="year" name="year" placeholder="Year">
+                        <input type="number" step="1" min="1900" max="2100" class="form-control" id="year" name="year" placeholder="Year" required>
                         <label for="year">Year</label>
                       </div>
                       <div class="form-floating">
@@ -73,7 +73,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-floating mb-3">
-                        <input type="number" step="1" min="1900" max="2100" class="form-control" id="e-year" name="e-year" placeholder="Year">
+                        <input type="number" step="1" min="1900" max="2100" class="form-control" id="e-year" name="e-year" placeholder="Year" required>
                         <label for="e-year">Year</label>
                       </div>
                       <div class="form-floating">

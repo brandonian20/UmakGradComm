@@ -175,8 +175,6 @@ function PopulateSelect(name, url, placeholder, value, search, dataIN, prepend, 
 
     let promise = undefined;
 
-    let employeeImg = (params == "Employee" || params == "ITStaff" ? `<span class="position-relative me-2"><img class="rounded-circle d-inline me-2" height="20" width="20" loading="lazy" src="img/login-image.jpg"/> <span class="position-absolute top-100 start-100 translate-middle p-2 bg-danger border border-2 border-light rounded-circle"><span class="visually-hidden">New alerts</span></span></span>` : ``);
-
     try {
         if (resetData && $(`[name=${name}]`).hasClass("select2-hidden-accessible")) {
             $(`#${name}-spinner`).css("display", "block");
