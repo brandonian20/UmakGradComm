@@ -279,92 +279,37 @@
             </div>
             <div class="modal-body">
 
-                {{-- Accordion --}}
-                <div class="" style="">
-                    <div class="accordion" id="accordionExample">
-
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingOne">
-                            
-                            <div class="input-group">
-                                <button type="button" class="btn btn-accent-4 text-light">
-                                    College of Allied Health and Studies
-                                </button>
-                                <button class="btn btn-accent-4 accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    <i class="fa-solid fa-chevron-down"></i>
-                                </button>
-                            </div>
-                           
-                          </h2>
-                          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                              <button class="btn btn-accent-4 accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseOne">
-                                College of Alli
-                              </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                              <div class="accordion-body">
-                                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                              </div>
-                            </div>
-                          </div>
-
-
-                          {{-- <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                              <button class="btn btn-accent-4 accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                College of Alli
-                              </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                              <div class="accordion-body">
-                                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                              <button class="btn btn-accent-4 accordion-button collapsed text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                College of Alli
-                              </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                              <div class="accordion-body">
-                                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                              </div>
-                            </div>
-                          </div> --}}
-                        
-                      </div>
-                </div>
-
                 {{-- Button --}}
-                <div class="" style="display: none">
+                <div class="" style="">
                     <!-- First Row -->
                     <div class="row py-10">
-                      <div class="col d-grid gap-2">
+                        <div class="col d-grid gap-2">
 
-                        <a type="button" class="btn btn-accent-4 rounded-3 shadow" href="#" target="_self">
-                            <div class="row align-items-center">
-                                <div class="col-4">
-                                    <img src="{{ asset('/img/coahs-logo.png') }}"  width="70px"> 
-                                </div>
-                                <div class="col-8 text-center fs-3">
-                                    COAHS
-
-                                </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-accent-4 rounded-start shadow" href="#" target="_self">
+                                    <div class="row align-items-center">
+                                        <div class="col-4">
+                                            <img src="{{ asset('/img/coahs-logo.png') }}"  width="70px"> 
+                                        </div>
+                                        <div class="col-8 text-center fs-3">
+                                            COAHS
+        
+                                        </div>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btn-accent-4 rounded-end shadow dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>
+                                    <i class="fa fa-solid fa-chevron-down"></i>
+                                </span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
                             </div>
-                        </a>
 
-                      </div>
+                        </div>
                       <div class="col d-grid gap-2">
                         
                         <a type="button" class="btn btn-accent-4 rounded-3 shadow" href="#" target="_self">
