@@ -268,6 +268,7 @@
     </div>
     
 </div>
+<<<<<<< HEAD
 
 <!-- College List Modal -->
 <div class="modal fade" id="viewCollege" tabindex="-1" aria-labelledby="viewCollegeLabel" aria-hidden="true">
@@ -513,4 +514,6 @@
         </div>
     </div>
 </div>
+=======
+>>>>>>> 3cf7070b9c448b88781c4d0c774fb557f4e89d97
 @endsection
