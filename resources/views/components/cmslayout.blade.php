@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
+
         <title>{{$title}} | UMak Commencement CMS</title>
         <link rel="icon" type="image/png" href="{{ asset('/img/umak_logo.png') }}" />
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
@@ -14,7 +16,7 @@
         <script src="{{ asset('vendors/js/fontawesome.min.js') }}" data-search-pseudo-elements="" defer="" crossorigin="anonymous"></script>
         <script src="{{ asset('vendors/js/feather.min.js') }}" crossorigin="anonymous"></script>
 
-        <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+        {{-- <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> --}}
         <script src="{{ asset('vendors/js/jquery.min.js') }}"></script>
         <script src="{{ asset('js/scripts.js') }}"></script>
         <script src="{{ asset('vendors/js/bootstrap.bundle.min.js') }}" crossorigin="anonymous"></script>
@@ -23,10 +25,16 @@
         <script src="{{ asset('vendors/js/litepicker.js') }}" crossorigin="anonymous"></script>
         <script src="{{ asset('vendors/js/sb-customizer.js') }}"></script>
 
-        <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
-        <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-        <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+        <script src="{{ asset('js/global.js') }}"></script>
+
+        {{-- Datatable --}}
+        <link href="{{ asset('vendors/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet" />
+        <script src="{{ asset('vendors/js/jquery.dataTables.min.js') }}"></script>
+        <script src="{{ asset('vendors/js/dataTables.bootstrap5.min.js') }}"></script>
         
+        {{-- Sweet Alert --}}
+        <script src="{{ asset('vendors/js/sweetalert2.all.min.js') }}"></script>
+        <link rel="stylesheet" href="{{ asset('vendors/css/sweetalert2.css') }}">
 
     </head>
     <body class="nav-fixed">
