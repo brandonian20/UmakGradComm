@@ -23,6 +23,6 @@ class VisitorPageController extends Controller
 
      //graduates func
      public function graduates_gallery(){
-        return view('visitor/graduates');
+        return view('visitor/graduates-gallery');
     }
 }
