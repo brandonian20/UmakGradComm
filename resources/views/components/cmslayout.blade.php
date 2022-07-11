@@ -7,12 +7,27 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>{{$title}} | UMak Commencement CMS</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+        <link rel="icon" type="image/png" href="{{ asset('/img/umak_logo.png') }}" />
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
         <link href="{{ asset('vendors/css/litepicker.css') }}" rel="stylesheet" />
-        {{-- <link href="{{ asset('vendors/css/datatable-style.css')}}" rel="stylesheet" /> --}}
+        <link href="{{ asset('vendors/css/datatable-style.css')}}" rel="stylesheet" />
         <script src="{{ asset('vendors/js/fontawesome.min.js') }}" data-search-pseudo-elements="" defer="" crossorigin="anonymous"></script>
         <script src="{{ asset('vendors/js/feather.min.js') }}" crossorigin="anonymous"></script>
+
+        <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+        <script src="{{ asset('vendors/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('js/scripts.js') }}"></script>
+        <script src="{{ asset('vendors/js/bootstrap.bundle.min.js') }}" crossorigin="anonymous"></script>
+        <script src="{{ asset('vendors/js/Chart.min.js') }}" crossorigin="anonymous"></script>
+        {{-- <script src="{{ asset('vendors/js/simple-datatables@latest.js') }}" crossorigin="anonymous"></script> --}}
+        <script src="{{ asset('vendors/js/litepicker.js') }}" crossorigin="anonymous"></script>
+        <script src="{{ asset('vendors/js/sb-customizer.js') }}"></script>
+
+        <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+        <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+        
+
     </head>
     <body class="nav-fixed">
         <nav class="topnav navbar navbar-expand shadow justify-content-between justify-content-sm-start navbar-light bg-white" id="sidenavAccordion">
@@ -146,14 +161,7 @@
                 </footer>
             </div>
         </div>
-        <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-        <script src="{{ asset('js/scripts.js') }}"></script>
-        <script src="{{ asset('vendors/js/bootstrap.bundle.min.js') }}" crossorigin="anonymous"></script>
-        <script src="{{ asset('vendors/js/Chart.min.js') }}" crossorigin="anonymous"></script>
-        <script src="{{ asset('vendors/js/simple-datatables@latest.js') }}" crossorigin="anonymous"></script>
-        <script src="{{ asset('vendors/js/litepicker.js') }}" crossorigin="anonymous"></script>
-        <script src="{{ asset('vendors/js/sb-customizer.js') }}"></script>
-        <script src="{{ asset('vendors/js/jquery.min.js') }}"></script>
+        
 
         <script>
             $(document).ready(function () {

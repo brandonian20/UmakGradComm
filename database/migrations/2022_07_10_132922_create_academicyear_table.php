@@ -15,10 +15,10 @@ class CreateAcademicyearTable extends Migration
     {
         Schema::create('academicyear', function (Blueprint $table) {
             $table->integer('acadYrID', true);
-            $table->date('year');
-            $table->string('theme', 500);
-            $table->string('youtubeLiveLink', 1000);
-            $table->integer('batchNum');
+            $table->year('year');
+            $table->string('theme', 500)->nullable();
+            $table->string('youtubeLiveLink', 1000)->nullable();
+            $table->integer('batchNum')->nullable();
         });
     }
 

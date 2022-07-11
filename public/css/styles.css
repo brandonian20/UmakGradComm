@@ -21049,3 +21049,11 @@ pre[class*=language-] {
   height: 16px;
   width: 16px;
 }
+
+#datatable tbody tr td{
+  vertical-align: middle;
+}
+
+#datatable thead tr{
+  border-bottom: 2px solid black;
+}
