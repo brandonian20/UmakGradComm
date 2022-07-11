@@ -29,13 +29,15 @@
         <nav class="navbar navbar-expand-lg navbar-top navbar-fixed navbar-dark navbar-opaque navbar-border-bottom text-white">
             <div class="container">
                 <a class="navbar-brand position-fixed" href="/">
-                    <img src="{{ asset('/img/umak_logo1.png') }}" class="img pt-25"/> <span class="ps-10 h6 d-none d-lg-inline-block text-white">UMak Commencement</span>
+                    <img src="{{ asset('/img/umak_logo.png') }}" class="img pt-5" style="width: 60px;"/> 
+                        {{-- <span class="ps-10 h6 d-none d-lg-inline-block text-white" style="font-family: Helvetica;">UMak Commencement</span> --}}
+                    <img src="{{ asset('/img/49th-Commencement-text.png') }}" class="img ms-10" style="height: 60px;"/>
                 </a>
                 <a class="navbar-toggle order-4 ms-auto pe-10 popup-inline" href="#navbar-mobile-style-1"><span></span><span></span><span></span></a>
-                <ul class="nav navbar-nav order-2 ms-auto nav-no-opacity">
+                <ul class="nav navbar-nav order-2 ms-auto nav-no-opacity"  style="font-family: Helvetica;">
                     <li class="nav-item {{ (request()->is('/*')) ? 'active' : '' }}"><a class="nav-link" href="/"><span>Home</span></a></li>
                     <li class="nav-item {{ (request()->is('gallery')) ? 'active' : '' }}"><a class="nav-link" href="{{url('/gallery')}}"><span>Gallery</span></a></li>
-                    <li class="nav-item {{ (request()->is('graduates')) ? 'active' : '' }}"><a class="nav-link" href="{{url('/graduates')}}"><span>Graduates</span></a></li>
+                    <li class="nav-item {{ (request()->is('graduates')) ? 'active' : '' }}"><a class="nav-link" href="{{url('/graduates-gallery')}}"><span>Graduates</span></a></li>
                     {{-- <li class="nav-item navbar-dropdown {{ (request()->is('programflow*')) ? 'active' : '' }}"><a class="nav-link" href="{{ url('/programflow') }}"><span>Programme</span></a>
                         <div class="dropdown-menu rounded-2 shadow">
                             <ul class="nav navbar-nav">
@@ -53,24 +55,16 @@
             <div class="navbar-wrapper">
                 <div class="navbar-head">
                     <a class="navbar-brand d-block d-md-none mt-20" href="/">
-                        <img src="{{ asset('/img/umak_logo.png') }}" width="75px" class="float-start me-15">
-                        <div class="ps-10 h6 mt-20 ms-15">UMak Commencement</div>
+                        <img src="{{ asset('/img/umak_logo.png') }}" width="60px" class="float-start me-15">
+                        <div class="ps-10 h6 mt-20 ms-15"  style="font-family: Helvetica !important;">UMak Commencement</div>
                         <a class="navbar-toggle popup-modal-dismiss" href="#"><span></span><span></span><span></span>
                     </a>
                 </div>
                 <div class="navbar-body">
                     <ul class="nav navbar-nav navbar-nav-collapse">
-                        <li class="nav-item active"><a class="nav-link" href="/"><span>Home</span></a></li>
-                        <li class="nav-item navbar-collapse"><a class="nav-link" href="#navbarCollapseHome" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbarCollapseHome"><span>Programme</span></a>
-                            <div class="navbar-collapse-menu collapse" id="navbarCollapseHome">
-                                <ul class="nav navbar-nav">
-                                    <li class="nav-item"><a class="nav-link" href="{{ url('/programflow') }}"><span>Program Flow</span></a></li>
-                                <li class="nav-item"><a class="nav-link" href="home-02.html"><span>Regalia</span></a></li>
-                                <li class="nav-item"><a class="nav-link" href="home-03.html"><span>Venue</span></a></li>
-                                <li class="nav-item"><a class="nav-link" href="home-04.html"><span>Policies</span></a></li>
-                                </ul>
-                            </div>
-                        </li>
+                        <li class="nav-item {{ (request()->is('/*')) ? 'active' : '' }}"><a class="nav-link" href="/"><span>Home</span></a></li>
+                        <li class="nav-item {{ (request()->is('gallery')) ? 'active' : '' }}"><a class="nav-link" href="{{url('/gallery')}}"><span>Gallery</span></a></li>
+                        <li class="nav-item {{ (request()->is('graduates')) ? 'active' : '' }}"><a class="nav-link" href="{{url('/graduates-gallery')}}"><span>Graduates</span></a></li>
                     </ul>
                 </div>
             </div>
