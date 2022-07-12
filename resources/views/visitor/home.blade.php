@@ -283,13 +283,13 @@
                 <div class="" style="">
                     <!-- First Row -->
                     <div class="row py-10">
-                        <div class="col-lg d-grid gap-2">
+                        <div class="col-lg d-grid gap-2 my-10 mb-sm-10">
 
                             <div class="btn-group">
                                 <a type="button" class="btn btn-accent-4 rounded-start shadow" href="#" target="_self">
-                                    <div class="row align-items-center">
+                                    <div class="row row-cols-1 row-cols-md-2 align-items-center">
                                         <div class="col-4">
-                                            <img src="{{ asset('/img/coahs-logo.png') }}"  width="70px"> 
+                                            <img src="{{ asset('/img/coahs-logo.png') }}"  class="img-fluid"> 
                                         </div>
                                         <div class="col-8 text-center fs-3">
                                             COAHS
@@ -297,45 +297,63 @@
                                     </div>
                                 </a>
                                 <button type="button" class="btn btn-accent-4 rounded-end shadow dropdown-toggle dropdown-toggle-split px-0" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fa-solid fa-chevron-down"></i>
+                                    <i class="fa-solid fa-chevron-down mx-10"></i>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a class="dropdown-item" href="#">Program 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Program 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Program 3</a></li>
                                 </ul>
                             </div>
 
                         </div>
 
-                        <div class="col-lg d-grid gap-2">
-                        
-                            <a type="button" class="btn btn-accent-4 rounded-3 shadow" href="#" target="_self">
+                        <div class="col-lg d-grid gap-2 my-10 mb-sm-10">
+
+                            <div class="btn-group">
+                                <a type="button" class="btn btn-accent-4 rounded-start shadow" href="#" target="_self">
+                                    <div class="row align-items-center">
+                                        <div class="col-4">
+                                            <img src="{{ asset('/img/cal-logo-w.png') }}"  class="img-fluid">
+                                        </div>
+                                        <div class="col-8 text-center fs-3">
+                                            CAL
+                                        </div>
+                                    </div>
+                                </a>
+                                <button type="button" class="btn btn-accent-4 rounded-end shadow dropdown-toggle dropdown-toggle-split px-0" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-chevron-down mx-10"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Program 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Program 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Program 3</a></li>
+                                </ul>
+                            </div>            
+
+                        </div>
+                      <div class="col-lg d-grid gap-2 my-10 mb-sm-10">
+
+                        <div class="btn-group">
+                            <a type="button" class="btn btn-accent-4 rounded-start shadow" href="#" target="_self">
                                 <div class="row align-items-center">
                                     <div class="col-4">
-                                        <img src="{{ asset('/img/cal-logo-w.png') }}"  width="70px"> 
+                                        <img src="{{ asset('/img/cbfs-logo.png') }}"  class="img-fluid"> 
                                     </div>
                                     <div class="col-8 text-center fs-3">
-                                        CAL
-
+                                        CBFS
                                     </div>
                                 </div>
                             </a>
-
-                        </div>
-                      <div class="col-lg d-grid gap-2">
-                        
-                        <a type="button" class="btn btn-accent-4 rounded-3 shadow" href="#" target="_self">
-                            <div class="row align-items-center">
-                                <div class="col-4">
-                                    <img src="{{ asset('/img/cbfs-logo.png') }}"  width="70px"> 
-                                </div>
-                                <div class="col-8 text-center fs-3">
-                                    CBFS
-
-                                </div>
-                            </div>
-                        </a>
+                            <button type="button" class="btn btn-accent-4 rounded-end shadow dropdown-toggle dropdown-toggle-split px-0" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-chevron-down mx-10"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Program 1</a></li>
+                                <li><a class="dropdown-item" href="#">Program 2</a></li>
+                                <li><a class="dropdown-item" href="#">Program 3</a></li>
+                            </ul>
+                        </div> 
 
                       </div>
                     </div>
@@ -345,7 +363,7 @@
                           <a type="button" class="btn btn-accent-4 rounded-3 shadow" href="#" target="_self">
                             <div class="row align-items-center">
                                 <div class="col-4">
-                                    <img src="{{ asset('/img/ccis-logo.png') }}"  width="70px"> 
+                                    <img src="{{ asset('/img/ccis-logo.png') }}"  class="img-fluid"> 
                                 </div>
                                 <div class="col-8 text-center fs-3">
                                     CCIS
@@ -359,7 +377,7 @@
                             <a type="button" class="btn btn-accent-4 rounded-3 shadow" href="#" target="_self">
                                 <div class="row align-items-center">
                                     <div class="col-4">
-                                        <img src="{{ asset('/img/ccse updated.png') }}"  width="70px"> 
+                                        <img src="{{ asset('/img/ccse updated.png') }}"  class="img-fluid"> 
                                     </div>
                                     <div class="col-8 text-center fs-3">
                                         CCSE
@@ -374,7 +392,7 @@
                             <a type="button" class="btn btn-accent-4 rounded-3 shadow" href="#" target="_self">
                                 <div class="row align-items-center">
                                     <div class="col-4">
-                                        <img src="{{ asset('/img/ccaps-logo-w.png') }}"  width="70px"> 
+                                        <img src="{{ asset('/img/ccaps-logo-w.png') }}"  class="img-fluid"> 
                                     </div>
                                     <div class="col-8 text-center fs-3">
                                         CCAPS
@@ -392,7 +410,7 @@
                                 <a type="button" class="btn btn-accent-4 rounded-3 shadow" href="#" target="_self">
                                     <div class="row align-items-center">
                                         <div class="col-4">
-                                            <img src="{{ asset('/img/coe-logo.png') }}"  width="70px"> 
+                                            <img src="{{ asset('/img/coe-logo.png') }}"  class="img-fluid"> 
                                         </div>
                                         <div class="col-8 text-center fs-3">
                                             COE
@@ -407,7 +425,7 @@
                                 <a type="button" class="btn btn-accent-4 rounded-3 shadow" href="#" target="_self">
                                     <div class="row align-items-center">
                                         <div class="col-4">
-                                            <img src="{{ asset('/img/cgpp-logo.png') }}"  width="70px"> 
+                                            <img src="{{ asset('/img/cgpp-logo.png') }}"  class="img-fluid"> 
                                         </div>
                                         <div class="col-8 text-center fs-3">
                                             CGPP
@@ -422,7 +440,7 @@
                                 <a type="button" class="btn btn-accent-4 rounded-3 shadow" href="#" target="_self">
                                     <div class="row align-items-center">
                                         <div class="col-4">
-                                            <img src="{{ asset('/img/chk-logo.png') }}"  width="70px"> 
+                                            <img src="{{ asset('/img/chk-logo.png') }}"  class="img-fluid"> 
                                         </div>
                                         <div class="col-8 text-center fs-3">
                                             CHK
@@ -440,7 +458,7 @@
                                 <a type="button" class="btn btn-accent-4 rounded-3 shadow" href="#" target="_self">
                                     <div class="row align-items-center">
                                         <div class="col-4">
-                                            <img src="{{ asset('/img/cos-logo.png') }}"  width="70px"> 
+                                            <img src="{{ asset('/img/cos-logo.png') }}"  class="img-fluid"> 
                                         </div>
                                         <div class="col-8 text-center fs-3">
                                             COS
@@ -455,7 +473,7 @@
                                 <a type="button" class="btn btn-accent-4 rounded-3 shadow" href="#" target="_self">
                                     <div class="row align-items-center">
                                         <div class="col-4">
-                                            <img src="{{ asset('/img/ctm-logo.png') }}"  width="70px"> 
+                                            <img src="{{ asset('/img/ctm-logo.png') }}"  class="img-fluid"> 
                                         </div>
                                         <div class="col-8 text-center fs-3">
                                             CTM
@@ -470,7 +488,7 @@
                                 <a type="button" class="btn btn-accent-4 rounded-3 shadow" href="#" target="_self">
                                     <div class="row align-items-center">
                                         <div class="col-4">
-                                            <img src="{{ asset('/img/cthm-logo.png') }}"  width="70px"> 
+                                            <img src="{{ asset('/img/cthm-logo.png') }}"  class="img-fluid"> 
                                         </div>
                                         <div class="col-8 text-center fs-3">
                                             CTHM
@@ -490,7 +508,7 @@
                                 <a type="button" class="btn btn-accent-4 rounded-3 shadow" href="#" target="_self">
                                     <div class="row align-items-center">
                                         <div class="col-4">
-                                            <img src="{{ asset('/img/sol-logo.png') }}"  width="70px"> 
+                                            <img src="{{ asset('/img/sol-logo.png') }}"  class="img-fluid"> 
                                         </div>
                                         <div class="col-8 text-center fs-3">
                                             SOL
