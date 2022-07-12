@@ -26,8 +26,8 @@
     <!-- jQuery-->
     <script src="{{ asset('/vendors/js/jquery.min.js') }}"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.20/dist/sweetalert2.all.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.20/dist/sweetalert2.css">
+    <script src="{{ asset('vendors/js/sweetalert2.all.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('vendors/css/sweetalert2.css') }}">
 
     {{-- Page JQuery --}}
     <script src="{{ asset('/js/pages/login.js') }}"></script>

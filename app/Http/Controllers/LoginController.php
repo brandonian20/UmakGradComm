@@ -32,7 +32,8 @@ class LoginController extends Controller
 
             Session::put('userData', 
                 ['email' => $user->get('email')[0]->email,
-                'name' => $user->get('name')[0]->name]
+                'name' => $user->get('name')[0]->name,
+                'id' => $user->get('userID')[0]->userID]
             );
 
             $resp = ['success' => true, 'data' => '/dashboard'];

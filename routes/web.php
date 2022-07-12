@@ -67,12 +67,18 @@ Route::get('/guest', [GuestController::class, 'index'])->middleware('auth');
 
 Route::get('/academicYear', [AcademicYearController::class, 'index'])->middleware('auth');
 Route::get('/academicYear/datatable', [AcademicYearController::class, 'datatable'])->middleware('auth');
-Route::get('/academicYear/add', [AcademicYearController::class, 'add'])->middleware('auth');
-Route::get('/academicYear/edit', [AcademicYearController::class, 'edit'])->middleware('auth');
+Route::post('/academicYear/add', [AcademicYearController::class, 'add'])->middleware('auth');
+Route::any('/academicYear/edit', [AcademicYearController::class, 'edit'])->middleware('auth');
 
 Route::get('/semester', [SemesterController::class, 'index'])->middleware('auth');
+Route::get('/semester/datatable', [SemesterController::class, 'datatable'])->middleware('auth');
+Route::post('/semester/add', [SemesterController::class, 'add'])->middleware('auth');
+Route::any('/semester/edit', [SemesterController::class, 'edit'])->middleware('auth');
 
 Route::get('/college', [CollegeController::class, 'index'])->middleware('auth');
+Route::get('/college/datatable', [CollegeController::class, 'datatable'])->middleware('auth');
+Route::post('/college/add', [CollegeController::class, 'add'])->middleware('auth');
+Route::any('/college/edit', [CollegeController::class, 'edit'])->middleware('auth');
 
 Route::get('/program', [ProgramController::class, 'index'])->middleware('auth');
 
@@ -81,6 +87,8 @@ Route::get('/organization', [OrganizationController::class, 'index'])->middlewar
 Route::get('/position', [PositionController::class, 'index'])->middleware('auth');
 
 Route::get('/honor', [HonorController::class, 'index'])->middleware('auth');
-
+Route::get('/honor/datatable', [HonorController::class, 'datatable'])->middleware('auth');
+Route::post('/honor/add', [HonorController::class, 'add'])->middleware('auth');
+Route::any('/honor/edit', [HonorController::class, 'edit'])->middleware('auth');
 
 /* ## END CMS Module Region ## */

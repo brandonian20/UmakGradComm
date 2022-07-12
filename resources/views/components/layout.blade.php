@@ -23,6 +23,9 @@
         <!-- jQuery-->
         <script src="{{ asset('/vendors/js/jquery.min.js') }}"></script>
 
+        <!-- Popper-->
+        <script src="{{ asset('/vendors/js/popper.min.js') }}"></script>
+
     </head>
     <body class="">
         <!-- Header-->

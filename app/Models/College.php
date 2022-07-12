@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class College extends Model
+{
+    use HasFactory;
+
+    public $timestamps = false;
+
+    protected $table = "college";
+    protected $primaryKey = "collegeID";
+    protected $fillable = ["collegeName", "shortname", "image", "updatedBy", "updatedAt"];
+
+}
