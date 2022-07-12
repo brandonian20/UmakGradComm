@@ -42,3 +42,18 @@ p {
   color: black !important;
 }
 
+.footer-link{
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.footer-icon{
+  
+}
+
+.footer-link:hover, .footer-icon:hover{
+  color: #F2EC26 !important;
+}
+
+
+

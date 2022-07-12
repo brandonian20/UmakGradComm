@@ -14,6 +14,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+        <script src="{{ asset('vendors/js/fontawesome.min.js') }}" data-search-pseudo-elements="" defer="" crossorigin="anonymous"></script> <!-- Font Awesome-->
         <!-- build:css -->
         <link rel="stylesheet" href="{{ asset('/vendors/css/magnific-popup.css') }}">
         <link rel="stylesheet" href="{{ asset('/vendors/css/swiper-bundle.css') }}">
@@ -31,7 +32,7 @@
                 <a class="navbar-brand position-fixed" href="/">
                     <img src="{{ asset('/img/umak_logo.png') }}" class="img pt-5" style="width: 60px;"/> 
                         {{-- <span class="ps-10 h6 d-none d-lg-inline-block text-white" style="font-family: Helvetica;">UMak Commencement</span> --}}
-                    <img src="{{ asset('/img/49th-Commencement-text.png') }}" class="img ms-10" style="height: 60px;"/>
+                    <img src="{{ asset('/img/49th-Commencement-text.png') }}" class="img ms-10 d-none d-sm-inline" style="height: 60px;"/>
                 </a>
                 <a class="navbar-toggle order-4 ms-auto pe-10 popup-inline" href="#navbar-mobile-style-1"><span></span><span></span><span></span></a>
                 <ul class="nav navbar-nav order-2 ms-auto nav-no-opacity"  style="font-family: Helvetica;">
@@ -75,14 +76,36 @@
             @yield('content')
         </main>
 
-        <footer class="bg-accent-2 text-dark py-50 footerNext">
-            <div class="container">
-                <div class="d-flex justify-content-between align-items-center gy-50">
+        <footer class="bg-accent-2 text-dark py-20 footerNext" style="background-color: #052964 !important">
+            <div class="container text-white">
+                {{-- <div class="d-flex justify-content-between align-items-center gy-50">
                     <img src="{{ asset('/img/umak_logo.png') }}" width="140" class="mb-0 mb-sm-20">
                     <p class="font-size-15 mb-35 text-justify ms-30">The <b>University of Makati (UMak)</b> is a public, locally funded university of the local government of Makati. It is envisioned as the primary instrument where university education and industry training programs interface to mold Makati and non-Makati youth into productive citizens and IT-enabled professionals who are exposed to cutting-edge technology in their areas of specialization. UMak is the final stage of Makati City's integrated primary level to tertiary level educational system that enables its less privileged citizens to compete for job opportunities in various businesses and industries.</p>
+                </div> --}}
+                {{-- <p class="text-center mb-10">© Copyright 2022 - University of Makati. All Rights Reserved.</p>
+                <p class="text-center mb-0"><a href="https://umak.edu.ph/olrog/assets/n_assets/DATA%20PRIVACY%20NOTICE%20FOR%20STUDENTS.pdf" class="text-dark fw-bold text-white" target="_blank" style="top: 0px;">Data Privacy Notice</a></p> --}}
+                <div class="row">
+                    <div class="row col-lg-6 d-flex justify-content-sm-center text-center text-lg-start">
+                        <span>&copy Copyright 2022.</span>
+                        <span>University of Makati. All Rights Reserved.</span>
+                        <span>Developed by CCIS Student Assistants</span>
+                    </div>
+                    <div class="row col-lg-6 d-flex justify-content-center justify-content-lg-start">
+                        <div class="col-lg-8 d-flex justify-content-center">
+                            <span class="me-10">
+                                <a class="footer-link"   href="https://www.umak.edu.ph/" target="_blank" alt="University of Makati"> University of Makati</a>
+                            </span>
+                            <span class="ms-10">
+                                <a class="footer-link" href="https://www.makati.gov.ph/" target="_blank" alt="City of Makati"> City of Makati </a>
+                            </span>
+                        </div>
+                        <div class="col-lg-4 d-flex justify-content-center">
+                                <a href="https://www.facebook.com/UMakPH/" alt="fb.com/UMakPH" target="_blank"><i class="fa-brands fa-facebook text-white mx-10 footer-icon"></i></a>
+                                <a href="https://twitter.com/umakph" alt="twitter.com/umakph" target="_blank"><i class="fa-brands fa-twitter-square mx-10 text-white footer-icon"></i></a>
+                                <a href="https://www.youtube.com/universityofmakatiph" alt="youtube.com/universityofmakatiph" target="_blank"><i class="fa-brands fa-youtube mx-10 text-white footer-icon"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-center mb-10">© Copyright 2022 - University of Makati. All Rights Reserved.</p>
-                <p class="text-center mb-0"><a href="https://umak.edu.ph/olrog/assets/n_assets/DATA%20PRIVACY%20NOTICE%20FOR%20STUDENTS.pdf" class="text-dark fw-bold" target="_blank" style="top: 0px;">Data Privacy Notice</a></p>
             </div>
         </footer><!-- Vendors-->
 
