@@ -55,5 +55,10 @@ p {
   color: #F2EC26 !important;
 }
 
+.modal-open{
+  padding-right: 0px !important;
+  overflow: visible !important;
+}
+
 
 
