@@ -80,7 +80,7 @@
         </main>
 
         <footer class="bg-accent-2 text-dark py-20 footerNext" style="background-color: #052964 !important">
-            <div class="container text-white">
+            <div class="container text-white" style="font-family: Helvetica, sans-serif">
                 {{-- <div class="d-flex justify-content-between align-items-center gy-50">
                     <img src="{{ asset('/img/umak_logo.png') }}" width="140" class="mb-0 mb-sm-20">
                     <p class="font-size-15 mb-35 text-justify ms-30">The <b>University of Makati (UMak)</b> is a public, locally funded university of the local government of Makati. It is envisioned as the primary instrument where university education and industry training programs interface to mold Makati and non-Makati youth into productive citizens and IT-enabled professionals who are exposed to cutting-edge technology in their areas of specialization. UMak is the final stage of Makati City's integrated primary level to tertiary level educational system that enables its less privileged citizens to compete for job opportunities in various businesses and industries.</p>

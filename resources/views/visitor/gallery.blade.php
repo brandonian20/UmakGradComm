@@ -3,11 +3,7 @@
 @section('content')
      <!-- Programme Content -->
      <section id="gallery">
-        <div class="pt-120 pb-130 text-center bg-image"   style="
-        background-image: url({{ asset('/img/BG1-Black.png') }});
-        background-repeat: repeat-y;
-        background-size: auto 100%;;
-    ">
+        <div class="pt-120 pb-130 text-center bg-image gallery-bg">
             <!-- Shape-->
             {{-- <div class="shape justify-content-end"><img loading="lazy" src="{{ asset('img/root/404-shape-326x321.png') }}"
                     alt="" width="542" height="382"></div><!-- Shape--> --}}
