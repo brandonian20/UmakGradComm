@@ -41,6 +41,7 @@ Route::get('/', [VisitorPageController::class, 'home']);
 // Route::get('/programflow', [VisitorPageController::class, 'programme']);
 Route::get('/gallery', [VisitorPageController::class, 'gallery']);
 Route::get('/graduates-gallery', [VisitorPageController::class, 'graduates_gallery']);
+Route::get('/message', [VisitorPageController::class, 'message']);
 
 /* ## END Visitor Module Region ## */
 
