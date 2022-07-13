@@ -15,7 +15,7 @@
                     </div>
                     <div class="text-center">
                         <span class="bg-warning bg-opacity-75">
-                            <h3 class="mb-30 px-lg-30 text-white" data-show="startbox"><br> Celebrating Our Past,<br> Igniting Our Future<br><div class="mb-0 mt-50 fw-medium fs-5 px-lg-70" data-show="startbox" data-show-delay="100">49th Commencement Exercises </div></h3>
+                            <h3 class="mb-30 px-lg-30 text-white" data-show="startbox"><br> Celebrating Our Past,<br> Igniting Our Future<br><div class="mb-0 mt-50 fw-medium fs-5 px-lg-70 d-block d-sm-none" data-show="startbox" data-show-delay="100">49th Commencement Exercises </div></h3>
                         </span>
                     </div>
                 </div>
@@ -30,7 +30,6 @@
                             <div class="background-color" style="--background-color: #000; opacity: .25;"></div>
                             <div class="background-color" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 100%, rgba(0, 0, 0, 0) 150px);"></div>
                         </div>
-                        
                     </div>
                 </div>
                 <div class="swiper-slide h-auto">
@@ -269,7 +268,7 @@
 
 <!-- College List Modal -->
 <div class="modal fade" id="viewCollege" tabindex="-1" aria-labelledby="viewCollegeLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
         <div class="modal-content">
             <div class="modal-header border-0 py-10 px-20">
                 <h3 class="modal-title" id="exampleModalLabel">Colleges</h3>
