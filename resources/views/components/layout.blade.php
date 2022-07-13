@@ -41,7 +41,7 @@
                 <ul class="nav navbar-nav order-2 ms-auto nav-no-opacity"  style="font-family: Helvetica;">
                     <li class="nav-item {{ (request()->is('/*')) ? 'active' : '' }}"><a class="nav-link" href="/"><span>Home</span></a></li >
                     <li class="nav-item {{ (request()->is('gallery')) ? 'active' : '' }}"><a class="nav-link" href="{{url('/gallery')}}"><span>Gallery</span></a></li>
-                    <li class="nav-item {{ (request()->is('graduates-gallery')) ? 'active' : '' }} {{ (request()->is('/*')) ? 'd-none' : '' }}"><a class="nav-link" href="{{url('/graduates-gallery')}}"><span>Graduates</span></a></li>
+                    <li class="nav-item {{ (request()->is('/graduates-gallery*')) ? 'active' : '' }} {{ (request()->is('/*')) ? 'd-none' : '' }}"><a class="nav-link" href="" data-show="startbox"  data-bs-toggle="modal" data-bs-target="#viewCollege" target="_self"><span>Graduates</span></a></li>
                     {{-- <li class="nav-item navbar-dropdown {{ (request()->is('programflow*')) ? 'active' : '' }}"><a class="nav-link" href="{{ url('/programflow') }}"><span>Programme</span></a>
                         <div class="dropdown-menu rounded-2 shadow">
                             <ul class="nav navbar-nav">
@@ -68,7 +68,7 @@
                     <ul class="nav navbar-nav navbar-nav-collapse">
                         <li class="nav-item {{ (request()->is('/*')) ? 'active' : '' }}"><a class="nav-link" href="/"><span>Home</span></a></li>
                         <li class="nav-item {{ (request()->is('gallery')) ? 'active' : '' }}"><a class="nav-link" href="{{url('/gallery')}}"><span>Gallery</span></a></li>
-                        <li class="nav-item {{ (request()->is('graduates-gallery')) ? 'active' : '' }} {{ (request()->is('/*')) ? 'd-none' : '' }}"><a class="nav-link" href="{{url('/graduates-gallery')}}"><span>Graduates</span></a></li>
+                        <li class="nav-item {{ (request()->is('/graduates-gallery*')) ? 'active' : '' }} {{ (request()->is('/*')) ? 'd-none' : '' }}"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#viewCollege" ><span>Graduates</span></a></li>
                     </ul>
                 </div>
             </div>
