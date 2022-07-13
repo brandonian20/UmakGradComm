@@ -27,9 +27,9 @@ p {
 }
 
 .gallery-bg {
-  background-image: url('img/BG1-Black.png') !important;
+  background-image: url('../img/BG1-Black.png') !important;
   background-repeat: repeat-y !important;
-  height: 100vh !important;
+  background-size: 100% !important;
 }
 
 .button-color{

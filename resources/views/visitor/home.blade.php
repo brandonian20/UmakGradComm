@@ -104,17 +104,14 @@
             </div>
         </div>
     </div>
-    <div class="pt-120 pb-130 alert-warning shape-parent text-center">
-        <!-- Shape-->
-        <div class="shape justify-content-end"><img loading="lazy" src="{{ asset('img/root/404-shape-326x321.png') }}" alt="" width="542" height="382"></div><!-- Shape-->
-        <div class="shape align-items-end"><img loading="lazy" src="{{ asset('/img/root/contact-2-shape-558x364.png') }}" alt="" width="309" height="435"></div>
+    <div class="pt-50 pb-50 alert-warning shape-parent text-center gallery-bg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
-                    <h2 class="m-0" data-show="startbox">Assembly and Procession Gallery</h2>
+                    <h2 class="m-0 text-white" data-show="startbox">Assembly and Procession Gallery</h2>
                 </div>
             </div>
-            <div class="isotope shape-parent mt-100">
+            <div class="isotope shape-parent mt-50">
                 <div class="row isotope-grid gy-30 gallery-wrapper animated ">
                     <div class=" isotope-item col-12 col-md-6 col-lg-4" data-filters="marketing">
                         <!-- Portfolio--><a class="card card-portfolio gallery-item card-overlay card-hover-appearance text-white text-center rounded-4" href="https://media.interaksyon.com/wp-content/uploads/2021/05/makati-coliseum-covid-19-vaccination-queue.jpg"><span class="card-img" data-img-height style="--img-height: 72%;"><img loading="lazy" src="https://media.interaksyon.com/wp-content/uploads/2021/05/makati-coliseum-covid-19-vaccination-queue.jpg" alt=""><span class="background-color" style="--background-color: rgba(148,126,3, 0.9);"></span></span><span class="card-img-overlay"><span class="card-title h4">Makati Coliseum</span><span class="card-category subtitle">Location</span></span></a>
@@ -136,7 +133,7 @@
                     </div>
                 </div>
             </div>
-            <a class="btn btn-accent-1 mt-50" href="services-01.html" target="_self">Show more...</a>
+            <a class="btn btn-accent-1 mt-50 button-color" href="services-01.html" target="_self">Show more...</a>
         </div>
     </div>
     <div class="pt-120 pb-130">
