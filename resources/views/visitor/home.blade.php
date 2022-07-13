@@ -274,10 +274,10 @@
                 <h3 class="modal-title" id="exampleModalLabel">Colleges</h3>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body py-5">
 
                 <!-- First Row -->
-                <div class="row py-10">
+                <div class="row py-0 py-lg-10">
                     <div class="col-lg d-grid gap-2 my-10 mb-sm-10">
 
                         <div class="btn-group">
@@ -287,7 +287,7 @@
                                         <img src="{{ asset('/img/coahs-logo.png') }}"  class="img-fluid"> 
                                     </div>
 
-                                    <div class="col-8 text-center px-0 px-xl-15">
+                                    <div class="col-8 text-center px-0 px-xl-15 fs-5">
                                         COAHS
                                     </div>
                                 </div>
@@ -314,7 +314,7 @@
                                     <div class="col-4">
                                         <img src="{{ asset('/img/cal-logo-w.png') }}"  class="img-fluid">
                                     </div>
-                                    <div class="col-8 text-center px-0 px-xl-15">
+                                    <div class="col-8 text-center px-0 px-xl-15 fs-5">
                                         CAL
                                     </div>
                                 </div>
@@ -339,7 +339,7 @@
                                     <div class="col-4">
                                         <img src="{{ asset('/img/cbfs-logo.png') }}"  class="img-fluid"> 
                                     </div>
-                                    <div class="col-8 text-center px-0 px-xl-15">
+                                    <div class="col-8 text-center px-0 px-xl-15 fs-5">
                                         CBFS
                                     </div>
                                 </div>
@@ -358,7 +358,7 @@
                 </div>
 
                 <!-- Second Row -->
-                <div class="row py-10">
+                <div class="row py-0 py-lg-10">
                     <div class="col-lg d-grid gap-2 my-10 mb-sm-10">
 
                         <div class="btn-group">
@@ -368,7 +368,7 @@
                                         <img src="{{ asset('/img/ccis-logo.png') }}"  class="img-fluid"> 
                                     </div>
 
-                                    <div class="col-8 text-center px-0 px-xl-15">
+                                    <div class="col-8 text-center px-0 px-xl-15 fs-5">
                                         CCIS
                                     </div>
                                 </div>
@@ -395,7 +395,7 @@
                                     <div class="col-4">
                                         <img src="{{ asset('/img/ccse updated.png') }}"  class="img-fluid">
                                     </div>
-                                    <div class="col-8 text-center px-0 px-xl-15">
+                                    <div class="col-8 text-center px-0 px-xl-15 fs-5">
                                         CCSE
                                     </div>
                                 </div>
@@ -420,7 +420,7 @@
                                     <div class="col-4">
                                         <img src="{{ asset('/img/ccaps-logo-w.png') }}"  class="img-fluid"> 
                                     </div>
-                                    <div class="col-8 text-center px-0 px-xl-15">
+                                    <div class="col-8 text-center px-0 px-xl-15 fs-5">
                                         CCAPS
                                     </div>
                                 </div>
@@ -439,7 +439,7 @@
                 </div>
 
                 <!-- Third Row -->
-                <div class="row py-10">
+                <div class="row py-0 py-lg-10">
                     <div class="col-lg d-grid gap-2 my-10 mb-sm-10">
 
                         <div class="btn-group">
@@ -449,7 +449,7 @@
                                         <img src="{{ asset('/img/coe-logo.png') }}"  class="img-fluid"> 
                                     </div>
 
-                                    <div class="col-8 text-center px-0 px-xl-15">
+                                    <div class="col-8 text-center px-0 px-xl-15 fs-5">
                                         COE
                                     </div>
                                 </div>
@@ -476,7 +476,7 @@
                                     <div class="col-4">
                                         <img src="{{ asset('/img/cgpp-logo.png') }}"  class="img-fluid">
                                     </div>
-                                    <div class="col-8 text-center px-0 px-xl-15">
+                                    <div class="col-8 text-center px-0 px-xl-15 fs-5">
                                         CGPP
                                     </div>
                                 </div>
@@ -501,7 +501,7 @@
                                     <div class="col-4">
                                         <img src="{{ asset('/img/chk-logo.png') }}"  class="img-fluid"> 
                                     </div>
-                                    <div class="col-8 text-center px-0 px-xl-15">
+                                    <div class="col-8 text-center px-0 px-xl-15 fs-5">
                                         CHK
                                     </div>
                                 </div>
@@ -520,7 +520,7 @@
                 </div>
 
                 <!-- Fourth Row -->
-                <div class="row py-10">
+                <div class="row py-0 py-lg-10">
                     <div class="col-lg d-grid gap-2 my-10 mb-sm-10">
 
                         <div class="btn-group">
@@ -530,7 +530,7 @@
                                         <img src="{{ asset('/img/cos-logo.png') }}"  class="img-fluid"> 
                                     </div>
 
-                                    <div class="col-8 text-center px-0 px-xl-15">
+                                    <div class="col-8 text-center px-0 px-xl-15 fs-5">
                                         COS
                                     </div>
                                 </div>
@@ -557,7 +557,7 @@
                                     <div class="col-4">
                                         <img src="{{ asset('/img/ctm-logo.png') }}"  class="img-fluid">
                                     </div>
-                                    <div class="col-8 text-center px-0 px-xl-15">
+                                    <div class="col-8 text-center px-0 px-xl-15 fs-5">
                                         CTM
                                     </div>
                                 </div>
@@ -582,7 +582,7 @@
                                     <div class="col-4">
                                         <img src="{{ asset('/img/cthm-logo.png') }}"  class="img-fluid"> 
                                     </div>
-                                    <div class="col-8 text-center px-0 px-xl-15">
+                                    <div class="col-8 text-center px-0 px-xl-15 fs-5">
                                         CTHM
                                     </div>
                                 </div>
@@ -601,8 +601,8 @@
                 </div>
 
                 <!-- Fourth Row -->
-                <div class="row py-10">
-                    <div class="col-lg d-grid gap-2 my-10 mb-sm-10">
+                <div class="row py-0 py-lg-10">
+                    <div class="col-lg d-grid gap-2">
 
                        
 
@@ -616,7 +616,7 @@
                                     <div class="col-4">
                                         <img src="{{ asset('/img/sol-logo.png') }}"  class="img-fluid">
                                     </div>
-                                    <div class="col-8 text-center px-0 px-xl-15">
+                                    <div class="col-8 text-center px-0 px-xl-15 fs-5">
                                         SOL
                                     </div>
                                 </div>
@@ -633,7 +633,7 @@
 
                     </div>
 
-                    <div class="col-lg d-grid gap-2 my-10 mb-sm-10">
+                    <div class="col-lg d-grid gap-2">
 
                         
 
