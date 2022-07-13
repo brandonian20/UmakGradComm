@@ -26,7 +26,7 @@
                 <div class="swiper-slide h-auto">
                     <div class="py-200 position-relative overflow-hidden h-100">
                         <div class="background">
-                            <div class="background-image jarallax" data-jarallax data-speed="0.8"><img class="jarallax-img" loading="lazy" src="{{ asset('/img/umak_banner.jpg') }}" data-swiper-parallax-x="20%" alt=""></div>
+                            <div class="background-image jarallax" data-jarallax data-speed="0.8"><img class="jarallax-img" loading="lazy" src="{{ asset('/img/facade-4.jpeg') }}" data-swiper-parallax-x="20%" alt=""></div>
                             <div class="background-color" style="--background-color: #000; opacity: .25;"></div>
                             <div class="background-color" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 100%, rgba(0, 0, 0, 0) 150px);"></div>
                         </div>
