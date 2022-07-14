@@ -22,12 +22,13 @@ class CollegeController extends Controller
             $data = null;
 
             if ($r->search['value']){
-                $data = College::where([
-                    ['collegeName', '=', $r->search['value']],
-                    ['shortname', '=', $r->search['value']],
-                    ])->get();
+                $searchVal = $r->search['value'];
+
+                $data = College::where('collegeName', 'LIKE', "%{$searchVal}%")
+                ->orWhere('shortname', 'LIKE', "%{$searchVal}%")
+                ->get();
             } else {
-                $data = College::get();
+                $data = College::orderBy('collegeName')->get();
             }
 
             return  DataTables::of($data)
