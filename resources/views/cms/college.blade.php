@@ -24,7 +24,7 @@
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Action</th>
+                            <th data-sortable=false>Action</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -184,7 +184,7 @@
                 ajax: "/college/datatable",
                 processing: true,
                 serverSide: true,
-                ordering: false,
+                ordering: true,
                 responsive: true,
                 search: {
                     return: true,

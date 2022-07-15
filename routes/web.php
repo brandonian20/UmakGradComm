@@ -17,6 +17,7 @@ use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\OrganizationController;
 use App\Http\Controllers\PositionController;
 use App\Http\Controllers\HonorController;
+use App\Models\Semester;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,27 +67,37 @@ Route::get('/faculty', [FacultyController::class, 'index'])->middleware('auth');
 
 Route::get('/guest', [GuestController::class, 'index'])->middleware('auth');
 
+// Academic Year
 Route::get('/academicYear', [AcademicYearController::class, 'index'])->middleware('auth');
 Route::get('/academicYear/datatable', [AcademicYearController::class, 'datatable'])->middleware('auth');
 Route::post('/academicYear/add', [AcademicYearController::class, 'add'])->middleware('auth');
 Route::any('/academicYear/edit', [AcademicYearController::class, 'edit'])->middleware('auth');
 
+// Semester
 Route::get('/semester', [SemesterController::class, 'index'])->middleware('auth');
 Route::get('/semester/datatable', [SemesterController::class, 'datatable'])->middleware('auth');
 Route::post('/semester/add', [SemesterController::class, 'add'])->middleware('auth');
 Route::any('/semester/edit', [SemesterController::class, 'edit'])->middleware('auth');
 
+// College
 Route::get('/college', [CollegeController::class, 'index'])->middleware('auth');
 Route::get('/college/datatable', [CollegeController::class, 'datatable'])->middleware('auth');
 Route::post('/college/add', [CollegeController::class, 'add'])->middleware('auth');
 Route::any('/college/edit', [CollegeController::class, 'edit'])->middleware('auth');
 
+// Program
 Route::get('/program', [ProgramController::class, 'index'])->middleware('auth');
+Route::get('/program/datatable', [ProgramController::class, 'datatable'])->middleware('auth');
+Route::post('/program/add', [ProgramController::class, 'add'])->middleware('auth');
+Route::any('/program/edit', [ProgramController::class, 'edit'])->middleware('auth');
 
+// Organization
 Route::get('/organization', [OrganizationController::class, 'index'])->middleware('auth');
 
+// Position
 Route::get('/position', [PositionController::class, 'index'])->middleware('auth');
 
+// Honor
 Route::get('/honor', [HonorController::class, 'index'])->middleware('auth');
 Route::get('/honor/datatable', [HonorController::class, 'datatable'])->middleware('auth');
 Route::post('/honor/add', [HonorController::class, 'add'])->middleware('auth');

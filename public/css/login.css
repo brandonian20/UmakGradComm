@@ -11,7 +11,7 @@ html, body {
 
 /*BACKGROUND CONTAINER (left side)*/
 .background-img {
-    background: url('https://upload.wikimedia.org/wikipedia/commons/c/c8/UMak_Oval.jpg');
+    background: url("../img/facade-1.jpg");
     height: 100vh;
     width: 60vw;
     left: 0px;
