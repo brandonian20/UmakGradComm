@@ -13,6 +13,6 @@ class Program extends Model
 
     protected $table = "program";
     protected $primaryKey = "programID";
+    protected $foreignKey = "collegeID";
     protected $fillable = ["programName", "collegeID", "updatedBy", "updatedAt"];
-
 }

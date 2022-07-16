@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Program;
+use App\Models\College;
 use Exception;
 use Yajra\DataTables\DataTables;
 use Illuminate\Http\Request;
@@ -13,7 +14,8 @@ class ProgramController extends Controller
 {
     //Index func
     public function index(){
-        return view('cms/program', ['title' => 'Programs']);
+        $collegeList = College::orderBy('collegeName')->get(['collegeID', 'collegeName']);
+        return view('cms/program', ['title' => 'Programs', 'collegeList' => $collegeList]);
     }
 
     public function datatable(Request $r){
@@ -24,29 +26,32 @@ class ProgramController extends Controller
             if ($r->search['value']){
                 $searchVal = $r->search['value'];
 
-                $data = Program::where('programName', 'LIKE', "%{$searchVal}%")
+                $data = Program::join('college', 'college.collegeID', '=', 'program.collegeID')
+                ->where('programName', 'LIKE', "%{$searchVal}%")
                 ->orWhere('shortname', 'LIKE', "%{$searchVal}%")
                 ->get();
             } else {
-                $data = Program::orderBy('collegeName')->get();
+                $data = Program::join('college', 'college.collegeID', '=', 'program.collegeID')
+                ->orderBy('shortName')->get();
             }
 
             return  DataTables::of($data)
-                    ->editColumn('collegeName', function($row){
-                        $data = "{$row['collegeName']} " . ($row['shortname'] != null ? "({$row['shortname']})" : "");
-
-                        return $data;
+                    ->addColumn('programName', function($row){
+                        return "{$row['programName']}";
+                    })
+                    ->addColumn('shortname', function($row){
+                        return "{$row['shortname']}";
                     })
                     ->addIndexColumn()
                     ->addColumn('action', function($row){
                         $data = "";
 
                         //Edit Button
-                        $data .= "<button type='button' data-id='".Crypt::encryptString($row["collegeID"])."' data-bs-toggle='tooltip' title='edit' class='btn btn-edit'><i class='fa-regular fa-edit'></i></button>";
+                        $data .= "<button type='button' data-id='".Crypt::encryptString($row["programID"])."' data-bs-toggle='tooltip' title='edit' class='btn btn-edit'><i class='fa-regular fa-edit'></i></button>";
 
                         return $data;
                     })
-                    ->rawColumns(['action','collegeName'])
+                    ->rawColumns(['action', 'shortname', 'programName'])
                     ->make(true);
             
         }
@@ -56,13 +61,13 @@ class ProgramController extends Controller
 
         try{
 
-            if(College::where('collegeName', strip_tags($r["collegeName"]))->exists()){
+            if(Program::where('programName', strip_tags($r["programName"]))->exists()){
                 return response()->json(["success" => false, 'data' => "Record already exists."], 200);
             }
 
-            $row = new College;
-            $row->collegeName = strip_tags($r->collegeName);
-            $row->shortname = strip_tags($r->shortname);
+            $row = new Program;
+            $row->programName = strip_tags($r->programName);
+            $row->collegeID = (int)strip_tags($r->collegeID);
             $row->save();
 
             return response()->json(["success" => true, 'data' => "Record added."], 200);
@@ -70,50 +75,6 @@ class ProgramController extends Controller
             return $e;
         }
 
-    }
-
-    public function edit(Request $r){
-
-        $id = null;
-
-        try{
-            $id = Crypt::decryptString($r->id);
-        } catch(Exception $e){
-            return response()->json('', 400);
-            //return $e;
-        }
-
-        try{
-            switch($r->method()){
-                case "GET":
-                    $data = College::where([['collegeID', '=', $id]])->first();
-    
-                    return $data;
-                case "POST":
-
-                    //Check if it has duplicates
-                    if (College::where('collegeName', strip_tags($r["e-collegeName"]))->exists() 
-                        && //Check if editing the same record
-                        ($id != College::select('collegeID')->where('collegeName', strip_tags($r["e-collegeName"]))->first()->collegeID )){
-                        return response()->json(["success" => false, 'data' => "Record already exists."], 200);
-                    }
-
-                    $data = College::find($id);
-
-                    $data->collegeName = strip_tags($r["e-collegeName"]);
-                    $data->shortname = strip_tags($r["e-shortname"]);
-                    $data->updatedBy = Session::get("userData.id");
-                    $data->updatedAt = \Carbon\Carbon::now();
-
-                    $data->update();
-    
-                    return response()->json(["success" => true, 'data' => "Record updated."], 200);
-                default:
-                    return response()->json('', 405);
-            }
-        } catch(Exception $e){
-            return $e;
-        }
     }
 
 }
