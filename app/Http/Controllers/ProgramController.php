@@ -15,6 +15,11 @@ class ProgramController extends Controller
     //Index func
     public function index(){
         $collegeList = College::orderBy('collegeName')->get(['collegeID', 'collegeName']);
+
+        for ($x = 0; $x < count($collegeList); $x++){
+            $collegeList[$x]->hashCollegeID = Crypt::encryptString($collegeList[$x]->collegeID);
+        }
+
         return view('cms/program', ['title' => 'Programs', 'collegeList' => $collegeList]);
     }
 
@@ -67,7 +72,8 @@ class ProgramController extends Controller
 
             $row = new Program;
             $row->programName = strip_tags($r->programName);
-            $row->collegeID = (int)strip_tags($r->collegeID);
+            $Id = Crypt::decryptString(strip_tags($r->collegeID));
+            $row->collegeID = (int)$Id;
             $row->save();
 
             return response()->json(["success" => true, 'data' => "Record added."], 200);

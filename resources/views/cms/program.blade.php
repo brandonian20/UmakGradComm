@@ -56,7 +56,7 @@
                                 <option value selected disabled>Select from...</option>
                                 
                                 @foreach($collegeList as $college)
-                                    <option value="{{$college["collegeID"]}}">{{$college["collegeName"]}}</option>
+                                    <option value={{$college["hashCollegeID"]}}>{{$college["collegeName"]}}</option>
                                 @endforeach
                                 
                               </select>
