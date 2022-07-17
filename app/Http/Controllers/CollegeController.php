@@ -61,8 +61,8 @@ class CollegeController extends Controller
             }
 
             $row = new College;
-            $row->collegeName = strip_tags($r->collegeName);
-            $row->shortname = strip_tags($r->shortname);
+            $row->collegeName = strtoupper(strip_tags($r->collegeName));
+            $row->shortname = strtoupper(strip_tags($r->shortname));
             $row->save();
 
             return response()->json(["success" => true, 'data' => "Record added."], 200);
@@ -94,14 +94,16 @@ class CollegeController extends Controller
                     //Check if it has duplicates
                     if (College::where('collegeName', strip_tags($r["e-collegeName"]))->exists() 
                         && //Check if editing the same record
-                        ($id != College::select('collegeID')->where('collegeName', strip_tags($r["e-collegeName"]))->first()->collegeID )){
+                        ($id == College::select('collegeID')->where('collegeName', strip_tags($r["e-collegeName"]))->first()->collegeID )
+                        &&
+                        (strip_tags($r["e-shortname"]) == College::find($id)->shortname)){
                         return response()->json(["success" => false, 'data' => "Record already exists."], 200);
                     }
 
                     $data = College::find($id);
 
-                    $data->collegeName = strip_tags($r["e-collegeName"]);
-                    $data->shortname = strip_tags($r["e-shortname"]);
+                    $data->collegeName = strtoupper(strip_tags($r["e-collegeName"]));
+                    $data->shortname = strtoupper(strip_tags($r["e-shortname"]));
                     $data->updatedBy = Session::get("userData.id");
                     $data->updatedAt = \Carbon\Carbon::now();
 

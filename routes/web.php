@@ -89,7 +89,7 @@ Route::any('/college/edit', [CollegeController::class, 'edit'])->middleware('aut
 Route::get('/program', [ProgramController::class, 'index'])->middleware('auth');
 Route::get('/program/datatable', [ProgramController::class, 'datatable'])->middleware('auth');
 Route::post('/program/add', [ProgramController::class, 'add'])->middleware('auth');
-// Route::any('/program/edit', [ProgramController::class, 'edit'])->middleware('auth');
+Route::any('/program/edit', [ProgramController::class, 'edit'])->middleware('auth');
 
 // Organization
 Route::get('/organization', [OrganizationController::class, 'index'])->middleware('auth');

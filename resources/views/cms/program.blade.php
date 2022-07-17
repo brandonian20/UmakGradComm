@@ -73,6 +73,42 @@
     </div>
 
     {{-- Edit --}}
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content">
+                <form id="editForm">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title" id="editTitle"></h5>
+                        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-floating mb-3">
+                            <select name="e-collegeName" id="e-collegeName" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required>
+                                <option value selected disabled>Select from...</option>
+                                
+                                @foreach($collegeList as $college)
+                                    <option value={{$college["hashCollegeID"]}}>{{$college["collegeName"]}}</option>
+                                @endforeach
+                                
+                              </select>
+                            <label for="e-collegeName">College</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control"
+                                id="e-programName" name="e-programName" placeholder="Desc">
+                            <label for="e-programName">Program Name</label>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer border-0">
+                        <button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-primary" type="submit">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 
     <script>
@@ -80,6 +116,10 @@
 
             $("#addForm").on('submit', function() {
                 addnew();
+                return false;
+            });
+            $("#editForm").on('submit', function() {
+                postedit();
                 return false;
             });
 
@@ -104,6 +144,54 @@
                             $("#addModal").modal("hide");
 
                             datatable.ajax.reload(null, false);
+                        } else {
+                            showToast(resp.data, "error");
+                        }
+                    }
+                });
+            }
+
+            function getedit(id) {
+                viewID = id;
+
+                $.ajax({
+                    url: '/program/edit',
+                    data: {
+                        id: viewID
+                    },
+                    type: 'GET',
+                    success: function(resp) {
+                        // console.log(resp);
+                        $("#editTitle").html(`Editing <b>${resp.programName}</b>`);
+
+                        $("select[name='e-collegeName'] option:contains('"+ resp.collegeName +"')").attr('selected', true);
+                        $("[name='e-programName']").val(resp.programName);
+
+                        $("#editModal").modal("show");
+                    }
+                });
+            }
+
+            function postedit() {
+                let fd = new FormData();
+                fd.append("id", viewID);
+
+                $.ajax({
+                    url: '/program/edit',
+                    data: GetFD($("#editForm"), fd),
+                    type: 'POST',
+                    processData: false,
+                    contentType: false,
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    success: function(resp) {
+                        // console.log(resp);
+                        if (resp.success) {
+                            showToast(resp.data, "success");
+
+                            datatable.ajax.reload(null, false);
+                            $("#editModal").modal("hide");
                         } else {
                             showToast(resp.data, "error");
                         }
@@ -141,6 +229,7 @@
                 drawCallback: function() {
                     $(".btn-edit").on('click', function() {
                         getedit($(this).attr(`data-id`));
+                        // console.log($(this).attr(`data-id`));
                     })
                 },
             })
