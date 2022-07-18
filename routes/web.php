@@ -93,9 +93,15 @@ Route::any('/program/edit', [ProgramController::class, 'edit'])->middleware('aut
 
 // Organization
 Route::get('/organization', [OrganizationController::class, 'index'])->middleware('auth');
+Route::get('/organization/datatable', [OrganizationController::class, 'datatable'])->middleware('auth');
+Route::post('/organization/add', [OrganizationController::class, 'add'])->middleware('auth');
+Route::any('/organization/edit', [OrganizationController::class, 'edit'])->middleware('auth');
 
 // Position
 Route::get('/position', [PositionController::class, 'index'])->middleware('auth');
+Route::get('/position/datatable', [PositionController::class, 'datatable'])->middleware('auth');
+Route::post('/position/add', [PositionController::class, 'add'])->middleware('auth');
+Route::any('/position/edit', [PositionController::class, 'edit'])->middleware('auth');
 
 // Honor
 Route::get('/honor', [HonorController::class, 'index'])->middleware('auth');
