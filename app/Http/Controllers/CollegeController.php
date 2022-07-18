@@ -96,7 +96,7 @@ class CollegeController extends Controller
                         && //Check if editing the same record
                         ($id == College::select('collegeID')->where('collegeName', strip_tags($r["e-collegeName"]))->first()->collegeID )
                         &&
-                        (strip_tags($r["e-shortname"]) == College::find($id)->shortname)){
+                        (College::where('shortname', strip_tags($r["e-shortname"]))->exists()) ){
                         return response()->json(["success" => false, 'data' => "Record already exists."], 200);
                     }
 
