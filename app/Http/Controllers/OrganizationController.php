@@ -24,15 +24,15 @@ class OrganizationController extends Controller
             if ($r->search['value']){
                 $searchVal = $r->search['value'];
 
-                $data = Organization::where('organizationName', 'LIKE', "%{$searchVal}%")
+                $data = Organization::where('orgName', 'LIKE', "%{$searchVal}%")
                 ->get();
             } else {
-                $data = Organization::orderBy('organizationName')->get();
+                $data = Organization::orderBy('orgName')->get();
             }
 
             return  DataTables::of($data)
-                ->addColumn('organizationName', function($row){
-                    return "{$row['organizationName']}";
+                ->addColumn('orgName', function($row){
+                    return "{$row['orgName']}";
                 })
                 ->addIndexColumn()
                 ->addColumn('action', function($row){
@@ -43,7 +43,7 @@ class OrganizationController extends Controller
 
                     return $data;
                 })
-                ->rawColumns(['action', 'organizationName'])
+                ->rawColumns(['action', 'orgName'])
                 ->make(true);
             
         }
@@ -53,12 +53,12 @@ class OrganizationController extends Controller
 
         try{
 
-            if(Organization::where('organizationName', strip_tags($r["organizationName"]))->exists()){
+            if(Organization::where('orgName', strip_tags($r["orgName"]))->exists()){
                 return response()->json(["success" => false, 'data' => "Record already exists."], 200);
             }
 
             $row = new Organization;
-            $row->organizationName = strtoupper(strip_tags($r->organizationName));
+            $row->orgName = strtoupper(strip_tags($r->orgName));
             $row->save();
 
             return response()->json(["success" => true, 'data' => "Record added."], 200);
@@ -88,15 +88,15 @@ class OrganizationController extends Controller
                 case "POST":
 
                     //Check if it has duplicates
-                    if (Organization::where('organizationName', strip_tags($r["e-organizationName"]))->exists() 
+                    if (Organization::where('orgName', strip_tags($r["e-orgName"]))->exists() 
                         && //Check if editing the same record
-                        ($id == Organization::select('orgID')->where('organizationName', strip_tags($r["e-organizationName"]))->first()->orgID )){
+                        ($id == Organization::select('orgID')->where('orgName', strip_tags($r["e-orgName"]))->first()->orgID )){
                         return response()->json(["success" => false, 'data' => "Record already exists."], 200);
                     }
 
                     $data = Organization::find($id);
 
-                    $data->organizationName = strtoupper(strip_tags($r["e-organizationName"]));
+                    $data->orgName = strtoupper(strip_tags($r["e-orgName"]));
                     $data->updatedBy = Session::get("userData.id");
                     $data->updatedAt = \Carbon\Carbon::now();
 

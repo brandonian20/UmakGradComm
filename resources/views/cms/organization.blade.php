@@ -46,8 +46,8 @@
                     <div class="modal-body">
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control"
-                                id="organizationName" name="organizationName" placeholder="Name" required>
-                            <label for="organizationName">Name of Organization</label>
+                                id="orgName" name="orgName" placeholder="Name" required>
+                            <label for="orgName">Name of Organization</label>
                         </div>
                     </div>
                     <div class="modal-footer border-0">
@@ -71,8 +71,8 @@
                     <div class="modal-body">
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control"
-                                id="e-organizationName" name="e-organizationName" placeholder="Desc" required>
-                            <label for="e-organizationName">Name of Organization</label>
+                                id="e-orgName" name="e-orgName" placeholder="Desc" required>
+                            <label for="e-orgName">Name of Organization</label>
                         </div>
                     <div class="modal-footer border-0">
                         <button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button>
@@ -133,9 +133,9 @@
                     },
                     type: 'GET',
                     success: function(resp) {
-                        $("#editTitle").html(`Editing <b>${resp.organizationName}</b>`);
+                        $("#editTitle").html(`Editing <b>${resp.orgName}</b>`);
 
-                        $("[name='e-organizationName']").val(resp.organizationName);
+                        $("[name='e-orgName']").val(resp.orgName);
 
                         $("#editModal").modal("show");
                     }
@@ -183,7 +183,7 @@
                     searchPlaceholder: "Search..."
                 },
                 columns: [{
-                        data: 'organizationName',
+                        data: 'orgName',
                         name: 'Name'
                     },{
                         data: 'action',

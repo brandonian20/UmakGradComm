@@ -13,5 +13,5 @@ class Organization extends Model
 
     protected $table = "organization";
     protected $primaryKey = "orgID";
-    protected $fillable = ["desc", "updatedBy", "updatedAt"];
+    protected $fillable = ["orgName", "updatedBy", "updatedAt"];
 }
