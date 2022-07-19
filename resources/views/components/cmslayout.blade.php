@@ -36,6 +36,10 @@
         <script src="{{ asset('vendors/js/sweetalert2.all.min.js') }}"></script>
         <link rel="stylesheet" href="{{ asset('vendors/css/sweetalert2.css') }}">
 
+        {{-- Select2 --}}
+        <script src="{{ asset('vendors/js/select2.min.js') }}"></script>
+        <link rel="stylesheet" href="{{ asset('vendors/css/select2.min.css') }}">
+
     </head>
     <body class="nav-fixed">
         <nav class="topnav navbar navbar-expand shadow justify-content-between justify-content-sm-start navbar-light bg-white" id="sidenavAccordion">
@@ -46,14 +50,14 @@
             <!-- Navbar Items-->
             <ul class="navbar-nav align-items-center ms-auto">
 
-                <div class="input-group input-group-joined me-3 " data-bs-toggle="tooltip" title="Selected Academic Year">
+                {{-- <div class="input-group input-group-joined me-3 " data-bs-toggle="tooltip" title="Selected Academic Year">
                     <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></span>
                     <select name="currentacadyear" id="currentacadyear" class="form-control ps-0 pt-3">
                         <option value="2022" selected>2022</option>
                         <option value="2021">2021</option>
                         <option value="2020">2020</option>
                     </select>
-                </div>
+                </div> --}}
 
                 <!-- User Dropdown-->
                 <li class="nav-item dropdown no-caret dropdown-user me-3 me-lg-4">
@@ -64,7 +68,7 @@
                             {{-- <img class="dropdown-user-img" src="assets/img/illustrations/profiles/profile-1.png" /> --}}
                             <div class="dropdown-user-details">
                                 <div class="dropdown-user-details-name">{{ Session::get('userData.name') }}</div>
-                                <div class="dropdown-user-details-email"><a href="cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="681e041d060928090704460b0705">{{ Session::get('userData.email') }}</a></div>
+                                <div class="dropdown-user-details-email"><small>{{ Session::get('userData.email') }}</small></div>
                             </div>
                         </h6>
                         <div class="dropdown-divider"></div>

@@ -206,9 +206,7 @@ function PopulateSelect(name, url, placeholder, value, search, dataIN, prepend, 
                                     metaData += ` data-meta-${j}="${escapeHtml(data[i][j])}"`;
 
                                 var newOption = $(`<option value="${data[i][0]}" data-id-raw="${data[i][1]}" ${metaData} >${data[i][2]} ${allowTags ? `<span class="d-none">${metaData}</span>` : ``}</option>`);
-
-                                /*var newOption = search ? $(`<option value="${data[i][0]}" data-id-raw="${data[i][1]}" ${metaData} >${data[i][2]} <span class="d-none">${metaData}</span></option>`) :
-                                    $(`<option value="${data[i][0]}" data-id-raw="${data[i][1]}" ${metaData} > ${params == "Employee" ? employeeImg : ``} ${data[i][2]}</option>`);*/
+                                
                                 $(`[name=${name}]`).append(newOption);
                             }
                         } else {
@@ -216,8 +214,6 @@ function PopulateSelect(name, url, placeholder, value, search, dataIN, prepend, 
 
                                 var newOption = $(`<option value="${data[i][0]}" data-id-raw="${data[i][1]}" ${metaData} >${data[i][2]} ${allowTags ? `<span class="d-none">${metaData}</span>` : ``}</option>`);
 
-                                /*var newOption = search ? $(`<option value="${data[i][0]}" data-id-raw="${data[i][1]}" >${data[i][2]}</option>`) :
-                                    $(`<option value="${data[i][0]}" data-id-raw="${data[i][1]}" ${metaData} > ${params == "Employee" ? employeeImg : ``} ${data[i][2]}</option>`);*/
                                 $(`[name=${name}]`).append(newOption);
                             }
                         }
@@ -246,77 +242,27 @@ function PopulateSelect(name, url, placeholder, value, search, dataIN, prepend, 
                             multiple: (params == "Multiple" ? true : false),
                             minimumResultsForSearch: minSearch,
                             dropdownParent: ($('.modal').hasClass('show') ? $(`#` + $(`[name=${name}]`).closest(".modal").attr("id")) : $(`[name=${name}]`).closest("div")),
-                            templateResult: function (state) {
+                            // templateResult: function (state) {
 
-                                let image = (params == "Employee" ? `<img class="rounded-circle d-inline me-2" height="30" width="30" loading="lazy" src="https://communityext.ismanila.org/photomanager/handler/Get_ProfilePhoto.ashx?Filename=${$(state.element).val()}&Size=1" />`
-                                    : (params == "ITStaff" ? ($(state.element).attr("data-meta-5") == "" || $(state.element).attr("data-meta-5") == null ? `<span class="position-relative me-2"><img class="rounded-circle d-inline" height="30" width="30" loading="lazy" src="https://communityext.ismanila.org/photomanager/handler/Get_ProfilePhoto.ashx?Filename=${$(state.element).attr("data-meta-4")}&Size=1" /><span class="position-absolute top-100 start-100 translate-middle p-1 bg-secondary border border-2 border-light rounded-circle"><span class="visually-hidden"></span></span></span>` : `<span class="position-relative me-2"><img class="rounded-circle d-inline" height="30" width="30" loading="lazy" src="https://communityext.ismanila.org/photomanager/handler/Get_ProfilePhoto.ashx?Filename=${$(state.element).attr("data-meta-4")}&Size=1" /><span class="position-absolute top-100 start-100 translate-middle p-1 bg-success border border-2 border-light rounded-circle"><span class="visually-hidden"></span></span></span>`) : ``)) + "";
-                                let itstaffTickets = (params == "ITStaff" ? `<span class="badge badge-pill bg-secondary">${$(state.element).attr("data-meta-3")}</span>` : ``);
+                            //     let returnString = `<div class="d-flex text-truncate justify-content-between align-items-center">
+                            //                     <span><span>${$(state.element).html()}</span></span>
+                            //                 </div>`;
 
-                                let returnString = "";
+                            //     return returnString;
+                            // },
+                            // templateSelection: function (state) {
 
-                                if (params == "Conclusion") {
-                                    returnString = `<div class="d-flex flex-wrap justify-content-between align-items-center" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="right" title="${escapeHtml($(state.element).html())}">
-                                                        <span>${$(state.element).attr("data-meta-3")}</span>
-                                                    </div>`;
-                                } else if (params == "RelatedTicket") {
-                                    returnString = `<div class="d-flex flex-wrap justify-content-between align-items-center" >
-                                                        <span>${$(state.element).attr("data-meta-3")}</span>
-                                                    </div>`;
-                                } else if (params == "Multiple") {
-                                    returnString = `${$(state.element).html()}`;
-                                } else {
-                                    returnString = `<div class="d-flex text-truncate justify-content-between align-items-center">
-                                                        <span>${image}<span>${$(state.element).html()}</span></span>
-                                                        ${$(state.element).attr("data-meta-3") != 0 ? itstaffTickets : ``}
-                                                    </div>`;
-                                }
+                            //     if (!state.id)
+                            //         return state.text;
 
-                                return returnString;
-                            },
-                            templateSelection: function (state) {
+                            //     let returnString = `<div class="d-flex text-truncate justify-content-between align-items-center">
+                            //                         <span><span>${$(state.element).html()}</span></span>
+                            //                     </div>`;
 
-                                if (!state.id)
-                                    return state.text;
-
-                                let image = (params == "Employee" ? `<img class="rounded-circle d-inline me-2" height="30" width="30" loading="lazy" src="https://communityext.ismanila.org/photomanager/handler/Get_ProfilePhoto.ashx?Filename=${$(state.element).val()}&Size=1" />`
-                                    : (params == "ITStaff" ? ($(state.element).attr("data-meta-5") == "" || $(state.element).attr("data-meta-5") == null ? `<span class="position-relative me-2"><img class="rounded-circle d-inline" height="30" width="30" loading="lazy" src="https://communityext.ismanila.org/photomanager/handler/Get_ProfilePhoto.ashx?Filename=${$(state.element).attr("data-meta-4")}&Size=1" /><span class="position-absolute top-100 start-100 translate-middle p-1 bg-secondary border border-2 border-light rounded-circle"><span class="visually-hidden"></span></span></span>` : `<span class="position-relative me-2"><img class="rounded-circle d-inline" height="30" width="30" loading="lazy" src="https://communityext.ismanila.org/photomanager/handler/Get_ProfilePhoto.ashx?Filename=${$(state.element).attr("data-meta-4")}&Size=1" /><span class="position-absolute top-100 start-100 translate-middle p-1 bg-success border border-2 border-light rounded-circle"><span class="visually-hidden"></span></span></span>`) : ``)) + "";
-                                let itstaffTickets = (params == "ITStaff" ? `<span class="badge badge-pill bg-secondary">${$(state.element).attr("data-meta-3")}</span>` : ``);
-
-                                let returnString = ``;
-
-                                if (params == "Conclusion") {
-                                    returnString = `<div class="d-flex flex-wrap justify-content-between align-items-center p-2">
-                                                        <span>${$(state.element).html()}</span>
-                                                    </div>`;
-                                } else if (params == "RelatedTicket") {
-                                    returnString = `<div class="d-flex flex-wrap justify-content-between align-items-center">
-                                                        <span>${$(state.element).attr("data-meta-3")}</span>
-                                                    </div>`;
-                                } else if (params == "Multiple") {
-                                    returnString = `${$(state.element).html()}`;
-                                }  else {
-                                    returnString = `<div class="d-flex text-truncate justify-content-between align-items-center">
-                                                        <span>${image}<span>${$(state.element).html()}</span></span>
-                                                        ${$(state.element).attr("data-meta-3") != 0 ? itstaffTickets : ``}
-                                                    </div>`;
-                                }
-
-                                return returnString;
-                            },
-                            escapeMarkup: function (markup) { return markup; }
+                            //     return returnString;
+                            // },
+                            // escapeMarkup: function (markup) { return markup; }
                         });
-
-                        if (params == "Conclusion" && !s2EventsDeclared) {
-                            $('.select2-hidden-accessible').on('select2:open', function (e) {
-                                setTimeout(function () {
-                                    $(".select2-results__option div").tooltip({ container: 'body', trigger: 'hover' }).on('click mousedown mouseup', function () {
-                                        $('[data-bs-toggle="tooltip"], [title]:not([data-bs-toggle="popover"])').tooltip('dispose');
-                                    });
-                                }, 200);
-                            });
-
-                            s2EventsDeclared = true;
-                        }
 
                         if (params == "Multiple") {
                             $(`[name=${name}]`).parent().find('textarea.select2-search__field').css("height", "23.75px");
@@ -326,6 +272,9 @@ function PopulateSelect(name, url, placeholder, value, search, dataIN, prepend, 
                             $(".select2-search__field").attr("placeholder", "Search")
                         });
 
+                        $(document).on('select2:open', () => {
+                            document.querySelector('.select2-search__field').focus();
+                        });
 
                     } else {
                         $("[name=" + name + "]").addClass("form-control");
@@ -371,12 +320,29 @@ function GetFD(formSelector, appendFD = null) {
     let fd = new FormData();
 
     for (let x of formSelector.serializeArray()) {
+        //console.log(`${x.name},  ${x.value}`);
         fd.append(x.name, x.value);
     }
 
     if (appendFD) {
         for(let pair of appendFD){
             fd.append(pair[0], pair[1]);
+        }
+    }
+
+    return fd;
+}
+
+function GetFD2(formSelector, appendFD = null) {
+    let fd = new FormData();
+
+    for (let x of formSelector.serializeArray()) {
+        fd.append(x.name, x.value);
+    }
+
+    if (appendFD) {
+        for (let i = 0; i < appendFD.length; i++) {
+            fd.append(appendFD[i].name, appendFD[i]);
         }
     }
 

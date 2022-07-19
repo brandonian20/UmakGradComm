@@ -17,6 +17,8 @@ use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\OrganizationController;
 use App\Http\Controllers\PositionController;
 use App\Http\Controllers\HonorController;
+
+use App\Http\Controllers\Select2Controller;
 use App\Models\Semester;
 
 /*
@@ -49,22 +51,31 @@ Route::get('/message', [VisitorPageController::class, 'message']);
 
 /* ## START CMS Module Region ## */
 
-/*
--------------------
-    Login Routes
-------------------- 
-*/ 
-
+//Login
 Route::get('/login', [LoginController::class, 'index'])->middleware('islogged');
 Route::post('/login/signin', [LoginController::class, 'signin']);
 Route::get('/login/signout', [LoginController::class, 'signout']);
 
+//Select2Routes
+Route::get('/select2/academicYear', [Select2Controller::class, 'academicYear'])->middleware('auth');
+Route::get('/select2/semester', [Select2Controller::class, 'semester'])->middleware('auth');
+Route::get('/select2/college', [Select2Controller::class, 'college'])->middleware('auth');
+Route::get('/select2/program', [Select2Controller::class, 'program'])->middleware('auth');
+
+//Dashboard
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 
+//Graduates
 Route::get('/graduates', [GraduatesController::class, 'index'])->middleware('auth');
+Route::get('/graduates/datatable', [GraduatesController::class, 'datatable'])->middleware('auth');
+Route::post('/graduates/add', [GraduatesController::class, 'add'])->middleware('auth');
+Route::any('/graduates/edit', [GraduatesController::class, 'edit'])->middleware('auth');
+Route::any('/graduates/check', [GraduatesController::class, 'check'])->middleware('auth');
 
+//Faculty
 Route::get('/faculty', [FacultyController::class, 'index'])->middleware('auth');
 
+//Guest
 Route::get('/guest', [GuestController::class, 'index'])->middleware('auth');
 
 // Academic Year
