@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Graduates;
+use App\Models\Picture;
+use App\Models\Pictures;
 use Exception;
 use Yajra\DataTables\DataTables;
 use Illuminate\Http\Request;
@@ -19,7 +21,12 @@ class GraduatesController extends Controller
 
     public function check(Request $r){
         try{
-            $this->datatable($r);
+
+           $data = Pictures::where('pictureID', '=', '1')
+                ->first();
+
+            return response(base64_decode($data->pictureFile))->header("Content-type","image/{$data->fileFormat}");
+
         } catch(Exception $e){
             return $e;
         }
@@ -71,6 +78,19 @@ class GraduatesController extends Controller
 
         try{
 
+
+            $allowedExts = array("jpg", "png", "jpeg");
+
+            //Check if it has image file, and if extension is on allowed extensions
+            if ($r->hasFile('image') && !in_array($r->image->extension(), $allowedExts) ){
+                return response()->json(["success" => false, 'data' => "File type not allowed."], 200);
+            }
+
+            //Check if it has banner file, and if extension is on allowed extensions
+            if ($r->hasFile('banner') && !in_array($r->banner->extension(), $allowedExts) ){
+                return response()->json(["success" => false, 'data' => "File type not allowed."], 200);
+            }
+
             // if(Graduates::where('year', strip_tags($r["year"]))->exists()){
             //     return response()->json(["success" => false, 'data' => "Record already exists."], 200);
             // }
@@ -87,10 +107,17 @@ class GraduatesController extends Controller
             // $files = $r->image;
             // foreach($files as $f){
             //     $x .= $f->getClientOriginalName();
+
             // }
 
 
-            return response()->json($r->image->hashName(), 200);
+
+            $img = new Pictures();
+            $img->pictureFile = base64_encode(file_get_contents($r->image->getRealPath()));
+            $img->fileFormat = $r->image->extension();
+            $img->save();
+
+            return response()->json($img->pictureID, 200);
 
         } catch(Exception $e){
             return $e;
