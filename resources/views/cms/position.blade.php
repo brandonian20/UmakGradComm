@@ -46,8 +46,8 @@
                     <div class="modal-body">
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control"
-                                id="desc" name="desc" placeholder="Name" required>
-                            <label for="desc">Name of Postion</label>
+                                id="positionName" name="positionName" placeholder="Name" required>
+                            <label for="positionName">Name of Postion</label>
                         </div>
                     </div>
                     <div class="modal-footer border-0">
@@ -71,8 +71,8 @@
                     <div class="modal-body">
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control"
-                                id="e-desc" name="e-desc" placeholder="Desc" required>
-                            <label for="e-desc">Name of Position</label>
+                                id="e-positionName" name="e-positionName" placeholder="Desc" required>
+                            <label for="e-positionName">Name of Position</label>
                         </div>
                     <div class="modal-footer border-0">
                         <button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button>
@@ -133,9 +133,9 @@
                     },
                     type: 'GET',
                     success: function(resp) {
-                        $("#editTitle").html(`Editing <b>${resp.desc}</b>`);
+                        $("#editTitle").html(`Editing <b>${resp.positionName}</b>`);
 
-                        $("[name='e-desc']").val(resp.desc);
+                        $("[name='e-positionName']").val(resp.positionName);
 
                         $("#editModal").modal("show");
                     }
@@ -183,11 +183,11 @@
                     searchPlaceholder: "Search..."
                 },
                 columns: [{
-                        data: 'desc',
-                        name: 'desc'
+                        data: 'positionName',
+                        name: 'Name'
                     },{
                         data: 'action',
-                        name: 'action'
+                        name: 'Action'
                     },
                 ],
                 drawCallback: function() {

@@ -52,7 +52,7 @@
                                 <td><span style="font-size: 35px;">University Of Makati</span></td>
                             </tr>
                             <tr>
-                                <td><small>A public, locally funded university of the local government of
+                                <td><small>A public, locally funded University of the Local Government of
                                         Makati.</small></td>
                             </tr>
                         </table>

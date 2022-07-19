@@ -24,15 +24,15 @@ class PositionController extends Controller
             if ($r->search['value']){
                 $searchVal = $r->search['value'];
 
-                $data = Position::where('desc', 'LIKE', "%{$searchVal}%")
+                $data = Position::where('positionName', 'LIKE', "%{$searchVal}%")
                 ->get();
             } else {
-                $data = Position::orderBy('desc')->get();
+                $data = Position::orderBy('positionName')->get();
             }
 
             return  DataTables::of($data)
-                ->addColumn('desc', function($row){
-                    return "{$row['desc']}";
+                ->addColumn('positionName', function($row){
+                    return "{$row['positionName']}";
                 })
                 ->addIndexColumn()
                 ->addColumn('action', function($row){
@@ -43,7 +43,7 @@ class PositionController extends Controller
 
                     return $data;
                 })
-                ->rawColumns(['action', 'desc'])
+                ->rawColumns(['action', 'positionName'])
                 ->make(true);
             
         }
@@ -53,12 +53,12 @@ class PositionController extends Controller
 
         try{
 
-            if(Position::where('desc', strip_tags($r["desc"]))->exists()){
+            if(Position::where('positionName', strip_tags($r["positionName"]))->exists()){
                 return response()->json(["success" => false, 'data' => "Record already exists."], 200);
             }
 
             $row = new Position;
-            $row->desc = strtoupper(strip_tags($r->desc));
+            $row->positionName = strtoupper(strip_tags($r->positionName));
             $row->save();
 
             return response()->json(["success" => true, 'data' => "Record added."], 200);
@@ -88,15 +88,15 @@ class PositionController extends Controller
                 case "POST":
 
                     //Check if it has duplicates
-                    if (Position::where('desc', strip_tags($r["e-desc"]))->exists() 
+                    if (Position::where('positionName', strip_tags($r["e-positionName"]))->exists() 
                         && //Check if editing the same record
-                        ($id == Position::select('positionID')->where('desc', strip_tags($r["e-desc"]))->first()->positionID )){
+                        ($id == Position::select('positionID')->where('positionName', strip_tags($r["e-positionName"]))->first()->positionID )){
                         return response()->json(["success" => false, 'data' => "Record already exists."], 200);
                     }
 
                     $data = Position::find($id);
 
-                    $data->desc = strtoupper(strip_tags($r["e-desc"]));
+                    $data->positionName = strtoupper(strip_tags($r["e-positionName"]));
                     $data->updatedBy = Session::get("userData.id");
                     $data->updatedAt = \Carbon\Carbon::now();
 
