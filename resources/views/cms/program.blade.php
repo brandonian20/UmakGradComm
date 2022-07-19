@@ -215,15 +215,15 @@
                 },
                 columns: [{
                         data: 'programName',
-                        name: 'programName'
+                        name: 'Name'
                     },
                     {
                         data: 'shortname',
-                        name: 'shortname'
+                        name: 'College'
                     },
                     {
                         data: 'action',
-                        name: 'action'
+                        name: 'Action'
                     },
                 ],
                 drawCallback: function() {
