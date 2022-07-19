@@ -18,6 +18,7 @@ use App\Http\Controllers\OrganizationController;
 use App\Http\Controllers\PositionController;
 use App\Http\Controllers\HonorController;
 
+use App\Http\Controllers\PicturesController;
 use App\Http\Controllers\Select2Controller;
 use App\Models\Semester;
 
@@ -55,6 +56,9 @@ Route::get('/message', [VisitorPageController::class, 'message']);
 Route::get('/login', [LoginController::class, 'index'])->middleware('islogged');
 Route::post('/login/signin', [LoginController::class, 'signin']);
 Route::get('/login/signout', [LoginController::class, 'signout']);
+
+//Images
+Route::get('/pictures/image', [PicturesController::class, 'image'])->middleware('auth');
 
 //Select2Routes
 Route::get('/select2/academicYear', [Select2Controller::class, 'academicYear'])->middleware('auth');

@@ -30,6 +30,8 @@
                     <thead>
                         <tr>
                             <th>Full Name</th>
+                            <th>Program</th>
+                            <th>Semester</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -83,7 +85,7 @@
                                 Loading...
                             </div>
                             <div class="input-group flex-nowrap">
-                                <select name="semester" class="form-select select-accent w-100"></select>
+                                <select name="semester" class="form-select select-accent w-100" required></select>
 
                                 <input type="checkbox" class="btn-check" id="semester-lock" autocomplete="off">
                                 <label class="btn btn-outline-primary" for="semester-lock"><i class="fa-solid fa-lock"></i></label>
@@ -96,7 +98,7 @@
                                 Loading...
                             </div>
                             <div class="input-group flex-nowrap">
-                                <select name="program" class="form-select select-accent w-100"></select>
+                                <select name="program" class="form-select select-accent w-100" required></select>
 
                                 <input type="checkbox" class="btn-check" id="program-lock" autocomplete="off">
                                 <label class="btn btn-outline-primary" for="program-lock"><i class="fa-solid fa-lock"></i></label>
@@ -173,16 +175,16 @@
                     },
                     success: function(resp) {
                         console.log(resp);
-                        // if (resp.success) {
-                        //     showToast(resp.data, "success");
+                        if (resp.success) {
+                            showToast(resp.data, "success");
 
-                        //     $('#addForm')[0].reset();
-                        //     $("#addModal").modal("hide");
+                            $('#addForm')[0].reset();
+                            $("#addModal").modal("hide");
 
-                        //     datatable.ajax.reload(null, false);
-                        // } else {
-                        //     showToast(resp.data, "error");
-                        // }
+                            datatable.ajax.reload(null, false);
+                        } else {
+                            showToast(resp.data, "error");
+                        }
                     }
                 });
             }
@@ -251,12 +253,21 @@
                     search: "",
                     searchPlaceholder: "Search..."
                 },
-                columns: [{
-                        data: 'fullname',
+                columns: [
+                    {
+                        data: 'Lastname',
                         name: 'Full Name'
                     },
                     {
-                        data: 'action',
+                        data: 'Firstname',
+                        name: 'Program Name'
+                    },
+                    {
+                        data: 'Middlename',
+                        name: 'Semester'
+                    },
+                    {
+                        data: 'action'  ,
                         name: 'action'
                     },
                 ],

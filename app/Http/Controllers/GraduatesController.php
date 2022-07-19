@@ -40,6 +40,8 @@ class GraduatesController extends Controller
             if ($r->search['value']){
 
                 $data = Graduates::join("academicyear", "academicyear.acadYrID" , "=", "graduates.acadYrID")
+                ->join("program", "program.programID", '=', 'graduates.programID')
+                ->join("semester", "semester.semID", '=', 'graduates.semID')
                 ->where([
                     ['LastName', '=', $r->search['value']],
                     ['FirstName', '=', $r->search['value']],
@@ -49,12 +51,35 @@ class GraduatesController extends Controller
                     
             } else {
                 $data = Graduates::join("academicyear", "academicyear.acadYrID" , "=", "graduates.acadYrID")
+                ->join("program", "program.programID", '=', 'graduates.programID')
+                ->join("semester", "semester.semID", '=', 'graduates.semID')
                 ->get();
             }
 
             return  DataTables::of($data)
-                    ->editColumn('LastName', function($row){
-                        $data = "{$row['LastName']}, {$row['FirstName']} {$row['MiddleName']}";
+                    // ->editColumn('pictureID', function($row){
+                    //     $data = "<img class='img-fluid' src='/pictures/image?id=".Crypt::encryptString($row['pictureID'])."' />";
+
+                    //     return $data;
+                    // })
+                    // ->editColumn('bannerID', function($row){
+                    //     $data = "<img src='/pictures/banner?id=".Crypt::encryptString($row['bannerID'])."' />";
+
+                    //     return $data;
+                    // })
+                    
+                    ->editColumn('Lastname', function($row){
+                        $data = "{$row['Lastname']}, {$row['Firstname']} {$row['Middlename']}";
+
+                        return $data;
+                    })
+                    ->editColumn('Firstname', function($row){
+                        $data = "{$row['programName']}";
+
+                        return $data;
+                    })
+                    ->editColumn('Middlename', function($row){
+                        $data = "{$row['semesterName']}";
 
                         return $data;
                     })
@@ -67,7 +92,7 @@ class GraduatesController extends Controller
 
                         return $data;
                     })
-                    ->rawColumns(['action','LastName'])
+                    ->rawColumns(['action','pictureID', 'bannerID', 'Lastname'])
                     //->rawColumns(['action'])
                     ->make(true);
             
@@ -117,7 +142,18 @@ class GraduatesController extends Controller
             $img->fileFormat = $r->image->extension();
             $img->save();
 
-            return response()->json($img->pictureID, 200);
+            $row = new Graduates();
+            $row->Lastname = strip_tags($r->lastname);
+            $row->Firstname = strip_tags($r->firstname);
+            $row->Middlename = strip_tags($r->middlename);
+            $row->pictureID = $img->pictureID;
+            $row->acadYrID = Crypt::decryptString($r->acadYear);
+            $row->semID = Crypt::decryptString($r->semester);
+            $row->honorID = 1;
+            $row->programID = Crypt::decryptString($r->program);
+            $row->save();
+
+            return response()->json(["success" => true, 'data' => "Record added."], 200);
 
         } catch(Exception $e){
             return $e;

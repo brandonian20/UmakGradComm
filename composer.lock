@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0ed5cae28303b68f931302f6856c8f1b",
+    "content-hash": "71e1417e84068d18ba428e5aeba6fe3b",
     "packages": [
         {
             "name": "brick/math",
@@ -5103,28 +5103,29 @@
         },
         {
             "name": "yajra/laravel-datatables-oracle",
-            "version": "v9.21.1",
+            "version": "v10.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yajra/laravel-datatables.git",
-                "reference": "8f37e59e7ed1c1d2ff713497918bcaee72d587bb"
+                "reference": "fcbecbcc5f4d475ceb33cf84c20363137a4e5d82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/8f37e59e7ed1c1d2ff713497918bcaee72d587bb",
-                "reference": "8f37e59e7ed1c1d2ff713497918bcaee72d587bb",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/fcbecbcc5f4d475ceb33cf84c20363137a4e5d82",
+                "reference": "fcbecbcc5f4d475ceb33cf84c20363137a4e5d82",
                 "shasum": ""
             },
             "require": {
-                "illuminate/database": "5.8.*|^6|^7|^8|^9",
-                "illuminate/filesystem": "5.8.*|^6|^7|^8|^9",
-                "illuminate/http": "5.8.*|^6|^7|^8|^9",
-                "illuminate/support": "5.8.*|^6|^7|^8|^9",
-                "illuminate/view": "5.8.*|^6|^7|^8|^9",
-                "php": "^7.1.3|^8"
+                "illuminate/database": "^9",
+                "illuminate/filesystem": "^9",
+                "illuminate/http": "^9",
+                "illuminate/support": "^9",
+                "illuminate/view": "^9",
+                "php": "^8.0.2"
             },
             "require-dev": {
-                "orchestra/testbench": "^3.8|^4.0|^5.0|^6.0|^7.0"
+                "nunomaduro/larastan": "^2.1",
+                "orchestra/testbench": "^7.3"
             },
             "suggest": {
                 "yajra/laravel-datatables-buttons": "Plugin for server-side exporting of dataTables.",
@@ -5135,7 +5136,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "9.0-dev"
+                    "dev-master": "10.x-dev"
                 },
                 "laravel": {
                     "providers": [
@@ -5164,7 +5165,7 @@
                     "email": "aqangeles@gmail.com"
                 }
             ],
-            "description": "jQuery DataTables API for Laravel 5|6|7|8|9",
+            "description": "jQuery DataTables API for Laravel 4|5|6|7|8|9",
             "keywords": [
                 "datatables",
                 "jquery",
@@ -5172,7 +5173,7 @@
             ],
             "support": {
                 "issues": "https://github.com/yajra/laravel-datatables/issues",
-                "source": "https://github.com/yajra/laravel-datatables/tree/v9.21.1"
+                "source": "https://github.com/yajra/laravel-datatables/tree/v10.0.0"
             },
             "funding": [
                 {
@@ -5184,7 +5185,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2022-06-22T09:21:30+00:00"
+            "time": "2022-05-07T16:58:13+00:00"
         }
     ],
     "packages-dev": [
