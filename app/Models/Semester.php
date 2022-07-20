@@ -13,6 +13,6 @@ class Semester extends Model
 
     protected $table = "semester";
     protected $primaryKey = "semID";
-    protected $fillable = ["desc", "updatedBy", "updatedAt"];
+    protected $fillable = ["semesterName", "updatedBy", "updatedAt"];
 
 }

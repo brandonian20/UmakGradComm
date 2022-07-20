@@ -298,6 +298,7 @@
                 type: 'GET',
                 headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
                 success: function (resp) {
+                    $(`#collegeRow`).html("");
                     if (resp.success){
                         let data = resp.data;
 

@@ -29,11 +29,11 @@
                 <table id="datatable" class="table table-responsive table-sm dataTable">
                     <thead>
                         <tr>
-                            <th>Image(s)</th>
+                            <th data-sortable=false>Image(s)</th>
                             <th>Full Name</th>
                             <th>Program</th>
                             <th>Semester</th>
-                            <th>Action</th>
+                            <th data-sortable=false>Action</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -391,7 +391,7 @@
                     },
                     processing: true,
                     serverSide: true,
-                    ordering: false,
+                    ordering: true,
                     responsive: true,
                     search: {
                         return: true,

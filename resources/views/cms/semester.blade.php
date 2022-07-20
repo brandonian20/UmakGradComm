@@ -24,7 +24,7 @@
                     <thead>
                         <tr>
                             <th>Description</th>
-                            <th>Action</th>
+                            <th data-sortable=false>Action</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -45,8 +45,8 @@
                     <div class="modal-body">
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control"
-                                id="desc" name="desc" placeholder="Desc" required>
-                            <label for="desc">Description</label>
+                                id="semesterName" name="semesterName" placeholder="Desc" required>
+                            <label for="semesterName">Description</label>
                         </div>
                     </div>
                     <div class="modal-footer border-0">
@@ -70,8 +70,8 @@
                     <div class="modal-body">
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control"
-                                id="e-desc" name="e-desc" placeholder="Desc" required>
-                            <label for="e-desc">Description</label>
+                                id="e-semesterName" name="e-semesterName" placeholder="Desc" required>
+                            <label for="e-semesterName">Description</label>
                         </div>
                     </div>
                     <div class="modal-footer border-0">
@@ -132,9 +132,9 @@
                     },
                     type: 'GET',
                     success: function(resp) {
-                        $("#editTitle").html(`Editing <b>${resp.desc}</b>`);
+                        $("#editTitle").html(`Editing <b>${resp.semesterName}</b>`);
 
-                        $("[name='e-desc']").val(resp.desc);
+                        $("[name='e-semesterName']").val(resp.semesterName);
 
                         $("#editModal").modal("show");
                     }
@@ -182,12 +182,12 @@
                     searchPlaceholder: "Search..."
                 },
                 columns: [{
-                        data: 'desc',
-                        name: 'desc'
+                        data: 'semesterName',
+                        name: 'Description'
                     },
                     {
                         data: 'action',
-                        name: 'action'
+                        name: 'Action'
                     },
                 ],
                 drawCallback: function() {
