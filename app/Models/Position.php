@@ -13,5 +13,5 @@ class Position extends Model
 
     protected $table = "position";
     protected $primaryKey = "positionID";
-    protected $fillable = ["desc", "updatedBy", "updatedAt"];
+    protected $fillable = ["positionName", "updatedBy", "updatedAt"];
 }

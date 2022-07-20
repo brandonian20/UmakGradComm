@@ -120,7 +120,7 @@
                                 Academic Year
                             </a>
                             <a class="nav-link" href="/semester">
-                                <div class="nav-link-icon"><i data-feather="activity"></i></div>
+                                <div class="nav-link-icon"><i class="fa-solid fa-list-ol"></i></div>
                                 Semester
                             </a>
                             <a class="nav-link" href="/college">
@@ -132,11 +132,11 @@
                                 Program
                             </a>
                             <a class="nav-link" href="/organization">
-                                <div class="nav-link-icon"><i data-feather="activity"></i></div>
+                                <div class="nav-link-icon"><i class="fa-solid fa-building-flag"></i></div>
                                 Organization
                             </a>
                             <a class="nav-link" href="/position">
-                                <div class="nav-link-icon"><i data-feather="activity"></i></div>
+                                <div class="nav-link-icon"><i class="fa-solid fa-person-dots-from-line"></i></div>
                                 Position
                             </a>
                             <a class="nav-link" href="/honor">
@@ -147,12 +147,12 @@
                         </div>
                     </div>
                     <!-- Sidenav Footer-->
-                    <div class="sidenav-footer">
+                    {{-- <div class="sidenav-footer">
                         <div class="sidenav-footer-content">
                             <!-- <div class="sidenav-footer-subtitle">Logged in as:</div>
                             <div class="sidenav-footer-title">Valerie Luna</div> -->
                         </div>
-                    </div>
+                    </div> --}}
                 </nav>
             </div>
             <div id="layoutSidenav_content">
