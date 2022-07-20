@@ -320,7 +320,7 @@
                             <a type="button" class="btn btn-accent-4 rounded-start shadow" href="#" target="_self">
                                 <div class="row align-items-center">
                                     <div class="col-4">
-                                        <img src="{{ asset('/img/cgpp-logo.png') }}"  class="img-fluid">
+                                        <img src="{{ asset('/img/cgpp-logo-w.png') }}"  class="img-fluid">
                                     </div>
                                     <div class="col-8 text-center px-0 px-xl-15 fs-5">
                                         CGPP
@@ -460,7 +460,7 @@
                             <a type="button" class="btn btn-accent-4 rounded-start shadow" href="#" target="_self">
                                 <div class="row align-items-center">
                                     <div class="col-4">
-                                        <img src="{{ asset('/img/sol-logo.png') }}"  class="img-fluid">
+                                        <img src="{{ asset('/img/sol-logo-w.png') }}"  class="img-fluid">
                                     </div>
                                     <div class="col-8 text-center px-0 px-xl-15 fs-5">
                                         SOL
