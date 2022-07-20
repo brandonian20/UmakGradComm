@@ -37,7 +37,7 @@
     <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-                <form id="addForm">
+                <form id="addForm" enctype="multipart/form-data" autocomplete="off">
                     <div class="modal-header border-0">
                         <h5 class="modal-title">Add New</h5>
                         <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -53,6 +53,10 @@
                                 id="shortname" name="shortname" placeholder="Acronym">
                             <label for="shortname">Acronym</label>
                         </div>
+                        <div class="input-group mb-3">
+                            <label class="input-group-text pe-0" for="imageUpload">Image</label>
+                            <input type="file" accept="image/*" class="form-control border-start-0 ps-1" id="imageUpload" name="image">
+                        </div>
                     </div>
                     <div class="modal-footer border-0">
                         <button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button>
@@ -67,7 +71,7 @@
     <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-                <form id="editForm">
+                <form id="editForm" enctype="multipart/form-data" autocomplete="off">
                     <div class="modal-header border-0">
                         <h5 class="modal-title" id="editTitle"></h5>
                         <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -82,6 +86,10 @@
                             <input type="text" class="form-control"
                                 id="e-shortname" name="e-shortname" placeholder="Desc">
                             <label for="e-shortname">Acronym</label>
+                        </div>
+                        <div class="input-group mb-3">
+                            <label class="input-group-text pe-0" for="e-imageUpload">Image</label>
+                            <input type="file" accept="image/*" class="form-control border-start-0 ps-1" id="e-imageUpload" name="e-image">
                         </div>
                     </div>
                     <div class="modal-footer border-0">
@@ -105,12 +113,16 @@
                 return false;
             });
 
-            let viewID = null;
+            let viewID = null, imageID = null;
 
             function addnew() {
+
+                let fd = new FormData();
+                fd.append("image", $("[name=image]").get(0).files[0]);
+
                 $.ajax({
                     url: '/college/add',
-                    data: GetFD($("#addForm")),
+                    data: GetFD($("#addForm"), fd),
                     type: 'POST',
                     processData: false,
                     contentType: false,
@@ -143,8 +155,8 @@
                     },
                     type: 'GET',
                     success: function(resp) {
+                        imageID = resp.image;
                         $("#editTitle").html(`Editing <b>${resp.collegeName}</b>`);
-
                         $("[name='e-collegeName']").val(resp.collegeName);
                         $("[name='e-shortname']").val(resp.shortname);
 
@@ -156,7 +168,9 @@
             function postedit() {
                 let fd = new FormData();
                 fd.append("id", viewID);
-
+                fd.append("image", $("[name=e-image]").get(0).files[0]);
+                fd.append("imageID", imageID);
+                
                 $.ajax({
                     url: '/college/edit',
                     data: GetFD($("#editForm"), fd),

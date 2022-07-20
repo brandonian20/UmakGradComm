@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePositionTable extends Migration
+class CreateOrganizationTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreatePositionTable extends Migration
      */
     public function up()
     {
-        Schema::create('position', function (Blueprint $table) {
-            $table->integer('positionID', true);
-            $table->text('description');
+        Schema::create('organization', function (Blueprint $table) {
+            $table->integer('orgID', true);
+            $table->string('orgName', 100);
             $table->integer('updatedBy')->nullable();
             $table->dateTime('updatedAt')->nullable();
         });
@@ -28,6 +28,6 @@ class CreatePositionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('position');
+        Schema::dropIfExists('organization');
     }
 }

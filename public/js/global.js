@@ -446,5 +446,10 @@ function pad (str, max) {
   return str.length < max ? pad("0" + str, max) : str;
 }
 
-
+function initTooltip(){
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+}
 

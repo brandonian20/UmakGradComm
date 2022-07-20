@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSemesterTable extends Migration
+class CreatePositionTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateSemesterTable extends Migration
      */
     public function up()
     {
-        Schema::create('semester', function (Blueprint $table) {
-            $table->integer('semID', true);
-            $table->string('desc', 100);
+        Schema::create('position', function (Blueprint $table) {
+            $table->integer('positionID', true);
+            $table->text('positionName');
             $table->integer('updatedBy')->nullable();
             $table->dateTime('updatedAt')->nullable();
         });
@@ -28,6 +28,6 @@ class CreateSemesterTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('semester');
+        Schema::dropIfExists('position');
     }
 }

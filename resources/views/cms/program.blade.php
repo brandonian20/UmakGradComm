@@ -215,11 +215,11 @@
                 },
                 columns: [{
                         data: 'programName',
-                        name: 'Name'
+                        name: 'programName'
                     },
                     {
                         data: 'shortname',
-                        name: 'College'
+                        name: 'shortname'
                     },
                     {
                         data: 'action',

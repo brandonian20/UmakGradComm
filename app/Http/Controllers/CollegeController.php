@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\College;
+use App\Models\Pictures;
 use Exception;
 use Yajra\DataTables\DataTables;
 use Illuminate\Http\Request;
@@ -26,6 +27,7 @@ class CollegeController extends Controller
 
                 $data = College::where('collegeName', 'LIKE', "%{$searchVal}%")
                 ->orWhere('shortname', 'LIKE', "%{$searchVal}%")
+                ->orderBy('collegeName')
                 ->get();
             } else {
                 $data = College::orderBy('collegeName')->get();
@@ -33,7 +35,7 @@ class CollegeController extends Controller
 
             return  DataTables::of($data)
                     ->editColumn('collegeName', function($row){
-                        $data = "{$row['collegeName']} " . ($row['shortname'] != null ? "({$row['shortname']})" : "");
+                        $data = "<img src='/pictures/image?id=".Crypt::encryptString($row->image)."' style='max-height: 53px;'> {$row['collegeName']} " . ($row['shortname'] != null ? "({$row['shortname']})" : "");
 
                         return $data;
                     })
@@ -60,9 +62,27 @@ class CollegeController extends Controller
                 return response()->json(["success" => false, 'data' => "Record already exists."], 200);
             }
 
+            $allowedExts = array("jpg", "png", "jpeg");
+
+            //Check if it has image file, and if extension is on allowed extensions
+            if ($r->hasFile('image') && !in_array($r->image->extension(), $allowedExts) ){
+                return response()->json(["success" => false, 'data' => "File type not allowed."], 200);
+            }
+
+            $img = null;
+            if ($r->hasFile('image')){
+                $img = new Pictures();
+                $img->pictureFile = base64_encode(file_get_contents($r->image->getRealPath()));
+                $img->fileFormat = $r->image->extension();
+                $img->save();
+            }
+
             $row = new College;
             $row->collegeName = strtoupper(strip_tags($r->collegeName));
             $row->shortname = strtoupper(strip_tags($r->shortname));
+            $row->image = ($img != null ? $img->pictureID : null);
+            $row->updatedBy = Session::get("userData.id");
+            $row->updatedAt = \Carbon\Carbon::now();
             $row->save();
 
             return response()->json(["success" => true, 'data' => "Record added."], 200);
@@ -94,16 +114,40 @@ class CollegeController extends Controller
                     //Check if it has duplicates
                     if (College::where('collegeName', strip_tags($r["e-collegeName"]))->exists() 
                         && //Check if editing the same record
-                        ($id == College::select('collegeID')->where('collegeName', strip_tags($r["e-collegeName"]))->first()->collegeID )
-                        &&
-                        (College::where('shortname', strip_tags($r["e-shortname"]))->exists()) ){
+                        $id != College::select('collegeID')->where('collegeName', strip_tags($r["e-collegeName"]))->first()->collegeID 
+                        // &&
+                        // (College::where('shortname', strip_tags($r["e-shortname"]))->exists()) 
+                        ){
                         return response()->json(["success" => false, 'data' => "Record already exists."], 200);
+                    }
+
+                    $allowedExts = array("jpg", "png", "jpeg");
+
+                    //Check if it has image file, and if extension is on allowed extensions
+                    if ($r->hasFile('image') && !in_array($r['image']->extension(), $allowedExts) ){
+                        return response()->json(["success" => false, 'data' => "File type not allowed."], 200);
+                    }
+
+                    $img = null;
+                    if ($r->hasFile('image')){
+                        if (Pictures::find($r->imageID) != null){
+                            $img = Pictures::find($r->imageID);
+                            $img->pictureFile = base64_encode(file_get_contents($r->image->getRealPath()));
+                            $img->fileFormat = $r->image->extension();
+                            $img->update();
+                        } else {
+                            $img = new Pictures();
+                            $img->pictureFile = base64_encode(file_get_contents($r->image->getRealPath()));
+                            $img->fileFormat = $r->image->extension();
+                            $img->save();
+                        }
                     }
 
                     $data = College::find($id);
 
                     $data->collegeName = strtoupper(strip_tags($r["e-collegeName"]));
                     $data->shortname = strtoupper(strip_tags($r["e-shortname"]));
+                    $data->image = ($img != null ? $img->pictureID : ($r['imageID'] != 'null' ? $r['imageID'] : NULL));
                     $data->updatedBy = Session::get("userData.id");
                     $data->updatedAt = \Carbon\Carbon::now();
 

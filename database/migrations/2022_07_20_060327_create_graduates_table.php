@@ -22,8 +22,10 @@ class CreateGraduatesTable extends Migration
             $table->integer('bannerImageID')->nullable()->index('bannerImageID');
             $table->integer('acadYrID')->nullable();
             $table->integer('semID')->index('FK_70');
-            $table->integer('honorID')->index('FK_63');
+            $table->integer('honorID')->nullable()->index('FK_63');
             $table->integer('programID')->index('FK_49');
+            $table->integer('updatedBy')->nullable();
+            $table->dateTime('updatedAt')->nullable();
         });
     }
 

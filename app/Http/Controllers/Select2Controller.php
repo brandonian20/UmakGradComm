@@ -45,7 +45,7 @@ class Select2Controller extends Controller
                     [   
                         Crypt::encryptString($row['semID']),
                         $row['semID'],
-                        $row['desc'], 
+                        $row['semesterName'], 
                     ]);
             }
 
