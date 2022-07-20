@@ -112,8 +112,8 @@
             </div>
         </footer><!-- Vendors-->
 
-        <!-- College List Modal -->
-<div class="modal fade" id="viewCollege" tabindex="-1" aria-labelledby="viewCollegeLabel" aria-hidden="true">
+<!-- College List Modal -->
+{{-- <div class="modal fade" id="viewCollege" tabindex="-1" aria-labelledby="viewCollegeLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl">
         <div class="modal-content">
             <div class="modal-header border-0 py-10 px-20">
@@ -491,7 +491,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
         <!-- build:js -->
         <script src="{{ asset('/vendors/js/bootstrap.js') }}"></script>

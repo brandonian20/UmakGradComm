@@ -43,6 +43,7 @@ use App\Models\Semester;
 
 Route::get('/', [VisitorPageController::class, 'home']);
 // Route::get('/programflow', [VisitorPageController::class, 'programme']);
+Route::get('/home/colleges', [VisitorPageController::class, 'colleges']);
 Route::get('/gallery', [VisitorPageController::class, 'gallery']);
 Route::get('/graduates-gallery', [VisitorPageController::class, 'graduates_gallery']);
 Route::get('/message', [VisitorPageController::class, 'message']);
