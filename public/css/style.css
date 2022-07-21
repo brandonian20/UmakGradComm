@@ -16,6 +16,7 @@
 
 html, body, h1, h2,h3, h4, h5, h6 {
     font-family: 'Marcellus', serif !important;
+    /* overflow-y: scroll !important; */
 }
 
 body{
@@ -30,6 +31,12 @@ a.dropdown-item, p {
   background-image: url('../img/BG1-Black.png') !important;
   background-repeat: repeat-y !important;
   background-size: 100% !important;
+}
+
+.graduates-bg{
+  background-image: url('../img/bg.jpg') !important; 
+  background-repeat: repeat-y;
+  background-size: 100%; background-attachment: fixed;
 }
 
 .button-color{
@@ -60,5 +67,48 @@ a.dropdown-item, p {
   overflow: visible !important;
 }
 
+/*========================= Styles of Graduates' Gallery ====================*/
+img.grad_pic {
+  width: 140px;
+   /*border: 5px solid #767676;*/
+   border: 3px solid #d5ac44;
+}
+.program_section {
+  width: 70%;
+}
+
+
+
+@media (max-width: 1200px) {
+img.grad_pic {
+  width: 140px;
+}
+.program_section {
+  width: 100%;
+}
+}
+
+img.grad_pic { 
+transition: all .3s ease-in-out;
+
+}
+img.grad_pic:hover { 
+    transform: scale(1.5); 
+  }
+
+.grow { 
+transition: all .2s ease-in-out; 
+}
+.grow:hover { 
+    transform: scale(1.1); 
+  }
+img.grad_pic:hover {
+transform: scale(1.3);
+}
+
+.modal-open {
+  overflow-y:scroll;
+  padding-right:0 !important;
+}
 
 
