@@ -135,14 +135,14 @@
             <a class="btn btn-accent-1 mt-50 button-color" href="services-01.html" target="_self">Show more...</a>
         </div>
     </div>
-    <div class="pt-120 pb-130">
+    <div class="pt-60 pb-60">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
-                    <h2 class="m-0 text-center" data-show="startbox">A heartfelt message from our<br><span class="highlight">President & Mayor</span></h2>
+                    <h2 class="m-0 text-center" data-show="startbox">A heartfelt messages from our<br><span class="highlight">Guest Speakers</span></h2>
                 </div>
             </div>
-            <div class="rounded-4 bg-accent-4 pt-160 pb-130 shape-parent mt-120">
+            <div class="rounded-4 bg-accent-4 pt-70 pb-70 shape-parent mt-60">
                 <!-- Shape-->
                 <div class="shape justify-content-end rounded-top-right-4 overflow-hidden opacity-50"><img loading="lazy" src="{{ asset('/img/root/home-2-shape-390x294.png') }}" alt="" width="232" height="325"></div>
                 <div class="swiper shape-parent" data-swiper-slides="1" data-swiper-gap="30" data-swiper-grabcursor="true" data-show="startbox">
@@ -155,12 +155,12 @@
                             <div class="swiper-slide px-45 px-lg-100">
                                 <div class="row">
                                     <div class="col-lg-10 offset-lg-1">
-                                        <blockquote class="h3 mb-50 text-white"  style="font-family: 'Metropolis', serif;">“ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ”</blockquote>
+                                        <blockquote class="h4 mb-50 text-white"  style="font-family: 'Metropolis', serif;">“ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ”</blockquote>
                                         <div class="d-flex align-items-center">
-                                            <div class="flex-shrink-0"><img class="rounded-circle" loading="lazy" src="https://www.umak.edu.ph/sites/default/files/inline-images/Dr.%20Ramos%20Portrait%203.jpg" alt="" height="64" width="64"></div>
+                                            <div class="flex-shrink-0"><img class="rounded-circle" loading="lazy" src="https://povcon2021.ssu.edu.ph/wp-content/uploads/2021/07/prospero.jpg" alt="" height="64" width="64"></div>
                                             <div class="flex-grow-1 ms-20">
-                                                <h6 class="feedback-author mb-5 text-white">DR. ELYXZUR C. RAMOS</h6>
-                                                <p class="feedback-position text-light font-size-14 m-0">OIC University President</p>
+                                                <h6 class="feedback-author mb-5 text-white">Dr. J. PROSPERO "POPOY" E. DE VERA</h6>
+                                                <p class="feedback-position text-light font-size-14 m-0">Chairman, Commission on Higher Education</p>
                                             </div>
                                         </div>
                                     </div>
@@ -169,7 +169,7 @@
                             <div class="swiper-slide px-45 px-lg-100">
                                 <div class="row">
                                     <div class="col-lg-10 offset-lg-1">
-                                        <blockquote class="h3 mb-50 text-white" style="font-family: 'Metropolis', serif;">“ No one shall be left behind, whether in teacher or in learning. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  ”</blockquote>
+                                        <blockquote class="h4 mb-50 text-white" style="font-family: 'Metropolis', serif;">“ No one shall be left behind, whether in teacher or in learning. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  ”</blockquote>
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0"><img class="rounded-circle" loading="lazy" src="https://www.manilatimes.net/uploads/imported_images/uploads/2018/11/Mayor-Abi-Binay20181104.jpg" alt="" height="64" width="64"></div>
                                             <div class="flex-grow-1 ms-20">
@@ -183,10 +183,10 @@
                         </div>
                     </div>
                     <div class="d-none d-lg-block">
-                        <div class="swiper-button-prev swiper-button-position-1 swiper-button-white shadow mt-30 top-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none">
+                        <div class="swiper-button-prev swiper-button-position-3 swiper-button-white shadow mt-130 top-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none">
                                 <path fill="currentColor" fill-rule="evenodd" d="m3.96 6.15 5.08-4.515L7.91.365.445 7l7.465 6.635 1.13-1.27L3.96 7.85h15.765v-1.7H3.96Z" clip-rule="evenodd" />
                             </svg></div>
-                        <div class="swiper-button-next swiper-button-position-1 swiper-button-white shadow mt-30 top-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none">
+                        <div class="swiper-button-next swiper-button-position-3 swiper-button-white shadow mt-130 top-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none">
                                 <path fill="currentColor" fill-rule="evenodd" d="m16.21 6.15-5.08-4.515 1.13-1.27L19.725 7l-7.465 6.635-1.13-1.27 5.08-4.515H.445v-1.7H16.21Z" clip-rule="evenodd" />
                             </svg></div>
                     </div>
