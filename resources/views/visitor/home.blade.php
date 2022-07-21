@@ -142,20 +142,20 @@
                     <h2 class="m-0 text-center" data-show="startbox">A heartfelt message from our<br><span class="highlight">President & Mayor</span></h2>
                 </div>
             </div>
-            <div class="rounded-4 bg-accent-1 pt-160 pb-130 shape-parent mt-120">
+            <div class="rounded-4 bg-accent-4 pt-160 pb-130 shape-parent mt-120">
                 <!-- Shape-->
                 <div class="shape justify-content-end rounded-top-right-4 overflow-hidden opacity-50"><img loading="lazy" src="{{ asset('/img/root/home-2-shape-390x294.png') }}" alt="" width="232" height="325"></div>
                 <div class="swiper shape-parent" data-swiper-slides="1" data-swiper-gap="30" data-swiper-grabcursor="true" data-show="startbox">
                     <!-- Shape-->
                     <div class="shape justify-content-center mt-n70 opacity-50"><svg class="no-transform" xmlns="http://www.w3.org/2000/svg" width="169" height="145" fill="none">
-                            <path fill="#042864" d="M42.92 70.388 62.37 0H32.191L0 78.131V145h71.087V70.388H42.921Zm97.913 0L160.282 0h-30.179l-32.19 78.131V145H169V70.388h-28.167Z" />
+                            <path fill="#FFF" d="M42.92 70.388 62.37 0H32.191L0 78.131V145h71.087V70.388H42.921Zm97.913 0L160.282 0h-30.179l-32.19 78.131V145H169V70.388h-28.167Z" />
                         </svg></div>
                     <div class="swiper-container">
-                        <div class="swiper-wrapper">
+                        <div class="swiper-wrapper" >
                             <div class="swiper-slide px-45 px-lg-100">
                                 <div class="row">
                                     <div class="col-lg-10 offset-lg-1">
-                                        <blockquote class="h3 mb-50 text-white">“ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ”</blockquote>
+                                        <blockquote class="h3 mb-50 text-white"  style="font-family: 'Metropolis', serif;">“ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ”</blockquote>
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0"><img class="rounded-circle" loading="lazy" src="https://www.umak.edu.ph/sites/default/files/inline-images/Dr.%20Ramos%20Portrait%203.jpg" alt="" height="64" width="64"></div>
                                             <div class="flex-grow-1 ms-20">
@@ -169,7 +169,7 @@
                             <div class="swiper-slide px-45 px-lg-100">
                                 <div class="row">
                                     <div class="col-lg-10 offset-lg-1">
-                                        <blockquote class="h3 mb-50 text-white">“ No one shall be left behind, whether in teacher or in learning. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  ”</blockquote>
+                                        <blockquote class="h3 mb-50 text-white" style="font-family: 'Metropolis', serif;">“ No one shall be left behind, whether in teacher or in learning. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  ”</blockquote>
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0"><img class="rounded-circle" loading="lazy" src="https://www.manilatimes.net/uploads/imported_images/uploads/2018/11/Mayor-Abi-Binay20181104.jpg" alt="" height="64" width="64"></div>
                                             <div class="flex-grow-1 ms-20">

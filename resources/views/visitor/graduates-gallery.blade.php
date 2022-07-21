@@ -8,7 +8,7 @@
                 <img src="http://127.0.0.1:8000/img/ccis-logo.png" class="img-fluid  me-3 " style="width: 100px;">
             </div>
             <div class="">
-                <h1 class="text-center mb-4 text-light mt-3" style="font-family: Marcellus;">College of Computing and Information Sciences</h2>
+                <h1 class="text-center mb-40 text-light mt-30" style="font-family: Marcellus;">College of Computing and Information Sciences</h2>
             </div>
         </div>
     </section>
@@ -20,60 +20,111 @@
         <div class="card text-center bg-dark rounded-5" >
           <div class="card-header row border-0">
             <div class=" d-flex pt-4 justify-content-center" >
-              <h3 class="text-light  " style="font-family: Marcellus;">Bachelor of Science in Computer Science Major in Application Development</h2>
+              <h3 class="text-light  m-0" style="font-family: Marcellus;">Bachelor of Science in Computer Science Major in Application Development</h2>
             </div>
           </div>
-          <div class="card-body mt-0" >
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
+          <div class="card-body mt-0 p-30" >
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="{{ asset('/img/sample.jpg') }}" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
 
-            <!-- <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
-            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top mx-2 mb-3 rounded grad_pic"  alt="..." ></a>
+            <!-- <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
+            <a data-bs-toggle="modal" data-bs-target="#slide-deck"><img src="elias.jpg" class="card-img-top m-10 rounded grad_pic"  alt="..." ></a>
 -->
 
           </div>
