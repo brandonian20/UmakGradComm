@@ -35,7 +35,7 @@
                 <a class="navbar-brand position-fixed" href="/">
                     <img src="{{ asset('/img/umak_logo.png') }}" class="img pt-5" style="width: 60px;"/> 
                         {{-- <span class="ps-10 h6 d-none d-lg-inline-block text-white" style="font-family: Helvetica;">UMak Commencement</span> --}}
-                    <img src="{{ asset('/img/49th-Commencement-text.png') }}" class="img ms-10 d-none d-sm-inline" style="height: 60px;"/>
+                    <img src="{{ asset('/img/49th-CE-logo-horizontal.png') }}" class="img d-none d-sm-inline" style="height: 60px;"/>
                 </a>
                 <a class="navbar-toggle order-4 ms-auto pe-10 popup-inline" href="#navbar-mobile-style-1"><span></span><span></span><span></span></a>
                 <ul class="nav navbar-nav order-2 ms-auto nav-no-opacity"  style="font-family: Helvetica;">
