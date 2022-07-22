@@ -35,13 +35,13 @@
                 <a class="navbar-brand position-fixed" href="/">
                     <img src="{{ asset('/img/umak_logo.png') }}" class="img pt-5" style="width: 60px;"/> 
                         {{-- <span class="ps-10 h6 d-none d-lg-inline-block text-white" style="font-family: Helvetica;">UMak Commencement</span> --}}
-                    <img src="{{ asset('/img/49th-Commencement-text.png') }}" class="img ms-10 d-none d-sm-inline" style="height: 60px;"/>
+                    <img src="{{ asset('/img/49th-CE-logo-horizontal.png') }}" class="img d-none d-sm-inline" style="height: 60px;"/>
                 </a>
                 <a class="navbar-toggle order-4 ms-auto pe-10 popup-inline" href="#navbar-mobile-style-1"><span></span><span></span><span></span></a>
                 <ul class="nav navbar-nav order-2 ms-auto nav-no-opacity"  style="font-family: Helvetica;">
-                    <li class="nav-item {{ (request()->is('/*')) ? 'active' : '' }}"><a class="nav-link" href="/"><span>Home</span></a></li >
-                    <li class="nav-item {{ (request()->is('gallery')) ? 'active' : '' }}"><a class="nav-link" href="{{url('/gallery')}}"><span>Gallery</span></a></li>
-                    <li class="nav-item {{ (request()->is('/graduates-gallery*')) ? 'active' : '' }} {{ (request()->is('/*')) ? 'd-none' : '' }}"><a class="nav-link" href="" data-show="startbox"  data-bs-toggle="modal" data-bs-target="#viewCollege" target="_self"><span>Graduates</span></a></li>
+                    <li class="nav-item {{ (request()->is('/*')) ? 'active' : '' }}"><a class="nav-link" href="/"><span>HOME</span></a></li >
+                    <li class="nav-item {{ (request()->is('gallery')) ? 'active' : '' }}"><a class="nav-link" href="{{url('/gallery')}}"><span>GALLERY</span></a></li>
+                    <li class="nav-item {{ (request()->is('/graduates-gallery*')) ? 'active' : '' }} {{ (request()->is('/*')) ? 'd-none' : '' }}"><a class="nav-link" href=""  data-bs-toggle="modal" data-bs-target="#viewCollege" target="_self"><span>GRADUATES</span></a></li>
                     {{-- <li class="nav-item navbar-dropdown {{ (request()->is('programflow*')) ? 'active' : '' }}"><a class="nav-link" href="{{ url('/programflow') }}"><span>Programme</span></a>
                         <div class="dropdown-menu rounded-2 shadow">
                             <ul class="nav navbar-nav">
