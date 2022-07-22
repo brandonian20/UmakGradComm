@@ -153,11 +153,11 @@
             </div>
             <div class="rounded-4 bg-accent-4 pt-70 pb-70 shape-parent mt-60">
                 <!-- Shape-->
-                <div class="shape justify-content-end rounded-top-right-4 overflow-hidden opacity-50"><img loading="lazy" src="{{ asset('/img/root/home-2-shape-390x294.png') }}" alt="" width="232" height="325"></div>
+                <div class="shape justify-content-end rounded-top-right-4 overflow-hidden opacity-50"><img loading="lazy" src="{{ asset('/img/root/home-3-shape-688x354.png') }}" alt="" width="232" height="325"></div>
                 <div class="swiper shape-parent" data-swiper-slides="1" data-swiper-gap="30" data-swiper-grabcursor="true" data-show="startbox">
                     <!-- Shape-->
                     <div class="shape justify-content-center mt-n70 opacity-50"><svg class="no-transform" xmlns="http://www.w3.org/2000/svg" width="169" height="145" fill="none">
-                            <path fill="#FFF" d="M42.92 70.388 62.37 0H32.191L0 78.131V145h71.087V70.388H42.921Zm97.913 0L160.282 0h-30.179l-32.19 78.131V145H169V70.388h-28.167Z" />
+                            <path fill="#000" d="M42.92 70.388 62.37 0H32.191L0 78.131V145h71.087V70.388H42.921Zm97.913 0L160.282 0h-30.179l-32.19 78.131V145H169V70.388h-28.167Z" />
                         </svg></div>
                     <div class="swiper-container">
                         <div class="swiper-wrapper" >
