@@ -165,7 +165,9 @@
                                 <div class="row">
                                     <div class="col-lg-10 offset-lg-1">
                                         <blockquote class="h4 mb-50 text-white"  style="font-family: 'Metropolis', serif;">
-                                            “ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ” <a href="/message" style="color: white"><br> Read More</a></blockquote>
+                                            “ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ” 
+                                            <a href="/message" style="color: white"><br> Read More</a>
+                                        </blockquote>
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0"><img class="rounded-circle" loading="lazy" src="https://povcon2021.ssu.edu.ph/wp-content/uploads/2021/07/prospero.jpg" alt="" height="64" width="64"></div>
                                             <div class="flex-grow-1 ms-20">
@@ -210,7 +212,7 @@
         <div class="container">
             <div class="row gy-90">
                 <div class="col-lg-3">
-                    <h2 class="m-0 text-white" data-show="startbox">Message from Deans and Faculty</h2>
+                    <h2 class="m-0 text-white" data-show="startbox">Message from the UMAK <span class="highlight"> Management </span></h2>
                 </div>
                 <div class="col-lg-8 offset-lg-1">
                     <!-- Slider-->
