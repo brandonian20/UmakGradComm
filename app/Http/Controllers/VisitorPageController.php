@@ -45,11 +45,6 @@ class VisitorPageController extends Controller
         return response()->json(['success' => true, 'data' => $data], 200);
     }
 
-    // //programme func
-    // public function programme(){
-    //     return view('visitor/programme');
-    // }
-
     //gallery func
     public function gallery(){
         return view('visitor/gallery');

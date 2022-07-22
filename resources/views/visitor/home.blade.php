@@ -280,7 +280,7 @@
     <div class="modal-dialog modal-dialog-centered modal-xl">
         <div class="modal-content">
             <div class="modal-header border-0 py-10 px-20">
-                <h3 class="modal-title" id="exampleModalLabel">Colleges</h3>
+                <h3 class="modal-title" id="exampleModalLabel">Colleges & Institutes</h3>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body py-5">
@@ -308,10 +308,10 @@
                                     <i class="fa-solid fa-chevron-down mx-10"></i>
                                 </button>
                                 <ul class="dropdown-menu border shadow py-10">
-                                    
-                                    {{-- @foreach($row['progams'] as $prog)
+
+                                    @foreach( $row['programs'] as $prog )
                                         <li><a class="dropdown-item fw-bold ps-20" href="/graduates-gallery/2022/{{$row['shortname']}}#{{$prog['programName']}}">{{$prog['programName']}}</a></li>
-                                    @endforeach --}}
+                                    @endforeach
 
                                 </ul>
                             </div>
@@ -327,69 +327,7 @@
 </div>
 
 <script>
-    $(function(){
-
-        // $("#viewCollege").on("show.bs.modal", function(){
-        //     loadColleges();
-        // })
-
-        function loadColleges(){
-            $.ajax({
-                url: '/home/colleges',
-                type: 'GET',
-                headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-                success: function (resp) {
-                    $(`#collegeRow`).html("");
-                    if (resp.success){
-                        let data = resp.data;
-
-                        console.log(data);
-
-                        for(let row of data){
-
-                            let listDropdown = "";
-                            for(let xrow of row.programs){
-                                listDropdown += `<li><a class="dropdown-item fw-bold ps-20" href="/graduates-gallery/2022/${row.shortname}#${xrow.programName}">${xrow.programName}</a></li>`;
-                            }
-
-                            $(`#collegeRow`).append(`
-                                <div class="col-md-3 flex-fill flex-sm-grow-0 d-grid gap-2 my-10 mb-sm-10 me-25">
-                                    <div class="btn-group">
-
-                                        <a type="button" class="btn btn-accent-4 col-10 p-20 rounded-start shadow" href="/graduates-gallery/2022/${row.shortname}" target="_self">
-                                            <div class="d-flex align-items-center">
-                                                <div class="w-100">
-                                                    <img src="/pictures/image?id=${row.image}" style="max-height: 50px;"> 
-                                                </div>
-
-                                                <div class="col-8 w-100 text-center px-0 px-xl-15 fs-5">
-                                                    ${row.shortname}
-                                                </div>
-                                            </div>
-                                        </a>
-
-                                        <button type="button" class="btn btn-accent-5 col-2 rounded-end shadow dropdown-toggle dropdown-toggle-split px-0" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="fa-solid fa-chevron-down mx-10"></i>
-                                        </button>
-                                        <ul class="dropdown-menu border shadow py-10">
-                                            ${listDropdown}
-                                        </ul>
-                                    </div>
-                                    
-                                </div>
-                            `);
-                        }
-
-                    }
-                }, error: function (resp) {
-                    console.log(resp)
-                }
-            });
-        }
-
-        
-
-    });
+   
 </script>
 
 @endsection
