@@ -210,7 +210,7 @@
         <div class="container">
             <div class="row gy-90">
                 <div class="col-lg-3">
-                    <h2 class="m-0 text-white" data-show="startbox">Message from Deans and Faculty</h2>
+                    <h2 class="m-0 text-white" data-show="startbox">Message from the UMAK <span class="highlight"> Management </span></h2>
                 </div>
                 <div class="col-lg-8 offset-lg-1">
                     <!-- Slider-->
