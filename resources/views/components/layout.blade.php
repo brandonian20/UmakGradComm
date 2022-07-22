@@ -39,9 +39,9 @@
                 </a>
                 <a class="navbar-toggle order-4 ms-auto pe-10 popup-inline" href="#navbar-mobile-style-1"><span></span><span></span><span></span></a>
                 <ul class="nav navbar-nav order-2 ms-auto nav-no-opacity"  style="font-family: Helvetica;">
-                    <li class="nav-item {{ (request()->is('/*')) ? 'active' : '' }}"><a class="nav-link" href="/"><span>Home</span></a></li >
-                    <li class="nav-item {{ (request()->is('gallery')) ? 'active' : '' }}"><a class="nav-link" href="{{url('/gallery')}}"><span>Gallery</span></a></li>
-                    <li class="nav-item {{ (request()->is('/graduates-gallery*')) ? 'active' : '' }} {{ (request()->is('/*')) ? 'd-none' : '' }}"><a class="nav-link" href="" data-show="startbox"  data-bs-toggle="modal" data-bs-target="#viewCollege" target="_self"><span>Graduates</span></a></li>
+                    <li class="nav-item {{ (request()->is('/*')) ? 'active' : '' }}"><a class="nav-link" href="/"><span>HOME</span></a></li >
+                    <li class="nav-item {{ (request()->is('gallery')) ? 'active' : '' }}"><a class="nav-link" href="{{url('/gallery')}}"><span>GALLERY</span></a></li>
+                    <li class="nav-item {{ (request()->is('/graduates-gallery*')) ? 'active' : '' }} {{ (request()->is('/*')) ? 'd-none' : '' }}"><a class="nav-link" href=""  data-bs-toggle="modal" data-bs-target="#viewCollege" target="_self"><span>GRADUATES</span></a></li>
                     {{-- <li class="nav-item navbar-dropdown {{ (request()->is('programflow*')) ? 'active' : '' }}"><a class="nav-link" href="{{ url('/programflow') }}"><span>Programme</span></a>
                         <div class="dropdown-menu rounded-2 shadow">
                             <ul class="nav navbar-nav">
@@ -78,6 +78,57 @@
         <main>
             @yield('content')
         </main>
+
+        <!-- College List Modal -->
+        <div class="modal fade" id="viewCollege" tabindex="-1" aria-labelledby="viewCollegeLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0 py-10 px-20">
+                        <h3 class="modal-title" id="exampleModalLabel">Colleges & Institutes</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body py-5">
+
+                        <div class="d-flex flex-wrap justify-content-center py-0 py-lg-10" id="collegeRow">
+                            
+                            @foreach($colleges as $row)
+
+                                <div class="col-md-3 flex-fill flex-sm-grow-0 d-grid gap-2 my-10 mb-sm-10 me-25">
+                                    <div class="btn-group">
+
+                                        <a type="button" class="btn btn-accent-4 col-10 p-20 rounded-start shadow" href="/graduates-gallery/2022/{{$row['shortname']}}" target="_self">
+                                            <div class="d-flex align-items-center">
+                                                <div class="w-100">
+                                                    <img src="/pictures/image?id={{$row['image']}}" style="max-height: 50px; max-width: 50px;"> 
+                                                </div>
+
+                                                <div class="col-8 w-100 text-center px-0 px-xl-15 fs-5">
+                                                    {{$row['shortname']}}
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <button type="button" class="btn btn-accent-5 col-2 rounded-end shadow dropdown-toggle dropdown-toggle-split px-0" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa-solid fa-chevron-down mx-10"></i>
+                                        </button>
+                                        <ul class="dropdown-menu border shadow py-10">
+
+                                            @foreach( $row['programs'] as $prog )
+                                                <li><a class="dropdown-item fw-bold ps-20" href="/graduates-gallery/2022/{{$row['shortname']}}#{{$prog['programName']}}">{{$prog['programName']}}</a></li>
+                                            @endforeach
+
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+                            @endforeach
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <footer class="bg-accent-2 text-dark py-20 footerNext" style="background-color: #052964 !important">
             <div class="container text-white" style="font-family: Helvetica, sans-serif">
