@@ -38,7 +38,7 @@
                     <img src="{{ asset('/img/49th-CE-logo-horizontal.png') }}" class="img d-none d-sm-inline" style="height: 60px;"/>
                 </a>
                 <a class="navbar-toggle order-4 ms-auto pe-10 popup-inline" href="#navbar-mobile-style-1"><span></span><span></span><span></span></a>
-                <ul class="nav navbar-nav order-2 ms-auto nav-no-opacity"  style="font-family: Helvetica;">
+                <ul class="nav navbar-nav order-2 ms-auto nav-no-opacity" >
                     <li class="nav-item {{ (request()->is('/*')) ? 'active' : '' }}"><a class="nav-link" href="/"><span>HOME</span></a></li >
                     <li class="nav-item {{ (request()->is('gallery')) ? 'active' : '' }}"><a class="nav-link" href="{{url('/gallery')}}"><span>GALLERY</span></a></li>
                     <li class="nav-item {{ (request()->is('/graduates-gallery*')) ? 'active' : '' }} {{ (request()->is('/*')) ? 'd-none' : '' }}"><a class="nav-link" href=""  data-bs-toggle="modal" data-bs-target="#viewCollege" target="_self"><span>GRADUATES</span></a></li>
@@ -82,14 +82,14 @@
         <!-- College List Modal -->
         <div class="modal fade" id="viewCollege" tabindex="-1" aria-labelledby="viewCollegeLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0 py-10 px-20">
+                <div class="modal-content p-10">
+                    <div class="modal-header justify-content-center border-0 py-10 px-20">
                         <h3 class="modal-title" id="exampleModalLabel">Colleges & Institutes</h3>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        {{-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> --}}
                     </div>
                     <div class="modal-body py-5">
 
-                        <div class="d-flex flex-wrap justify-content-center py-0 py-lg-10" id="collegeRow">
+                        <div class="d-flex flex-wrap justify-content-center pb-10 pt-0" id="collegeRow">
                             
                             @foreach($colleges as $row)
 

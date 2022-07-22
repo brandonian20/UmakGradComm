@@ -100,6 +100,6 @@ class VisitorPageController extends Controller
 
      //graduates func
      public function message(){
-        return view('visitor/message');
+        return view('visitor/message', ["colleges" => $this->dataColleges()]);
     }
 }

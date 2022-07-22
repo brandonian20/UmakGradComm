@@ -15,12 +15,14 @@
 }
 
 html, body, h1, h2,h3, h4, h5, h6 {
-    font-family: 'Marcellus', serif !important;
+    /*font-family: 'Marcellus', serif !important;*/
+font-family: 'Metropolis', sans-serif !important;
     /* overflow-y: scroll !important; */
 }
 
 body{
-    font-family: 'Marcellus', serif !important;
+    /*font-family: 'Marcellus', serif !important;*/
+font-family: 'Metropolis', sans-serif !important;
 }   
 
 a.dropdown-item, p {
@@ -35,6 +37,13 @@ a.dropdown-item, p {
 
 .graduates-bg{
   background-image: url('../img/bg.jpg') !important; 
+  background-repeat: repeat-y;
+  background-size: 100%; 
+  background-attachment: fixed;
+}
+
+.graduates-bg-blur{
+  background-image: url('../img/bg-blur.jpg') !important; 
   background-repeat: repeat-y;
   background-size: 100%; 
   background-attachment: fixed;
