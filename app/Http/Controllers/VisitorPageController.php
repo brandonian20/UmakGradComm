@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Crypt;
 
 class VisitorPageController extends Controller
 {
-    //Home func
-    public function home(){
-        
+
+    public function dataColleges(){
+
         $data = College::orderBy('collegeName', 'ASC')->get();
 
         foreach($data as $row){
@@ -26,33 +26,22 @@ class VisitorPageController extends Controller
             $row['programs'] = $programs;
         }
 
-        return view('visitor/home', ["data" => $data]);
+        return $data;
     }
 
-    public function colleges(){
-        $data = College::orderBy('collegeName', 'ASC')->get();
-
-        foreach($data as $row){
-
-            $programs = Program::where('collegeID', '=', $row['collegeID'])->orderBy('programName', 'ASC')->get();
-
-            $row['image'] = ($row['image'] != null ? Crypt::encryptString($row['image']) : null);
-            $row['programs'] = $programs;
-        }
-
-        //$data = Program::where('collegeID', '=', '4')->get();
-
-        return response()->json(['success' => true, 'data' => $data], 200);
+    //Home func
+    public function home(){
+        return view('visitor/home', ["colleges" => $this->dataColleges()]);
     }
 
     //gallery func
     public function gallery(){
-        return view('visitor/gallery');
+        return view('visitor/gallery', ["colleges" => $this->dataColleges()]);
     }
 
     //graduates func
     public function graduates_gallery(){
-        return view('visitor/graduates-gallery');
+        return view('visitor/graduates-gallery', ["colleges" => $this->dataColleges()]);
     }
 
     //graduates func
@@ -106,7 +95,7 @@ class VisitorPageController extends Controller
         }
 
         // return response()->json($data, 200);
-        return view('visitor/graduates-gallery-dev', ["data" => $data]);
+        return view('visitor/graduates-gallery-dev', ["data" => $data, "colleges" => $this->dataColleges()]);
     }
 
      //graduates func
