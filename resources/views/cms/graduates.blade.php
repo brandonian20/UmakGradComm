@@ -109,13 +109,13 @@
 
                         <div class="d-flex justify-content-center">
                             <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                <input type="radio" class="btn-check" name="honor" value="1" id="cumlaude" autocomplete="off">
+                                <input type="radio" class="btn-check" name="honor" value="3" id="cumlaude" autocomplete="off">
                                 <label class="btn btn-outline-primary" for="cumlaude">Cum Laude</label>
                               
                                 <input type="radio" class="btn-check" name="honor" value="2" id="mcumlaude" autocomplete="off">
                                 <label class="btn btn-outline-primary" for="mcumlaude">Magna Cum Laude</label>
                               
-                                <input type="radio" class="btn-check" name="honor" value="3" id="scumlaude" autocomplete="off">
+                                <input type="radio" class="btn-check" name="honor" value="1" id="scumlaude" autocomplete="off">
                                 <label class="btn btn-outline-primary" for="scumlaude">Summa Cum Laude</label>
                             </div>
                         </div>
@@ -204,13 +204,13 @@
         
                                 <div class="d-flex justify-content-center">
                                     <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                        <input type="radio" class="btn-check" name="e-honor" value="1" id="e-cumlaude" autocomplete="off">
+                                        <input type="radio" class="btn-check" name="e-honor" value="3" id="e-cumlaude" autocomplete="off">
                                         <label class="btn btn-outline-primary" for="e-cumlaude">Cum Laude</label>
                                       
                                         <input type="radio" class="btn-check" name="e-honor" value="2" id="e-mcumlaude" autocomplete="off">
                                         <label class="btn btn-outline-primary" for="e-mcumlaude">Magna Cum Laude</label>
                                       
-                                        <input type="radio" class="btn-check" name="e-honor" value="3" id="e-scumlaude" autocomplete="off">
+                                        <input type="radio" class="btn-check" name="e-honor" value="1" id="e-scumlaude" autocomplete="off">
                                         <label class="btn btn-outline-primary" for="e-scumlaude">Summa Cum Laude</label>
                                     </div>
                                 </div>

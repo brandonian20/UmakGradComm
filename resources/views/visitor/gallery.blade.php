@@ -3,7 +3,7 @@
 @section('content')
      <!-- Programme Content -->
      <section id="gallery">
-        <div class="pt-120 pb-130 text-center bg-image gallery-bg">
+        <div class="pt-120 pb-130 text-center bg-image graduates-bg">
             <!-- Shape-->
             {{-- <div class="shape justify-content-end"><img loading="lazy" src="{{ asset('img/root/404-shape-326x321.png') }}"
                     alt="" width="542" height="382"></div><!-- Shape--> --}}

@@ -103,11 +103,20 @@
             </div>
         </div>
     </div>
-    <div class="pt-50 pb-50 alert-warning shape-parent text-center gallery-bg">
+    {{-- <div class="pt-50 pb-50 alert-warning shape-parent text-center graduates-bg"> --}}
+    <div class="pt-50 pb-50 alert-warning shape-parent text-center graduates-bg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <h2 class="m-0 text-white" data-show="startbox">Assembly and Procession Gallery</h2>
+                    <div class="background">
+                        <div class="background-image jarallax" data-jarallax data-speed="0.8">
+                            {{-- <img class="jarallax-img gradutes-bg" loading="lazy" src="" data-swiper-parallax-x="20%" alt=""> --}}
+                            <img class="jarallax-img" loading="lazy" src="{{ asset('/img/bg.jpg') }}" data-swiper-parallax-x="20%" alt="">
+                        </div>
+                        {{-- <div class="background-color" style="--background-color: #000; opacity: .25;"></div>
+                        <div class="background-color" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 100%, rgba(0, 0, 0, 0) 150px);"></div> --}}
+                    </div>
                 </div>
             </div>
             <div class="isotope shape-parent mt-50">
@@ -278,6 +287,38 @@
 
                 <div class="d-flex flex-wrap justify-content-center py-0 py-lg-10" id="collegeRow">
                     
+                    @foreach($data as $row)
+
+                        <div class="col-md-3 flex-fill flex-sm-grow-0 d-grid gap-2 my-10 mb-sm-10 me-25">
+                            <div class="btn-group">
+
+                                <a type="button" class="btn btn-accent-4 col-10 p-20 rounded-start shadow" href="/graduates-gallery/2022/{{$row['shortname']}}" target="_self">
+                                    <div class="d-flex align-items-center">
+                                        <div class="w-100">
+                                            <img src="/pictures/image?id={{$row['image']}}" style="max-height: 50px;"> 
+                                        </div>
+
+                                        <div class="col-8 w-100 text-center px-0 px-xl-15 fs-5">
+                                            {{$row['shortname']}}
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <button type="button" class="btn btn-accent-5 col-2 rounded-end shadow dropdown-toggle dropdown-toggle-split px-0" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-chevron-down mx-10"></i>
+                                </button>
+                                <ul class="dropdown-menu border shadow py-10">
+                                    
+                                    {{-- @foreach($row['progams'] as $prog)
+                                        <li><a class="dropdown-item fw-bold ps-20" href="/graduates-gallery/2022/{{$row['shortname']}}#{{$prog['programName']}}">{{$prog['programName']}}</a></li>
+                                    @endforeach --}}
+
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    @endforeach
+
                 </div>
 
             </div>
@@ -288,9 +329,9 @@
 <script>
     $(function(){
 
-        $("#viewCollege").on("show.bs.modal", function(){
-            loadColleges();
-        })
+        // $("#viewCollege").on("show.bs.modal", function(){
+        //     loadColleges();
+        // })
 
         function loadColleges(){
             $.ajax({
@@ -308,14 +349,14 @@
 
                             let listDropdown = "";
                             for(let xrow of row.programs){
-                                listDropdown += `<li><a class="dropdown-item fw-bold ps-20" href="#">${xrow.programName}</a></li>`;
+                                listDropdown += `<li><a class="dropdown-item fw-bold ps-20" href="/graduates-gallery/2022/${row.shortname}#${xrow.programName}">${xrow.programName}</a></li>`;
                             }
 
                             $(`#collegeRow`).append(`
                                 <div class="col-md-3 flex-fill flex-sm-grow-0 d-grid gap-2 my-10 mb-sm-10 me-25">
                                     <div class="btn-group">
 
-                                        <a type="button" class="btn btn-accent-4 col-10 p-20 rounded-start shadow" href="#" target="_self">
+                                        <a type="button" class="btn btn-accent-4 col-10 p-20 rounded-start shadow" href="/graduates-gallery/2022/${row.shortname}" target="_self">
                                             <div class="d-flex align-items-center">
                                                 <div class="w-100">
                                                     <img src="/pictures/image?id=${row.image}" style="max-height: 50px;"> 

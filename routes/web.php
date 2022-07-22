@@ -46,6 +46,7 @@ Route::get('/', [VisitorPageController::class, 'home']);
 Route::get('/home/colleges', [VisitorPageController::class, 'colleges']);
 Route::get('/gallery', [VisitorPageController::class, 'gallery']);
 Route::get('/graduates-gallery', [VisitorPageController::class, 'graduates_gallery']);
+Route::get('/graduates-gallery/{year}/{college}', [VisitorPageController::class, 'graduates_gallery_dev']);
 Route::get('/message', [VisitorPageController::class, 'message']);
 
 /* ## END Visitor Module Region ## */
@@ -59,7 +60,8 @@ Route::post('/login/signin', [LoginController::class, 'signin']);
 Route::get('/login/signout', [LoginController::class, 'signout']);
 
 //Images
-Route::get('/pictures/image', [PicturesController::class, 'image'])->middleware('auth');
+Route::get('/pictures/image', [PicturesController::class, 'image']);
+Route::get('/pictures/toga', [PicturesController::class, 'toga']);
 
 //Select2Routes
 Route::get('/select2/academicYear', [Select2Controller::class, 'academicYear'])->middleware('auth');

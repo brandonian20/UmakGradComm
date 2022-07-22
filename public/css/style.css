@@ -36,7 +36,8 @@ a.dropdown-item, p {
 .graduates-bg{
   background-image: url('../img/bg.jpg') !important; 
   background-repeat: repeat-y;
-  background-size: 100%; background-attachment: fixed;
+  background-size: 100%; 
+  background-attachment: fixed;
 }
 
 .button-color{
@@ -71,7 +72,8 @@ a.dropdown-item, p {
 img.grad_pic {
   width: 140px;
    /*border: 5px solid #767676;*/
-   border: 3px solid #d5ac44;
+  border: 3px solid #d5ac44;
+  cursor: pointer;
 }
 .program_section {
   width: 70%;
