@@ -49,7 +49,8 @@
               {{-- <h3 class="text-light text-left m-0" style="font-family: 'Marcellus' !important;">{{$prog['name']}}</h2> --}}
             </div>
           </div>
-          <div class="card-body mt-0 p-40 pt-0 shape-parent">
+          {{-- <div class="card-body mt-0 p-40 pt-0 shape-parent"> --}}
+          <div class="card-body mt-0 p-20 px-sm-40 pt-0 shape-parent">
             
 
 
@@ -72,7 +73,7 @@
                         <img loading="lazy" src="{{ $grad['image'] == null ? 'https://www.acstechnologies.com/church-growth/wp-content/uploads/sites/5/2020/06/Graduate_06.20_Blog_Image_Resize.jpg' : "/pictures/image?id=".$grad['image'] }}" alt="">
                         <span class="background-color" style="--background-color: rgba(0,0,0, 0.2);"></span>
                       </span>
-                      <span class="card-img-overlay p-5"><span class="card-title h4">{{$grad['name']}}</span>
+                      <span class="card-img-overlay justify-content-end p-5"><span class="card-title h4">{{$grad['name']}}</span>
                       <span class="card-category"><small>{{$grad['honor']}}</small></span>
                     </a>
                   </div>
