@@ -31,7 +31,7 @@
             </div> --}}
             <div class="text-start">
               
-              @if(str_contains($prog['name'], ' in '))
+              @if(str_contains(strtolower($prog['name']), ' in '))
 
               
 
@@ -65,11 +65,8 @@
               <div class="row justify-content-center isotope-grid gallery-wrapper animated ">
 
                 @foreach($sem['graduates'] as $grad)
-<<<<<<< HEAD
-                  <div class="isotope-item  col-6 col-md-4 col-lg-3 mb-20">
-=======
+                  {{-- <div class="isotope-item  col-6 col-md-4 col-lg-3 mb-20"> --}}
                   <div class="isotope-item  col-6 col-md-3 col-lg-2 p-5">
->>>>>>> 002625cb7da911561fa5e96a9b36d02c14d5cc6f
                     <a class="card card-portfolio gallery-item card-overlay card-hover-appearance text-white text-center rounded-4" href="{{$grad['banner'] == null ? "#" : "/pictures/image?id=".$grad['banner'] }}" style="border: 3px solid #d5ac44;">
                       <span class="card-img" data-img-height style="--img-height: 120%;">
                         <img loading="lazy" src="{{ $grad['image'] == null ? 'https://www.acstechnologies.com/church-growth/wp-content/uploads/sites/5/2020/06/Graduate_06.20_Blog_Image_Resize.jpg' : "/pictures/image?id=".$grad['image'] }}" alt="">
