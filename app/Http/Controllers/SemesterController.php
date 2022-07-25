@@ -24,7 +24,7 @@ class SemesterController extends Controller
 
             if ($r->search['value']){
                 $data = Semester::where([
-                    ['desc', '=', $r->search['value']],
+                    ['semesterName', '=', $r->search['value']],
                     ])->get();
             } else {
                 $data = Semester::get();
@@ -32,7 +32,7 @@ class SemesterController extends Controller
 
             return  DataTables::of($data)
                     ->editColumn('theme', function($row){
-                        $data = "{$row['desc']}";
+                        $data = "{$row['semesterName']}";
 
                         return $data;
                     })
@@ -55,12 +55,12 @@ class SemesterController extends Controller
 
         try{
 
-            if(Semester::where('desc', strip_tags($r["desc"]))->exists()){
+            if(Semester::where('semesterName', strip_tags($r["semesterName"]))->exists()){
                 return response()->json(["success" => false, 'data' => "Record already exists."], 200);
             }
 
             $row = new Semester;
-            $row->desc = strip_tags($r->desc);
+            $row->semesterName = strip_tags($r->semesterName);
             $row->save();
 
             return response()->json(["success" => true, 'data' => "Record added."], 200);
@@ -90,15 +90,15 @@ class SemesterController extends Controller
                 case "POST":
 
                     //Check if it has duplicates
-                    if (Semester::where('desc', strip_tags($r["e-desc"]))->exists() 
+                    if (Semester::where('semesterName', strip_tags($r["e-semesterName"]))->exists() 
                         && //Check if editing the same record
-                        ($id != Semester::select('semID')->where('desc', strip_tags($r["e-desc"]))->first()->semID )){
+                        ($id != Semester::select('semID')->where('semesterName', strip_tags($r["e-semesterName"]))->first()->semID )){
                         return response()->json(["success" => false, 'data' => "Record already exists."], 200);
                     }
 
                     $data = Semester::find($id);
 
-                    $data->desc = strip_tags($r["e-desc"]);
+                    $data->semesterName = strip_tags($r["e-semesterName"]);
                     $data->updatedBy = Session::get("userData.id");
                     $data->updatedAt = \Carbon\Carbon::now();
 
