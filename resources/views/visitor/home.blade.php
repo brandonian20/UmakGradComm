@@ -76,7 +76,7 @@
                         <p data-show="startbox" data-show-delay="100" class="text-justify">
                             Commencement is a University-wide event typically held annually in the month of July. The University celebrates this special occasion with you, your family and friends, to mark the achievement of a major milestone in your life.
                             <br><br>Commencement signifies the start of a new journey as you are now officially an UMak alumnus, ready to embark on your career or to take on new challenges in your profession. The University congratulates each one of you as we celebrate your achievements at your Commencement ceremony.
-                            <br><br>Commencement 2022 will be held from 6 to 17 July 2022.
+                            
                         </p>
                     </div>
                     <div class="col-lg-8">
@@ -221,7 +221,7 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide h-auto">
                                     <!-- Feedback-->
-                                    <div class="feedback bg-dark-light rounded-4 pe-60 h-100">
+                                    <div class="feedback bg-dark rounded-4 pe-60 h-100">
                                         <div class="feedback-header d-flex align-items-center mb-35">
                                             <div class="flex-shrink-0"><img class="rounded-circle" loading="lazy" src="{{ asset('/img/root/avatar-3-200x200.jpg') }}" alt="" height="64" width="64"></div>
                                             <div class="flex-grow-1 ms-20">
@@ -234,7 +234,7 @@
                                 </div>
                                 <div class="swiper-slide h-auto">
                                     <!-- Feedback-->
-                                    <div class="feedback bg-dark-light rounded-4 pe-60 h-100">
+                                    <div class="feedback bg-dark rounded-4 pe-60 h-100">
                                         
                                         <div class="feedback-header d-flex align-items-center mb-35">
                                             <div class="flex-shrink-0"><img class="rounded-circle" loading="lazy" src="{{ asset('/img/root/avatar-2-200x200.jpg') }}" alt="" height="64" width="64"></div>
@@ -248,7 +248,7 @@
                                 </div>
                                 <div class="swiper-slide h-auto">
                                     <!-- Feedback-->
-                                    <div class="feedback bg-dark-light rounded-4 pe-60 h-100">
+                                    <div class="feedback bg-dark rounded-4 pe-60 h-100">
                                         
                                         <div class="feedback-header d-flex align-items-center mb-35">
                                             <div class="flex-shrink-0"><img class="rounded-circle" loading="lazy" src="{{ asset('/img/root/avatar-1-200x200.jpg') }}" alt="" height="64" width="64"></div>

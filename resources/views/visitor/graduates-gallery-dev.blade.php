@@ -6,10 +6,15 @@
 
     <section id="questions" class="pt-4 pb-30 mt-40">
       <div class="container">
-          <div class="d-flex justify-content-center align-items-center">
-              <img src="/pictures/image?id={{$data['insignia']}}" class="img-fluid  me-3 " style="max-width: 200px; max-height: 200px;">
-              <h1 class="ms-30 text-left text-light mb-0 fw-bold" style="font-family: 'Marcellus' !important;">{{$data['collegeName']}}</h2>
+        <div class="row">
+          <div class="col-12 col-lg-3 d-flex justify-content-center align-items-center order-1">
+            <img src="/pictures/image?id={{$data['insignia']}}" class="img-fluid  me-3 " style="max-width: 200px; max-height: 200px;">
           </div>
+          <div class="col-12 col-lg-9 d-flex justify-content-center align-items-center order-2 ">
+            <h1 class="mt-30 mt-lg-0 text-center text-lg-start text-light mb-0 fw-bold" style="font-family: 'Marcellus' !important;">{{$data['collegeName']}}</h2>
+          </div>
+        </div>
+          
       </div>
   </section>
 
@@ -34,7 +39,7 @@
               <div class="row justify-content-center isotope-grid gallery-wrapper animated ">
 
                 @foreach($sem['graduates'] as $grad)
-                  <div class="isotope-item  col-6 col-md-3 col-lg-2">
+                  <div class="isotope-item  col-6 col-md-3 col-lg-2 p-5">
                     <a class="card card-portfolio gallery-item card-overlay card-hover-appearance text-white text-center rounded-4" href="{{$grad['banner'] == null ? "#" : "/pictures/image?id=".$grad['banner'] }}" style="border: 3px solid #d5ac44;">
                       <span class="card-img" data-img-height style="--img-height: 120%;">
                         <img loading="lazy" src="{{ $grad['image'] == null ? 'https://www.acstechnologies.com/church-growth/wp-content/uploads/sites/5/2020/06/Graduate_06.20_Blog_Image_Resize.jpg' : "/pictures/image?id=".$grad['image'] }}" alt="">
