@@ -124,7 +124,7 @@
                     <div class="modal-footer border-0">
                         <button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button>
                         <button class="btn btn-primary" type="submit">Save</button>
-                        <button class="btn btn-primary" type="button">Save & Add New</button>
+                        <button class="btn btn-primary" id="SaveAddNew" type="submit">Save & Add New</button>
                     </div>
                 </form>
             </div>
@@ -243,6 +243,11 @@
                 return false;
             });
 
+            saveAddNew = false;
+            $("#SaveAddNew").on('click', function(){
+                saveAddNew = true;
+            })
+
             $("#editForm").on('submit', function() {
                 postedit();
                 return false;
@@ -292,12 +297,28 @@
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     },
                     success: function(resp) {
-                        console.log(resp);
+                        // console.log(resp);
                         if (resp.success) {
                             showToast(resp.data, "success");
 
-                            $('#addForm')[0].reset();
-                            $("#addModal").modal("hide");
+                            if (saveAddNew){
+                                $('[name="lastname"], [name="firstname"], [name="middlename"], [name="image"], [name="banner"], [name="honor"]').val("");
+                                $('[name="honor"]').prop('checked', false);
+
+                                //Clear semester if locked
+                                if(!$("#semester-lock").prop("checked")) $("[name='semester']").select2("val", " ");
+
+                                //Clear program if locked
+                                if(!$("#program-lock").prop("checked")) $("[name='program']").select2("val", " ");
+
+                                saveAddNew = false;
+
+                            } else {
+                                $('#addForm')[0].reset();
+                                $("#addModal").modal("hide");
+                            }
+
+                            
 
                             datatable.ajax.reload(null, false);
                         } else {
