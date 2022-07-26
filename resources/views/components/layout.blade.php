@@ -111,10 +111,10 @@
                                         <button type="button" class="btn btn-accent-5 col-2 rounded-end shadow dropdown-toggle dropdown-toggle-split px-0" data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="fa-solid fa-chevron-down mx-10"></i>
                                         </button>
-                                        <ul class="dropdown-menu border shadow py-10">
+                                        <ul class="dropdown-menu border shadow py-10" style="max-width: 80vw;">
 
                                             @foreach( $row['programs'] as $prog )
-                                                <li><a class="dropdown-item fw-bold ps-20" href="/graduates-gallery/2022/{{$row['shortname']}}#{{$prog['programName']}}">{{$prog['programName']}}</a></li>
+                                                <li><a class="dropdown-item fw-bold ps-20" style="word-wrap: break-word; white-space: normal;" href="/graduates-gallery/2022/{{$row['shortname']}}#{{$prog['programName']}}">{{$prog['programName']}}</a></li>
                                             @endforeach
 
                                         </ul>
