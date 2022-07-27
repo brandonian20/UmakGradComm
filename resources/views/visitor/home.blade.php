@@ -276,7 +276,7 @@
                                             <div class="col-lg-10 offset-lg-1">
                                                 <blockquote class="h4 mb-50 text-white"
                                                     style="font-family: 'Metropolis', serif;">
-                                                    “ {{ substr($message['body'], 0, 500) . '...' }} ”
+                                                    “ {!! substr($message['body'], 0, 500) . '...' !!} ”
                                                     <a href="/message/2022/{{ $message['name'] }}"
                                                         style="color: white"><br> Read More</a>
                                                 </blockquote>

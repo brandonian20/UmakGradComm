@@ -118,7 +118,9 @@ class VisitorPageController extends Controller
         }
 
         $data = Messages::where("name", "=", "{$name}")->first();
-
+        
+        $data['image'] = Crypt::encryptString($data['image']);
+        
         return view('visitor/message-dev', ["data" => $data, "colleges" => $this->dataColleges()]);
     }
 

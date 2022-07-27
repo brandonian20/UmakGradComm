@@ -21,7 +21,7 @@
                         data-bs-target="#enroll">Start The Enrollment</button> -->
                     </div>
                     <div class="col-lg-4 col-12 d-flex justify-content-center">
-                        <img class="w-75 d-sm-block d-flex" src="{{ asset('/img/binay.jpg') }}" alt="Showcase Photo"
+                        <img class="w-75 d-sm-block d-flex" src="/pictures/image?id={{$data['image']}}" alt="Showcase Photo"
                             style="border-radius: 50%">
                     </div>
                 </div>
