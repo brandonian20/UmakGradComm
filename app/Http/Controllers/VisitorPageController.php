@@ -8,17 +8,19 @@ use App\Models\AcademicYear;
 use App\Models\Program;
 use App\Models\Graduates;
 use App\Models\Semester;
+use App\Models\Messages;
 
 use Illuminate\Support\Facades\Crypt;
 
 class VisitorPageController extends Controller
 {
 
-    public function dataColleges(){
+    public function dataColleges()
+    {
 
         $data = College::orderBy('collegeName', 'ASC')->get();
 
-        foreach($data as $row){
+        foreach ($data as $row) {
 
             $programs = Program::where('collegeID', '=', $row['collegeID'])->orderBy('programName', 'ASC')->get();
 
@@ -29,26 +31,43 @@ class VisitorPageController extends Controller
         return $data;
     }
 
+    public function dataMessages()
+    {
+
+        $data = Messages::get();
+
+        foreach ($data as $row) {
+            $row['image'] = ($row['image'] != null ? Crypt::encryptString($row['image']) : null);
+        }
+
+        return $data;
+    }
+
     //Home func
-    public function home(){
-        return view('visitor/home', ["colleges" => $this->dataColleges()]);
+    public function home()
+    {
+        //return response()->json($this->dataMessages(), 200);
+        return view('visitor/home', ["colleges" => $this->dataColleges(), "messages" => $this->dataMessages()]);
     }
 
     //gallery func
-    public function gallery(){
+    public function gallery()
+    {
         return view('visitor/gallery', ["colleges" => $this->dataColleges()]);
     }
 
     //graduates func
-    public function graduates_gallery(){
+    public function graduates_gallery()
+    {
         return view('visitor/graduates-gallery', ["colleges" => $this->dataColleges()]);
     }
 
     //graduates func
-    public function graduates_gallery_dev($yr, $college){
+    public function graduates_gallery_dev($yr, $college)
+    {
 
         //Check if College and AcadYear Exists on Database
-        if (!College::where("shortname", "=", "{$college}")->exists() || !AcademicYear::where("year", "=", "{$yr}")->exists()){
+        if (!College::where("shortname", "=", "{$college}")->exists() || !AcademicYear::where("year", "=", "{$yr}")->exists()) {
             return redirect("/");
         }
 
@@ -65,31 +84,32 @@ class VisitorPageController extends Controller
         $data["program"] = [];
 
         //O(n) where n = length of programs array
-        foreach($programs as $prog){
-            
+        foreach ($programs as $prog) {
+
             $semester = Semester::orderBy("semesterName", "ASC")->get();
-            
+
             //Initialize blank row
             $row = [];
 
             //O(n) where n = length of semester array
-            foreach($semester as $sem){
-                
+            foreach ($semester as $sem) {
+
                 $graduates = Graduates::leftJoin('honor', 'honor.honorID', '=', 'graduates.honorID')
-                                        ->where([ ["semID", "=", $sem->semID],
-                                            ["programID", "=", $prog->programID],
-                                        ])->orderBy("Lastname", "ASC")->get();
+                    ->where([
+                        ["semID", "=", $sem->semID],
+                        ["programID", "=", $prog->programID],
+                    ])->orderBy("Lastname", "ASC")->get();
                 $graduate = [];
 
                 //O(n) where n = length of graduates array
-                foreach($graduates as $grad){
-                    array_push($graduate, ["name" => "{$grad["Lastname"]}, {$grad["Firstname"]} " . $grad["Middlename"][0] . ".", "image" => ($grad->pictureID == null ? null : Crypt::encryptString($grad->pictureID)), "banner" => ($grad->bannerImageID == null ? null : Crypt::encryptString($grad->bannerImageID)), 'honor' => $grad->honorName ]);    
+                foreach ($graduates as $grad) {
+                    array_push($graduate, ["name" => "{$grad["Lastname"]}, {$grad["Firstname"]} " . $grad["Middlename"][0] . ".", "image" => ($grad->pictureID == null ? null : Crypt::encryptString($grad->pictureID)), "banner" => ($grad->bannerImageID == null ? null : Crypt::encryptString($grad->bannerImageID)), 'honor' => $grad->honorName]);
                 }
 
                 if ($graduate != null)
                     array_push($row, ["name" => $sem['semesterName'], "graduates" => $graduate]);
             }
-            
+
             if ($row != null)
                 array_push($data["program"], ["name" => $prog->programName, "semester" => $row]);
         }
@@ -98,8 +118,22 @@ class VisitorPageController extends Controller
         return view('visitor/graduates-gallery-dev', ["data" => $data, "colleges" => $this->dataColleges()]);
     }
 
-     //graduates func
-     public function message(){
+    //message func
+    public function message()
+    {
         return view('visitor/message', ["colleges" => $this->dataColleges()]);
+    }
+
+    //message func
+    public function message_dev($yr, $name)
+    {
+        //Check if College and AcadYear Exists on Database
+        if (!AcademicYear::where("year", "=", "{$yr}")->exists() || !Messages::where("name", "=", "{$name}")->exists()) {
+            return redirect("/");
+        }
+
+        $data = Messages::where("name", "=", "{$name}")->first();
+
+        return view('visitor/message-dev', ["data" => $data, "colleges" => $this->dataColleges()]);
     }
 }

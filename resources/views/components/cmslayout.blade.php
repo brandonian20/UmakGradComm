@@ -97,19 +97,19 @@
                                 Dashboard
                             </a>
 
-                            <div class="sidenav-menu-heading">Entity</div>
+                            <div class="sidenav-menu-heading">Academic Year Based</div>
                             <!-- Sidenav Accordion (Dashboard)-->
                             <a class="nav-link" href="/graduates">
                                 <div class="nav-link-icon"><i class="fa-solid fa-user-graduate"></i></div>
                                 Graduates
                             </a>
-                            <a class="nav-link" href="/faculty">
-                                <div class="nav-link-icon"><i class="fa-solid fa-user-tie"></i></div>
-                                Faculty
+                            <a class="nav-link" href="/messages">
+                                <div class="nav-link-icon"><i class="fa-solid fa-message"></i></div>
+                                Messages
                             </a>
-                            <a class="nav-link" href="/guest">
-                                <div class="nav-link-icon"><i class="fa-solid fa-user"></i></div>
-                                Guest
+                            <a class="nav-link" href="/onsitepics">
+                                <div class="nav-link-icon"><i class="fa-solid fa-image"></i></div>
+                                On-site Pictures
                             </a>
                             
                             <!-- Sidenav Menu Heading (Core)-->

@@ -161,7 +161,32 @@
                         </svg></div>
                     <div class="swiper-container">
                         <div class="swiper-wrapper" >
-                            <div class="swiper-slide px-45 px-lg-100">
+
+                            @foreach($messages as $message)
+
+                                <div class="swiper-slide px-45 px-lg-100">
+                                    <div class="row">
+                                        <div class="col-lg-10 offset-lg-1">
+                                            <blockquote class="h4 mb-50 text-white"  style="font-family: 'Metropolis', serif;">
+                                                “ {{ substr($message['body'], 0, 300 ) . "..." }} ” 
+                                                <a href="/message/2022/{{$message['name']}}" style="color: white"><br> Read More</a>
+                                            </blockquote>
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-shrink-0"><img class="rounded-circle" loading="lazy" src="/pictures/image?id={{$message['image']}}" alt="" height="64" width="64"></div>
+                                                <div class="flex-grow-1 ms-20">
+                                                    <h6 class="feedback-author mb-5 text-white">{{$message['name']}}</h6>
+                                                    <p class="feedback-position text-light font-size-14 m-0">{{$message['header']}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            @endforeach
+
+                            
+
+                            {{-- <div class="swiper-slide px-45 px-lg-100">
                                 <div class="row">
                                     <div class="col-lg-10 offset-lg-1">
                                         <blockquote class="h4 mb-50 text-white"  style="font-family: 'Metropolis', serif;">
@@ -191,7 +216,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     <div class="d-none d-lg-block">

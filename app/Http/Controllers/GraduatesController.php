@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Graduates;
-use App\Models\Picture;
 use App\Models\Pictures;
 use Exception;
 use Yajra\DataTables\DataTables;
@@ -17,23 +16,6 @@ class GraduatesController extends Controller
     //Index func
     public function index(){
         return view('cms/graduates', ['title' => 'Graduates']);
-    }
-
-    public function check(Request $r){
-        try{
-
-            // $data = Graduates::join("academicyear", "academicyear.acadYrID" , "=", "graduates.acadYrID")
-            //     ->join("program", "program.programID", '=', 'graduates.programID')
-            //     ->join("semester", "semester.semID", '=', 'graduates.semID')
-            //     ->where("academicyear.acadYrID", '=', Crypt::decryptString($r->acadYear))
-            //     ->get();
-
-            //return response()->json($data, 200);
-            return response()->json(Pictures::find($r->imageID), 200);
-
-        } catch(Exception $e){
-            return $e;
-        }
     }
 
     public function datatable(Request $r){

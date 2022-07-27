@@ -7,8 +7,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
 
 use App\Http\Controllers\GraduatesController;
-use App\Http\Controllers\FacultyController;
-use App\Http\Controllers\GuestController;
+use App\Http\Controllers\MessagesController;
+use App\Http\Controllers\OnSitePicsController;
 
 use App\Http\Controllers\AcademicYearController;
 use App\Http\Controllers\SemesterController;
@@ -45,9 +45,10 @@ Route::get('/', [VisitorPageController::class, 'home']);
 // Route::get('/programflow', [VisitorPageController::class, 'programme']);
 Route::get('/home/colleges', [VisitorPageController::class, 'colleges']);
 Route::get('/gallery', [VisitorPageController::class, 'gallery']);
-Route::get('/graduates-gallery', [VisitorPageController::class, 'graduates_gallery']);
+// Route::get('/graduates-gallery', [VisitorPageController::class, 'graduates_gallery']);
 Route::get('/graduates-gallery/{year}/{college}', [VisitorPageController::class, 'graduates_gallery_dev']);
 Route::get('/message', [VisitorPageController::class, 'message']);
+Route::get('/message/{year}/{name}', [VisitorPageController::class, 'message_dev']);
 
 /* ## END Visitor Module Region ## */
 
@@ -79,11 +80,15 @@ Route::post('/graduates/add', [GraduatesController::class, 'add'])->middleware('
 Route::any('/graduates/edit', [GraduatesController::class, 'edit'])->middleware('auth');
 Route::any('/graduates/check', [GraduatesController::class, 'check'])->middleware('auth');
 
-//Faculty
-Route::get('/faculty', [FacultyController::class, 'index'])->middleware('auth');
+//Messages
+Route::get('/messages', [MessagesController::class, 'index'])->middleware('auth');
+Route::get('/messages/datatable', [MessagesController::class, 'datatable'])->middleware('auth');
+Route::post('/messages/add', [MessagesController::class, 'add'])->middleware('auth');
+Route::any('/messages/edit', [MessagesController::class, 'edit'])->middleware('auth');
+Route::any('/messages/check', [MessagesController::class, 'check'])->middleware('auth');
 
-//Guest
-Route::get('/guest', [GuestController::class, 'index'])->middleware('auth');
+//OnSitePics
+Route::get('/onsitepics', [OnSitePicsController::class, 'index'])->middleware('auth');
 
 // Academic Year
 Route::get('/academicYear', [AcademicYearController::class, 'index'])->middleware('auth');
