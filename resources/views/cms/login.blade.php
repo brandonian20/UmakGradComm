@@ -84,12 +84,12 @@
                                         <form id="formSignIn">
                                             <div class="form-floating mb-3">
                                                 <input type="email" class="form-control" name="email"
-                                                    id="floatingEmail" value="timothywaltercuizon@gmail.com" required>
+                                                    id="floatingEmail" value="" required>
                                                 <label for="floatingEmail">Email address</label>
                                             </div>
                                             <div class="form-floating mb-3">
                                                 <input type="password" class="form-control" name="password"
-                                                    id="floatingPassword" value="tim123" required>
+                                                    id="floatingPassword" value="" required>
                                                 <label for="floatingPassword">Password</label>
                                             </div>
                                             <button type="submit" class="btn btn-primary btn-block">
