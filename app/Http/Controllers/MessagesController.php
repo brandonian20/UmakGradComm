@@ -27,8 +27,8 @@ class MessagesController extends Controller
             if ($r->search['value']){
 
                 $data = Messages::join("academicyear", "academicyear.acadYrID" , "=", "messages.acadYrID")
-                ->where("academicyear.acadYrID", '=', Crypt::decryptString($r->acadYear))
-                ->orWhere([
+                ->where([
+                    ["academicyear.acadYrID", '=', Crypt::decryptString($r->acadYear)],
                     ['messages.name', 'LIKE', "%{$r->search['value']}%"],
                 ])
                 ->get();

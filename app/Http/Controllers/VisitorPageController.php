@@ -9,51 +9,36 @@ use App\Models\Program;
 use App\Models\Graduates;
 use App\Models\Semester;
 use App\Models\Messages;
+use App\Models\OnSitePics;
 
 use Illuminate\Support\Facades\Crypt;
 
 class VisitorPageController extends Controller
 {
 
-    public function dataColleges()
-    {
-
-        $data = College::orderBy('collegeName', 'ASC')->get();
-
-        foreach ($data as $row) {
-
-            $programs = Program::where('collegeID', '=', $row['collegeID'])->orderBy('programName', 'ASC')->get();
-
-            $row['image'] = ($row['image'] != null ? Crypt::encryptString($row['image']) : null);
-            $row['programs'] = $programs;
-        }
-
-        return $data;
-    }
-
-    public function dataMessages()
-    {
-
-        $data = Messages::get();
-
-        foreach ($data as $row) {
-            $row['image'] = ($row['image'] != null ? Crypt::encryptString($row['image']) : null);
-        }
-
-        return $data;
-    }
-
     //Home func
     public function home()
     {
         //return response()->json($this->dataMessages(), 200);
-        return view('visitor/home', ["colleges" => $this->dataColleges(), "messages" => $this->dataMessages()]);
+        return view('visitor/home', ["colleges" => $this->dataColleges(), "messages" => $this->dataMessages(), "onsitepics" => $this->dataOnSitePics(6)]);
     }
 
     //gallery func
     public function gallery()
     {
         return view('visitor/gallery', ["colleges" => $this->dataColleges()]);
+    }
+
+    //gallery func
+    public function gallery_dev($yr)
+    {
+
+        //Check if College and AcadYear Exists on Database
+        if (!AcademicYear::where("year", "=", "{$yr}")->exists()) {
+            return redirect("/");
+        }
+
+        return view('visitor/gallery-dev', ["colleges" => $this->dataColleges(), "onsitepics" => $this->dataOnSitePics()]);
     }
 
     //graduates func
@@ -136,4 +121,52 @@ class VisitorPageController extends Controller
 
         return view('visitor/message-dev', ["data" => $data, "colleges" => $this->dataColleges()]);
     }
+
+    public function dataColleges()
+    {
+
+        $data = College::orderBy('collegeName', 'ASC')->get();
+
+        foreach ($data as $row) {
+
+            $programs = Program::where('collegeID', '=', $row['collegeID'])->orderBy('programName', 'ASC')->get();
+
+            $row['image'] = ($row['image'] != null ? Crypt::encryptString($row['image']) : null);
+            $row['programs'] = $programs;
+        }
+
+        return $data;
+    }
+
+    public function dataMessages()
+    {
+
+        $data = Messages::get();
+
+        foreach ($data as $row) {
+            $row['image'] = ($row['image'] != null ? Crypt::encryptString($row['image']) : null);
+        }
+
+        return $data;
+    }
+
+    public function dataOnSitePics($limit = null)
+    {
+
+        $data = null;
+
+        if ($limit != null){
+            $data = OnSitePics::take($limit)->get();
+        } else {
+            $data = OnSitePics::get();
+        }
+
+
+        foreach ($data as $row) {
+            $row['image'] = ($row['image'] != null ? Crypt::encryptString($row['image']) : null);
+        }
+
+        return $data;
+    }
+
 }

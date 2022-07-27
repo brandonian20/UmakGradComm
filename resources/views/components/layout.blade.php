@@ -49,8 +49,8 @@
             <ul class="nav navbar-nav order-2 ms-auto nav-no-opacity">
                 <li class="nav-item {{ request()->is('/*') ? 'active' : '' }}"><a class="nav-link"
                         href="/"><span>HOME</span></a></li>
-                <li class="nav-item {{ request()->is('gallery') ? 'active' : '' }}"><a class="nav-link"
-                        href="{{ url('/gallery') }}"><span>GALLERY</span></a></li>
+                <li class="nav-item {{ request()->is('gallery/2022') ? 'active' : '' }}"><a class="nav-link"
+                        href="{{ url('/gallery/2022') }}"><span>GALLERY</span></a></li>
                 <li
                     class="nav-item {{ request()->is('/graduates-gallery*') ? 'active' : '' }} {{ request()->is('/*') ? 'd-none' : '' }}">
                     <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#viewCollege"

@@ -51,11 +51,11 @@ a.dropdown-item, p {
 
 .button-color{
   background-color: black !important;
-  color: #948601 !important;
+  color: #e6d555 !important;
 }
 
 .button-color:hover{
-  background-color: #948601 !important;
+  background-color: #e6d555 !important;
   color: black !important;
 }
 

@@ -153,7 +153,7 @@
 
                     <div class="input-group mb-3">
                         <label class="input-group-text pe-0" for="e-imageUpload">Image</label>
-                        <input type="file" accept="image/*" class="form-control border-start-0 ps-1" id="e-imageUpload" name="e-image">
+                        <input type="file" accept="image/*" class="form-control border-start-0 ps-1" id="e-imageUpload" name="e-image" >
                     </div>
 
                 </div>
