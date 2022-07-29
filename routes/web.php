@@ -79,6 +79,8 @@ Route::get('/graduates', [GraduatesController::class, 'index'])->middleware('aut
 Route::get('/graduates/datatable', [GraduatesController::class, 'datatable'])->middleware('auth');
 Route::post('/graduates/add', [GraduatesController::class, 'add'])->middleware('auth');
 Route::any('/graduates/edit', [GraduatesController::class, 'edit'])->middleware('auth');
+Route::any('/graduates/uploadToga', [GraduatesController::class, 'uploadToga'])->middleware('auth');
+Route::any('/graduates/uploadSlideDeck', [GraduatesController::class, 'uploadSlideDeck'])->middleware('auth');
 
 //Messages
 Route::get('/messages', [MessagesController::class, 'index'])->middleware('auth');

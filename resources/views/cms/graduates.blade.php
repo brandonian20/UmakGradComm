@@ -21,7 +21,7 @@
         </div>
     </header>
 
-    
+
 
     <div class="container-xl px-4 mt-n10">
         <div class="card mb-4">
@@ -52,33 +52,34 @@
                         <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        
+
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="lastname" name="lastname"
-                                placeholder="Name" required>
+                            <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Name"
+                                required>
                             <label for="lastname">Last Name</label>
                         </div>
-                        
+
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="firstname" name="firstname"
-                                placeholder="Name" required>
+                            <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Name"
+                                required>
                             <label for="firstname">First Name</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="middlename" name="middlename"
-                                placeholder="Name">
+                            <input type="text" class="form-control" id="middlename" name="middlename" placeholder="Name">
                             <label for="middlename">Middle Name</label>
                         </div>
 
                         <div class="input-group mb-3">
                             <label class="input-group-text pe-0" for="imageUpload">Image</label>
-                            <input type="file" accept="image/*" class="form-control border-start-0 ps-1" id="imageUpload" name="image">
+                            <input type="file" accept="image/*" class="form-control border-start-0 ps-1" id="imageUpload"
+                                name="image">
                         </div>
 
                         <div class="input-group mb-3">
                             <label class="input-group-text pe-0" for="bannerUpload">Slide Deck</label>
-                            <input type="file" accept="image/*" class="form-control border-start-0 ps-1" id="bannerUpload" name="banner">
+                            <input type="file" accept="image/*" class="form-control border-start-0 ps-1"
+                                id="bannerUpload" name="banner">
                         </div>
 
                         <div class="w-100 mb-3">
@@ -89,9 +90,10 @@
                                 <select name="semester" class="form-select select-accent w-100" required></select>
 
                                 <input type="checkbox" class="btn-check" id="semester-lock" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="semester-lock"><i class="fa-solid fa-lock"></i></label>
+                                <label class="btn btn-outline-primary" for="semester-lock"><i
+                                        class="fa-solid fa-lock"></i></label>
                             </div>
-                            
+
                         </div>
 
                         <div class="w-100 mb-3">
@@ -102,20 +104,24 @@
                                 <select name="program" class="form-select select-accent w-100" required></select>
 
                                 <input type="checkbox" class="btn-check" id="program-lock" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="program-lock"><i class="fa-solid fa-lock"></i></label>
+                                <label class="btn btn-outline-primary" for="program-lock"><i
+                                        class="fa-solid fa-lock"></i></label>
                             </div>
-                            
+
                         </div>
 
                         <div class="d-flex justify-content-center">
                             <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                <input type="radio" class="btn-check" name="honor" value="3" id="cumlaude" autocomplete="off">
+                                <input type="radio" class="btn-check" name="honor" value="3" id="cumlaude"
+                                    autocomplete="off">
                                 <label class="btn btn-outline-primary" for="cumlaude">Cum Laude</label>
-                              
-                                <input type="radio" class="btn-check" name="honor" value="2" id="mcumlaude" autocomplete="off">
+
+                                <input type="radio" class="btn-check" name="honor" value="2" id="mcumlaude"
+                                    autocomplete="off">
                                 <label class="btn btn-outline-primary" for="mcumlaude">Magna Cum Laude</label>
-                              
-                                <input type="radio" class="btn-check" name="honor" value="1" id="scumlaude" autocomplete="off">
+
+                                <input type="radio" class="btn-check" name="honor" value="1" id="scumlaude"
+                                    autocomplete="off">
                                 <label class="btn btn-outline-primary" for="scumlaude">Summa Cum Laude</label>
                             </div>
                         </div>
@@ -159,65 +165,72 @@
                                         placeholder="Name" required>
                                     <label for="e-lastname">Last Name</label>
                                 </div>
-                                
+
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control" id="e-firstname" name="e-firstname"
                                         placeholder="Name" required>
                                     <label for="e-firstname">First Name</label>
                                 </div>
-        
+
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control" id="e-middlename" name="e-middlename"
                                         placeholder="Name">
                                     <label for="e-middlename">Middle Name</label>
                                 </div>
-        
+
                                 <div class="input-group mb-3">
                                     <label class="input-group-text pe-0" for="e-imageUpload">Image</label>
-                                    <input type="file" accept="image/*" class="form-control border-start-0 ps-1" id="e-imageUpload" name="e-image">
+                                    <input type="file" accept="image/*" class="form-control border-start-0 ps-1"
+                                        id="e-imageUpload" name="e-image">
                                 </div>
-        
+
                                 <div class="input-group mb-3">
                                     <label class="input-group-text pe-0" for="bannerUpload">Slide Deck</label>
-                                    <input type="file" accept="image/*" class="form-control border-start-0 ps-1" id="e-bannerUpload" name="e-banner">
+                                    <input type="file" accept="image/*" class="form-control border-start-0 ps-1"
+                                        id="e-bannerUpload" name="e-banner">
                                 </div>
-        
+
                                 <div class="w-100 mb-3">
                                     <div id="e-semester-spinner">
                                         Loading...
                                     </div>
                                     <div class="input-group flex-nowrap">
-                                        <select name="e-semester" class="form-select select-accent w-100" required></select>
+                                        <select name="e-semester" class="form-select select-accent w-100"
+                                            required></select>
                                     </div>
-                                    
+
                                 </div>
-        
+
                                 <div class="w-100 mb-3">
                                     <div id="e-program-spinner">
                                         Loading...
                                     </div>
                                     <div class="input-group flex-nowrap">
-                                        <select name="e-program" class="form-select select-accent w-100" required></select>
+                                        <select name="e-program" class="form-select select-accent w-100"
+                                            required></select>
                                     </div>
-                                    
+
                                 </div>
-        
+
                                 <div class="d-flex justify-content-center">
                                     <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                        <input type="radio" class="btn-check" name="e-honor" value="3" id="e-cumlaude" autocomplete="off">
+                                        <input type="radio" class="btn-check" name="e-honor" value="3"
+                                            id="e-cumlaude" autocomplete="off">
                                         <label class="btn btn-outline-primary" for="e-cumlaude">Cum Laude</label>
-                                      
-                                        <input type="radio" class="btn-check" name="e-honor" value="2" id="e-mcumlaude" autocomplete="off">
+
+                                        <input type="radio" class="btn-check" name="e-honor" value="2"
+                                            id="e-mcumlaude" autocomplete="off">
                                         <label class="btn btn-outline-primary" for="e-mcumlaude">Magna Cum Laude</label>
-                                      
-                                        <input type="radio" class="btn-check" name="e-honor" value="1" id="e-scumlaude" autocomplete="off">
+
+                                        <input type="radio" class="btn-check" name="e-honor" value="1"
+                                            id="e-scumlaude" autocomplete="off">
                                         <label class="btn btn-outline-primary" for="e-scumlaude">Summa Cum Laude</label>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        
+
 
                     </div>
                     <div class="modal-footer border-0">
@@ -230,12 +243,12 @@
     </div>
 
     <script>
-
         let datatable = null;
 
         $(function() {
 
-            let acadYearLoaded = PopulateSelect('academicYear', '/select2/academicYear', "Select Academic Year", "6", null, null, null,
+            let acadYearLoaded = PopulateSelect('academicYear', '/select2/academicYear', "Select Academic Year",
+                "6", null, null, null,
                 null);
 
             $("#addForm").on('submit', function() {
@@ -244,7 +257,7 @@
             });
 
             saveAddNew = false;
-            $("#SaveAddNew").on('click', function(){
+            $("#SaveAddNew").on('click', function() {
                 saveAddNew = true;
             })
 
@@ -254,31 +267,36 @@
             });
 
             $("#addModal").on("shown.bs.modal", function() {
-                PopulateSelect('semester', '/select2/semester', "Select Semester Graduated", null, false, null, null, null);
-                PopulateSelect('program', '/select2/program', "Select Program", null, true, null, null, null);
+                PopulateSelect('semester', '/select2/semester', "Select Semester Graduated", null, false,
+                    null, null, null);
+                PopulateSelect('program', '/select2/program', "Select Program", null, true, null, null,
+                    null);
                 $("#honorName").focus();
             });
 
-            let wasChecked = 0, wasChecked2 = 0;
-            $('[name=honor]').on('click', function(){
-                if ($('[name=honor]:checked').val() == wasChecked){
+            let wasChecked = 0,
+                wasChecked2 = 0;
+            $('[name=honor]').on('click', function() {
+                if ($('[name=honor]:checked').val() == wasChecked) {
                     $('[name=honor]').prop('checked', false);
                     wasChecked = 0;
                 } else {
-                    wasChecked = $('[name=honor]:checked').val();    
+                    wasChecked = $('[name=honor]:checked').val();
                 }
             });
 
-            $('[name=e-honor]').on('click', function(){
-                if ($('[name=e-honor]:checked').val() == wasChecked2){
+            $('[name=e-honor]').on('click', function() {
+                if ($('[name=e-honor]:checked').val() == wasChecked2) {
                     $('[name=e-honor]').prop('checked', false);
                     wasChecked2 = 0;
                 } else {
-                    wasChecked2 = $('[name=e-honor]:checked').val();    
+                    wasChecked2 = $('[name=e-honor]:checked').val();
                 }
             });
 
-            let viewID = null, imageID = null, bannerID = null;
+            let viewID = null,
+                imageID = null,
+                bannerID = null;
 
             function addnew() {
 
@@ -301,15 +319,18 @@
                         if (resp.success) {
                             showToast(resp.data, "success");
 
-                            if (saveAddNew){
-                                $('[name="lastname"], [name="firstname"], [name="middlename"], [name="image"], [name="banner"], [name="honor"]').val("");
+                            if (saveAddNew) {
+                                $('[name="lastname"], [name="firstname"], [name="middlename"], [name="image"], [name="banner"], [name="honor"]')
+                                    .val("");
                                 $('[name="honor"]').prop('checked', false);
 
                                 //Clear semester if locked
-                                if(!$("#semester-lock").prop("checked")) $("[name='semester']").select2("val", " ");
+                                if (!$("#semester-lock").prop("checked")) $("[name='semester']")
+                                    .select2("val", " ");
 
                                 //Clear program if locked
-                                if(!$("#program-lock").prop("checked")) $("[name='program']").select2("val", " ");
+                                if (!$("#program-lock").prop("checked")) $("[name='program']").select2(
+                                    "val", " ");
 
                                 saveAddNew = false;
 
@@ -318,7 +339,7 @@
                                 $("#addModal").modal("hide");
                             }
 
-                            
+
 
                             datatable.ajax.reload(null, false);
                         } else {
@@ -344,21 +365,24 @@
                         bannerID = resp.bannerImageID;
                         wasChecked2 = resp.honorID;
 
-                        $("#editTitle").html(`Editing <b>${resp.Lastname}, ${resp.Firstname} ${resp.Middlename}</b>`);
+                        $("#editTitle").html(
+                            `Editing <b>${resp.Lastname}, ${resp.Firstname} ${resp.Middlename}</b>`);
 
                         $("[name='e-lastname']").val(resp.Lastname);
                         $("[name='e-firstname']").val(resp.Firstname);
                         $("[name='e-middlename']").val(resp.Middlename);
 
-                        PopulateSelect('e-semester', '/select2/semester', "Select Semester Graduated", resp.semID, false, null, null, null);
-                        PopulateSelect('e-program', '/select2/program', "Select Program", resp.programID, true, null, null, null);
+                        PopulateSelect('e-semester', '/select2/semester', "Select Semester Graduated",
+                            resp.semID, false, null, null, null);
+                        PopulateSelect('e-program', '/select2/program', "Select Program", resp
+                            .programID, true, null, null, null);
 
                         $("[name='e-image']").val("");
                         $("[name='e-banner']").val("");
 
                         if ($(`[name='e-honor'][value='${resp.honorID}']`).length > 0)
                             $(`[name='e-honor'][value='${resp.honorID}']`).prop('checked', true);
-                        else 
+                        else
                             $(`[name='e-honor']`).prop('checked', false);
 
                         $("#e-toga").attr("src", `/pictures/image?id=${resp.image}`);
@@ -402,11 +426,11 @@
 
             let tblFilterEvent = true;
 
-            $.when(acadYearLoaded).done(function () { 
+            $.when(acadYearLoaded).done(function() {
                 datatable = $("#datatable").DataTable({
                     ajax: {
                         url: "/graduates/datatable",
-                        data: function(d){
+                        data: function(d) {
                             d.acadYear = $("[name=academicYear]").val();
                         }
                     },
@@ -421,8 +445,7 @@
                         search: "",
                         searchPlaceholder: "Search..."
                     },
-                    columns: [
-                        {
+                    columns: [{
                             data: 'pictureID',
                         },
                         {
@@ -435,7 +458,7 @@
                             data: 'Middlename',
                         },
                         {
-                            data: 'action'  ,
+                            data: 'action',
                         },
                     ],
                     drawCallback: function() {
@@ -443,6 +466,7 @@
                             getedit($(this).attr(`data-id`));
                         });
                         initTooltip();
+                        dragDropFunction();
                     },
                     initComplete: function() {
                         if (tblFilterEvent) {
@@ -453,12 +477,95 @@
                 })
             });
 
-            function acadYearLoad(){
-                $("[name=academicYear]").on("change", function () {
+            function acadYearLoad() {
+                $("[name=academicYear]").on("change", function() {
                     datatable.ajax.reload();
                 });
             }
 
         });
+
+        function dragDropFunction() {
+            $('.toga-box-upload, .slide-deck-box-upload').off('drag dragstart dragend dragover dragenter dragleave').on(
+                'drag dragstart dragend dragover dragenter dragleave',
+                function(e) {
+                    e.stopPropagation();
+                    e.preventDefault();
+                });
+
+            $('.toga-box-upload').off('drop').on('drop', function(e) {
+                e.stopPropagation();
+                e.preventDefault();
+
+                var file = e.originalEvent.dataTransfer.files;
+
+                let fd = new FormData();
+                fd.append("id", $(this).attr("data-student-id"));
+                fd.append("image", file[0]);
+                fd.append("imageID", $(this).attr("data-img-id"));
+
+                uploadToga(fd);
+            });
+
+            $('.slide-deck-box-upload').off('drop').on('drop', function(e) {
+                e.stopPropagation();
+                e.preventDefault();
+
+                var file = e.originalEvent.dataTransfer.files;
+
+                let fd = new FormData();
+                fd.append("id", $(this).attr("data-student-id"));
+                fd.append("banner", file[0]);
+                fd.append("bannerID", $(this).attr("data-img-id"));
+
+                uploadSlideDeck(fd);
+            });
+        }
+
+        function uploadToga(fd) {
+
+            $.ajax({
+                url: '/graduates/uploadToga',
+                data: fd,
+                type: 'POST',
+                contentType: false,
+                processData: false,
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                success: function(resp) {
+                    console.log(resp);
+                    if (resp.success) {
+                        showToast(resp.data, "success");
+                        datatable.ajax.reload(null, false);
+                    } else {
+                        showToast(resp.data, "error");
+                    }
+                }
+            });
+        }
+
+        function uploadSlideDeck(fd) {
+
+            $.ajax({
+                url: '/graduates/uploadSlideDeck',
+                data: fd,
+                type: 'POST',
+                contentType: false,
+                processData: false,
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                success: function(resp) {
+                    console.log(resp);
+                    if (resp.success) {
+                        showToast(resp.data, "success");
+                        datatable.ajax.reload(null, false);
+                    } else {
+                        showToast(resp.data, "error");
+                    }
+                }
+            });
+        }
     </script>
 @endsection

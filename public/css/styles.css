@@ -21069,3 +21069,11 @@ pre[class*=language-] {
 .select-accent{
   height: 58px !important;
 }
+
+.upload-box{
+  height: 50px;
+  width: 70px;
+  outline: 2px dashed #92b0b3;
+  -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+  transition: outline-offset .15s ease-in-out, background-color .15s linear;
+}
