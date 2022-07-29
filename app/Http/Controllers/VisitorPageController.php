@@ -88,7 +88,7 @@ class VisitorPageController extends Controller
 
                 //O(n) where n = length of graduates array
                 foreach ($graduates as $grad) {
-                    array_push($graduate, ["name" => "{$grad["Lastname"]}, {$grad["Firstname"]} " . $grad["Middlename"][0] . ".", "image" => ($grad->pictureID == null ? null : Crypt::encryptString($grad->pictureID)), "banner" => ($grad->bannerImageID == null ? null : Crypt::encryptString($grad->bannerImageID)), 'honor' => $grad->honorName]);
+                    array_push($graduate, ["lname" => "{$grad["Lastname"]},", "fname" => "{$grad["Firstname"]} " . (strlen($grad["Middlename"]) > 0 ? substr($grad["Middlename"], 0, 1) . "." : ""), "image" => ($grad->pictureID == null ? null : Crypt::encryptString($grad->pictureID)), "banner" => ($grad->bannerImageID == null ? null : Crypt::encryptString($grad->bannerImageID)), 'honor' => $grad->honorName]);
                 }
 
                 if ($graduate != null)

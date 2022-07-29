@@ -70,10 +70,12 @@
                   <div class="isotope-item  col-6 col-md-3 col-lg-2 p-5">
                     <a class="card card-portfolio gallery-item card-overlay card-hover-appearance text-white text-center rounded-4" href="{{$grad['banner'] == null ? "#" : "/pictures/image?id=".$grad['banner'] }}" style="border: 3px solid #d5ac44;">
                       <span class="card-img" data-img-height style="--img-height: 120%;">
-                        <img loading="lazy" src="{{ $grad['image'] == null ? 'https://www.acstechnologies.com/church-growth/wp-content/uploads/sites/5/2020/06/Graduate_06.20_Blog_Image_Resize.jpg' : "/pictures/image?id=".$grad['image'] }}" alt="">
+                        <img loading="lazy" src="{{ $grad['image'] == null ? asset('/img/silhouette-toga.jpg') : "/pictures/image?id=".$grad['image'] }}" alt="">
                         <span class="background-color" style="--background-color: rgba(0,0,0, 0.2);"></span>
                       </span>
-                      <span class="card-img-overlay justify-content-end p-5"><span class="card-title h4">{{$grad['name']}}</span>
+                      <span class="card-img-overlay justify-content-end p-5">
+                        <span class="card-title h4">{{$grad['lname']}}</span>
+                        <span class="card-title h6">{{$grad['fname']}}</span>
                       <span class="card-category"><small>{{$grad['honor']}}</small></span>
                     </a>
                   </div>

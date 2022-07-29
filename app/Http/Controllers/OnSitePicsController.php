@@ -26,16 +26,16 @@ class OnSitePicsController extends Controller
 
             if ($r->search['value']){
 
-                $data = OnSitePics::join("academicyear", "academicyear.acadYrID" , "=", "OnSitePics.acadYrID")
+                $data = OnSitePics::join("academicyear", "academicyear.acadYrID" , "=", "onsitepics.acadYrID")
                 ->where([
                     ["academicyear.acadYrID", '=', Crypt::decryptString($r->acadYear)],
-                    ['OnSitePics.title', 'LIKE', "%{$r->search['value']}%"],
-                    ['OnSitePics.subtitle', 'LIKE', "%{$r->search['value']}%"],
+                    ['onsitepics.title', 'LIKE', "%{$r->search['value']}%"],
+                    ['onsitepics.subtitle', 'LIKE', "%{$r->search['value']}%"],
                 ])
                 ->get();
                     
             } else {
-                $data = OnSitePics::join("academicyear", "academicyear.acadYrID" , "=", "OnSitePics.acadYrID")
+                $data = OnSitePics::join("academicyear", "academicyear.acadYrID" , "=", "onsitepics.acadYrID")
                 ->where("academicyear.acadYrID", '=', Crypt::decryptString($r->acadYear))
                 ->get();
             }

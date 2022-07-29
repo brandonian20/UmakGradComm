@@ -67,7 +67,7 @@
 
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" id="middlename" name="middlename"
-                                placeholder="Name" required>
+                                placeholder="Name">
                             <label for="middlename">Middle Name</label>
                         </div>
 
@@ -168,7 +168,7 @@
         
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control" id="e-middlename" name="e-middlename"
-                                        placeholder="Name" required>
+                                        placeholder="Name">
                                     <label for="e-middlename">Middle Name</label>
                                 </div>
         
